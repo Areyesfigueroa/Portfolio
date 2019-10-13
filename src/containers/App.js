@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import classes from './App.module.css';
-import Navbar from '../components/Header/Navbar';
-import HeaderBG from '../components/Header/HeaderBG';
-import HeaderTitle from '../components/Header/HeaderTitle';
 
+/** Components */
+import Navbar from '../components/Header/Navbar';
+import PageTitle from '../components/Header/PageTitle';
+import SectionTitle from '../components/SectionTitle/SectionTitle';
 
 //Local Assets
 import alielLogo from '../assets/aliel-logo.png';
-import headerBG from '../assets/header-bg.png';
 
 /**
  * Task Planner:
- * Navbar
- * 1. Display Logo
+ * About Section
+ * 1. About Title
  */
 
 
@@ -30,20 +30,25 @@ class App extends Component {
       
     return (
       <div className="App">
-        <HeaderBG 
-        style={classes.headerBG}
-        img={headerBG}/>
-        <Navbar 
-        style={classes.navbar}
-        img={alielLogo}
-        />
+        <header>
+          {/** Header Components */}
+          <Navbar 
+          style={classes.navbar}
+          img={alielLogo}
+          />
+          <PageTitle 
+          style={classes.pageTitle}
+          title={this.state.header.title}
+          subtitle={this.state.header.subtitle}
+          btnText={this.state.header.btnText}
+          />
+        </header>
 
-        <HeaderTitle 
-        style={classes.headerTitle}
-        title={this.state.header.title}
-        subtitle={this.state.header.subtitle}
-        btnText={this.state.header.btnText}
-        />
+        {/** About Components */}
+        <SectionTitle style={classes.sectionTitle}>About</SectionTitle>
+
+
+
 
 
       </div>
