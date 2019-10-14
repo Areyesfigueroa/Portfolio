@@ -5,6 +5,9 @@ import classes from './App.module.css';
 import Navbar from '../components/Header/Navbar';
 import PageTitle from '../components/Header/PageTitle';
 import SectionTitle from '../components/SectionTitle/SectionTitle';
+import Textbox from '../components/About/Textbox';
+import Button from '../components/Button/Button';
+import Cards from '../components/Cards/Cards';
 
 //Local Assets
 import alielLogo from '../assets/aliel-logo.png';
@@ -30,8 +33,9 @@ class App extends Component {
       
     return (
       <div className="App">
-        <header>
-          {/** Header Components */}
+
+        {/** Header Section */}
+        <header class>
           <Navbar 
           style={classes.navbar}
           img={alielLogo}
@@ -44,8 +48,33 @@ class App extends Component {
           />
         </header>
 
-        {/** About Components */}
-        <SectionTitle style={classes.sectionTitle}>About</SectionTitle>
+        {/** About Section */}
+        <section className={classes.aboutSection}>
+          <SectionTitle style={classes.sectionTitle}>About</SectionTitle>
+          <Textbox style={classes.textbox}>
+            Hello my name is Aliel Reyes, I am a Front End Engineer based in 
+            the bay area.
+            <br/><br/>
+
+            I consider myself a tinkerer, I love to explore new technologies. I 
+            am currently working for a company creating Javascript tools and 
+            data management.
+            <br/><br/>
+
+            I am focused in creating web applications as a Front End Engineer 
+            but my goal is to become a full stack developer.
+            <br/><br/>
+
+            I look forward to meeting future employers.
+          </Textbox>
+          <Button>Download Resume</Button>
+        </section>
+
+        {/** Technologies Section */}
+        <section className={classes.techSection}>
+          <SectionTitle style={classes.sectionTitle}>Technologies</SectionTitle>
+          <Cards />
+        </section>
 
 
 

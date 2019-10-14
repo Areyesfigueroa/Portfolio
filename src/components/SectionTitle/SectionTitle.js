@@ -1,7 +1,11 @@
 import React from 'react';
 
 const sectionTitle = (props) => {
-    return <h1 className={props.style}>{props.children}</h1>
+    return (
+    <div>
+        <h1 className={props.style}>{props.children}</h1>
+    </div>
+    );
 }
 
 export default sectionTitle;
