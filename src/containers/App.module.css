@@ -69,7 +69,6 @@ header {
 }
 
 section {
-  margin-top: 100px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
@@ -83,6 +82,7 @@ section {
 */
 
 .sectionTitle {
+  margin: 100px 0 50px 0;
   font-size: 50px;
   border-bottom: 2px solid var(--accent-color);
   padding-bottom: 5px;
@@ -97,6 +97,35 @@ section {
   padding: 20px;
   max-width: 50%;
   text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+} 
+
+.card {
+  display: grid;
+  row-gap: 10px;
+  background-color: #fefdfd;
+  border: 3px solid #9f9f9f;
+  border-radius: 8px;
+  padding: 40px;
+  height: 270px;
+  text-align: center;
+}
+
+.card h1 {
+  font-size: 300%;
+}
+
+.card ul {
+  list-style-type: none;
+  display: grid;
+  row-gap: 10px;
 }
 
 /*
@@ -165,6 +194,8 @@ section {
 --------  TECHNOLOGY SECTION --------
 -------------------------------------
 */
+
+
 
 
 

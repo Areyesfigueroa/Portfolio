@@ -7,6 +7,7 @@ import PageTitle from '../components/Header/PageTitle';
 import SectionTitle from '../components/SectionTitle/SectionTitle';
 import Textbox from '../components/About/Textbox';
 import Button from '../components/Button/Button';
+import Card from '../components/Cards/Card/Card';
 import Cards from '../components/Cards/Cards';
 
 //Local Assets
@@ -22,29 +23,60 @@ import alielLogo from '../assets/aliel-logo.png';
 class App extends Component {
 
   state = {
-    header: {
-      title: "Aliel Reyes",
-      subtitle: "Front End Engineer",
-      btnText: "See Portfolio"
-    }
+    cards: [
+      {
+        id: '0', 
+        title: 'Frontend',
+        items: [
+          {id: '0', value: 'HTML'},
+          {id: '1', value: 'CSS'},
+          {id: '2', value: 'Javascript'},
+          {id: '3', value: 'React'}
+        ]
+      }, 
+      {
+        id: '1',
+        title: 'Server',
+        items: [
+          {id: "0", value: 'PHP'},
+          {id: "1", value: 'Python'}
+        ]
+      },
+      {
+        id: '2',
+        title: 'Tools',
+        items: [
+          {id: "0", value: 'NPM'},
+          {id: "1", value: 'Git'},
+          {id: "2", value: 'Github'},
+          {id: "3", value: 'SourceTree'}
+        ]
+      }
+    ]
   }
 
   render() {
-      
+    
+    const headerInfo = {
+      title: "Aliel Reyes",
+      subtitle: "Front End Engineer", 
+      btnText: "See Portfolio"
+    };
+
     return (
       <div className="App">
 
         {/** Header Section */}
-        <header class>
+        <header>
           <Navbar 
           style={classes.navbar}
           img={alielLogo}
           />
           <PageTitle 
           style={classes.pageTitle}
-          title={this.state.header.title}
-          subtitle={this.state.header.subtitle}
-          btnText={this.state.header.btnText}
+          title={headerInfo.title}
+          subtitle={headerInfo.subtitle}
+          btnText={headerInfo.btnText}
           />
         </header>
 
@@ -71,9 +103,11 @@ class App extends Component {
         </section>
 
         {/** Technologies Section */}
-        <section className={classes.techSection}>
+        <section>
           <SectionTitle style={classes.sectionTitle}>Technologies</SectionTitle>
-          <Cards />
+          <div className={classes.cards}>
+            <Cards cards={this.state.cards}/>
+          </div>
         </section>
 
 
