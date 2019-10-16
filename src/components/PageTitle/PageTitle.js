@@ -1,9 +1,9 @@
 import React from 'react';
-import Button from '../Button/Button';
+import classes from '../../containers/App.module.css';
 
 const pageTitle = (props) => {
     return (
-        <div className={props.style}>
+        <div className={classes.pageTitle}>
             <div>
                 <h1>{props.title}</h1>
                 <h3>{props.subtitle}</h3>

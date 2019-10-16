@@ -1,8 +1,9 @@
 import React from 'react';
+import classes from '../../containers/App.module.css';
 
 const navbar = (props) => {
     return (
-        <div className={props.style}>
+        <div className={classes.navbar}>
             <img src={props.img} alt='Aliel Logo'/>
             <ul>
                 <li><a href="#">About</a></li>

@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import classes from './App.module.css';
 
 /** Components */
-import Navbar from '../components/Header/Navbar';
-import PageTitle from '../components/Header/PageTitle';
+import Navbar from '../components/Navbar/Navbar';
+import PageTitle from '../components/PageTitle/PageTitle';
+import SectionWrapper from '../components/SectionWrapper/SectionWrapper';
 import SectionTitle from '../components/SectionTitle/SectionTitle';
-import Textbox from '../components/About/Textbox';
+import Textbox from '../components/Textbox/Textbox';
 import Button from '../components/Button/Button';
 import Cards from '../components/Cards/Cards';
-import Card from '../components/Cards/Card/Card';
 
 //Local Assets
 import alielLogo from '../assets/aliel-logo.png';
@@ -23,6 +23,11 @@ import alielLogo from '../assets/aliel-logo.png';
 class App extends Component {
 
   state = {
+    headerInfo: {
+      title: "Aliel Reyes",
+      subtitle: "Front End Engineer", 
+      btnText: "See Portfolio"
+    },
     cards: [
       {
         id: '0A', 
@@ -57,62 +62,59 @@ class App extends Component {
 
   render() {
     
-    const headerInfo = {
-      title: "Aliel Reyes",
-      subtitle: "Front End Engineer", 
-      btnText: "See Portfolio"
-    };
+    const techCards = (
+        <div className={classes.cards}>
+          <Cards cards={this.state.cards}/>
+        </div>
+    );
 
     return (
       <div className="App">
 
         {/** Header Section */}
         <header>
-          <Navbar 
-          style={classes.navbar}
-          img={alielLogo}
-          />
+          <Navbar img={alielLogo}/>
           <PageTitle 
-          style={classes.pageTitle}
-          title={headerInfo.title}
-          subtitle={headerInfo.subtitle}
-          btnText={headerInfo.btnText}
+          title={this.state.headerInfo.title}
+          subtitle={this.state.headerInfo.subtitle}
+          btnText={this.state.headerInfo.btnText}
           />
         </header>
 
         {/** About Section */}
-        <section>
-          <div className={classes.container}>
-            <SectionTitle style={classes.sectionTitle}>About</SectionTitle>
-            <Textbox style={classes.textbox}>
-              Hello my name is Aliel Reyes, I am a Front End Engineer based in 
-              the bay area.
-              <br/><br/>
+        <SectionWrapper title="About">
+          <Textbox>
+            Hello my name is Aliel Reyes, I am a Front End Engineer based in 
+            the bay area.
+            <br/><br/>
 
-              I consider myself a tinkerer, I love to explore new technologies. I 
-              am currently working for a company creating Javascript tools and 
-              data management.
-              <br/><br/>
+            I consider myself a tinkerer, I love to explore new technologies. I 
+            am currently working for a company creating Javascript tools and 
+            data management.
+            <br/><br/>
 
-              I am focused in creating web applications as a Front End Engineer 
-              but my goal is to become a full stack developer.
-              <br/><br/>
+            I am focused in creating web applications as a Front End Engineer 
+            but my goal is to become a full stack developer.
+            <br/><br/>
 
-              I look forward to meeting future employers.
-            </Textbox>
-            <Button>Download Resume</Button>
-          </div>
-        </section>
+            I look forward to meeting future employers.
+          </Textbox>
+          <Button>Download Resume</Button>
+        </SectionWrapper>
 
         {/** Technologies Section */}
+        <SectionWrapper title="Technologies">
+          {techCards}
+        </SectionWrapper>
+
+
+        {/* * Technologies Section
         <section>
           <div className={classes.container}>
-            <SectionTitle style={classes.sectionTitle}>Technologies</SectionTitle>
-            <div className={classes.cards}>
-              <Cards cards={this.state.cards}/>
-            </div>
+
           </div>
-        </section>
+        </section> */}
+
 
 
 
