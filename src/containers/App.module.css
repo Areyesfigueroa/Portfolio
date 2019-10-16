@@ -9,6 +9,8 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  border: 1px solid rgb(80, 223, 241);
 }
 
 :root {
@@ -22,11 +24,6 @@
 
   --border-bottom-size: 2px;
 
-}
-
-html,body {
-  box-sizing: border-box;
-  border: 1px solid rgb(80, 223, 241);
 }
 
 a {
@@ -69,20 +66,29 @@ header {
 }
 
 section {
+  padding: 100px 0;
+}
+
+section:nth-child(odd) {
+  background-color: #eef3f5;
+}
+/*
+--------------------------------
+-------- CUSTOM/REUSABLE CSS ---
+--------------------------------
+*/
+
+.container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   row-gap: 50px;
   justify-items: center;
+  margin: 0 120px;
 }
-/*
---------------------------------
--------- CUSTOM/REUSABLE CSS --------
---------------------------------
-*/
 
 .sectionTitle {
-  margin: 100px 0 50px 0;
+  margin-bottom: 40px;
   font-size: 50px;
   border-bottom: 2px solid var(--accent-color);
   padding-bottom: 5px;
@@ -109,23 +115,27 @@ section {
 
 .card {
   display: grid;
+  grid-template-rows: 70px 50px auto;
   row-gap: 10px;
   background-color: #fefdfd;
   border: 3px solid #9f9f9f;
   border-radius: 8px;
-  padding: 40px;
-  height: 270px;
+  width: 250px;
+  height: 330px;
   text-align: center;
+  padding: 10px 0;
 }
 
+/*TEMPORARY - TODO: REPLACE WITH IMG*/
 .card h1 {
   font-size: 300%;
 }
 
 .card ul {
   list-style-type: none;
+  grid-template-rows: 30px 30px 30px;
+  margin: auto 0;
   display: grid;
-  row-gap: 10px;
 }
 
 /*

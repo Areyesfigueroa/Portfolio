@@ -7,8 +7,8 @@ import PageTitle from '../components/Header/PageTitle';
 import SectionTitle from '../components/SectionTitle/SectionTitle';
 import Textbox from '../components/About/Textbox';
 import Button from '../components/Button/Button';
-import Card from '../components/Cards/Card/Card';
 import Cards from '../components/Cards/Cards';
+import Card from '../components/Cards/Card/Card';
 
 //Local Assets
 import alielLogo from '../assets/aliel-logo.png';
@@ -25,7 +25,7 @@ class App extends Component {
   state = {
     cards: [
       {
-        id: '0', 
+        id: '0A', 
         title: 'Frontend',
         items: [
           {id: '0', value: 'HTML'},
@@ -35,7 +35,7 @@ class App extends Component {
         ]
       }, 
       {
-        id: '1',
+        id: '1B',
         title: 'Server',
         items: [
           {id: "0", value: 'PHP'},
@@ -43,7 +43,7 @@ class App extends Component {
         ]
       },
       {
-        id: '2',
+        id: '2C',
         title: 'Tools',
         items: [
           {id: "0", value: 'NPM'},
@@ -81,32 +81,36 @@ class App extends Component {
         </header>
 
         {/** About Section */}
-        <section className={classes.aboutSection}>
-          <SectionTitle style={classes.sectionTitle}>About</SectionTitle>
-          <Textbox style={classes.textbox}>
-            Hello my name is Aliel Reyes, I am a Front End Engineer based in 
-            the bay area.
-            <br/><br/>
+        <section>
+          <div className={classes.container}>
+            <SectionTitle style={classes.sectionTitle}>About</SectionTitle>
+            <Textbox style={classes.textbox}>
+              Hello my name is Aliel Reyes, I am a Front End Engineer based in 
+              the bay area.
+              <br/><br/>
 
-            I consider myself a tinkerer, I love to explore new technologies. I 
-            am currently working for a company creating Javascript tools and 
-            data management.
-            <br/><br/>
+              I consider myself a tinkerer, I love to explore new technologies. I 
+              am currently working for a company creating Javascript tools and 
+              data management.
+              <br/><br/>
 
-            I am focused in creating web applications as a Front End Engineer 
-            but my goal is to become a full stack developer.
-            <br/><br/>
+              I am focused in creating web applications as a Front End Engineer 
+              but my goal is to become a full stack developer.
+              <br/><br/>
 
-            I look forward to meeting future employers.
-          </Textbox>
-          <Button>Download Resume</Button>
+              I look forward to meeting future employers.
+            </Textbox>
+            <Button>Download Resume</Button>
+          </div>
         </section>
 
         {/** Technologies Section */}
         <section>
-          <SectionTitle style={classes.sectionTitle}>Technologies</SectionTitle>
-          <div className={classes.cards}>
-            <Cards cards={this.state.cards}/>
+          <div className={classes.container}>
+            <SectionTitle style={classes.sectionTitle}>Technologies</SectionTitle>
+            <div className={classes.cards}>
+              <Cards cards={this.state.cards}/>
+            </div>
           </div>
         </section>
 
