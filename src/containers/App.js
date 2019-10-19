@@ -5,13 +5,15 @@ import classes from './App.module.css';
 import Navbar from '../components/Navbar/Navbar';
 import PageTitle from '../components/PageTitle/PageTitle';
 import SectionWrapper from '../components/SectionWrapper/SectionWrapper';
-import SectionTitle from '../components/SectionTitle/SectionTitle';
 import Textbox from '../components/Textbox/Textbox';
 import Button from '../components/Button/Button';
 import Cards from '../components/Cards/Cards';
+import ProjectCard from '../components/ProjectCard/ProjectCard';
 
 //Local Assets
 import alielLogo from '../assets/aliel-logo.png';
+import cardBanner from '../assets/cardHeader.png';
+import cardBackground from '../assets/skateboard-example.png'
 
 /**
  * Task Planner:
@@ -57,6 +59,19 @@ class App extends Component {
           {id: "3", value: 'SourceTree'}
         ]
       }
+    ],
+    projectCards: [
+      {
+        id: 0,
+        title: 'Project 1',
+        description: "Create your own custom skateboard",
+        items: [
+          {id: 0, value: ''},
+          {id: 1, value: 'CSS'},
+          {id: 2, value: 'Javascript'},
+          {id: 3, value: 'React'}
+        ]
+      },
     ]
   }
 
@@ -107,18 +122,14 @@ class App extends Component {
           {techCards}
         </SectionWrapper>
 
-
-        {/* * Technologies Section
-        <section>
-          <div className={classes.container}>
-
-          </div>
-        </section> */}
-
-
-
-
-
+        {/** Projects Section */}
+        <SectionWrapper title="Projects">
+          <ProjectCard 
+          title="Skateboard Shop"
+          banner={cardBanner}
+          backgroundImg={cardBackground}
+          description={this.state.projectCards[0].description}/>
+        </SectionWrapper>
 
       </div>
     );

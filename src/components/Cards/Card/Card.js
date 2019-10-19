@@ -9,10 +9,15 @@ import classes from '../../../containers/App.module.css';
 
 const card = (props) => {
 
+    let classList = [
+        classes.cardBase, 
+        classes.techCard
+    ];
+
     const listItems = props.card.items.map((item) => <li key={item.id}>{item.value}</li>);
 
     return (
-        <div className={classes.card}>
+        <div className={classList.join(' ')}>
             {/* <img src={props.imgSrc} alt='Card Image'/> */}
             <h1>{"</>"}</h1>
             <h2>{props.card.title}</h2>
