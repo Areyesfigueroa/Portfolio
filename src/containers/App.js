@@ -63,16 +63,34 @@ class App extends Component {
     projectCards: [
       {
         id: 0,
-        title: 'Project 1',
+        title: 'Skateboard Builder',
         description: "Create your own custom skateboard",
-        items: [
-          {id: 0, value: ''},
-          {id: 1, value: 'CSS'},
-          {id: 2, value: 'Javascript'},
-          {id: 3, value: 'React'}
-        ]
-      },
+        showText: false 
+      }
     ]
+  }
+
+
+  cardTextHandler = (id, isActive) => {
+    //Get the index
+    const cardIndex = this.state.projectCards.findIndex((card) => card.id === id);
+
+    //get a copy of the state card
+    const card = {
+       ...this.state.projectCards[cardIndex]
+    }
+
+    //Change the showText status.
+    card.showText = isActive; 
+
+    //get a copy of project cards and add the new changed card to it. 
+    const changedProjectCards = [...this.state.projectCards];
+    changedProjectCards[cardIndex] = card;
+
+    //set the state
+    this.setState({
+      projectCards: changedProjectCards
+    });
   }
 
   render() {
@@ -125,10 +143,13 @@ class App extends Component {
         {/** Projects Section */}
         <SectionWrapper title="Projects">
           <ProjectCard 
-          title="Skateboard Shop"
+          title={this.state.projectCards[0].title}
+          description={this.state.projectCards[0].description}
+          showText={this.state.projectCards[0].showText} 
           banner={cardBanner}
           backgroundImg={cardBackground}
-          description={this.state.projectCards[0].description}/>
+          hover={() => this.cardTextHandler(this.state.projectCards[0].id, true)}
+          hoverExit={() => this.cardTextHandler(this.state.projectCards[0].id, false)} />
         </SectionWrapper>
 
       </div>

@@ -1,6 +1,9 @@
 import React from 'react';
 import classes from '../../containers/App.module.css';
 
+import ShadowBox from '../ShadowBox/ShadowBox';
+import ProjectCardText from '../ProjectCard/ProjectCardText'
+
 const projectCard = (props) => {
 
     let card = [
@@ -10,21 +13,22 @@ const projectCard = (props) => {
 
     return (
 
-            <div className={card.join(' ')}>
-                <div className={classes.shadowBox}></div>
-                <div className={classes.cardHeader}>
-                    <img src={props.banner} alt="Card banner"/>
-                    <h1>{props.title}</h1>
-                </div>
-                <div className={classes.projectCardBG}>
-                    <img src={props.backgroundImg} alt="Background"/>
-
-                    <div className={classes.projectCardText}>
-                        <p>{props.description}</p>
-                        <a href="www.google.com">See more</a>
-                    </div>
-                </div>
+        <div onMouseLeave={props.hoverExit} onMouseEnter={props.hover} className={card.join(' ')}>
+            <ShadowBox isActive={props.showText}/>
+            
+            <div className={classes.cardHeader}>
+                <img src={props.banner} alt="Card banner"/>
+                <h1>{props.title}</h1>
             </div>
+            
+            <div className={classes.projectCardBG}>
+                <img src={props.backgroundImg} alt="Background"/>
+                
+                <ProjectCardText 
+                isActive={props.showText}
+                description={props.description}/>
+            </div>
+        </div>
     );
 };
 

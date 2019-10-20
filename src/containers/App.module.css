@@ -219,7 +219,6 @@ section:nth-child(odd) {
   margin: 0 auto;
 }
 
-
 /*
 ----- SHADOW BOX ------
 */
@@ -231,6 +230,7 @@ section:nth-child(odd) {
   background-color: rgba(65, 65, 65, 90%);
   z-index: 999;
 }
+
 
 /*
 --------------------------------
