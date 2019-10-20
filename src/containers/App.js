@@ -66,10 +66,15 @@ class App extends Component {
         title: 'Skateboard Builder',
         description: "Create your own custom skateboard",
         showText: false 
+      },
+      {
+        id: 1,
+        title: 'Skateboard Builder 2',
+        description: "Create your own custom skateboard 2",
+        showText: false 
       }
     ]
   }
-
 
   cardTextHandler = (id, isActive) => {
     //Get the index
@@ -150,6 +155,7 @@ class App extends Component {
           backgroundImg={cardBackground}
           hover={() => this.cardTextHandler(this.state.projectCards[0].id, true)}
           hoverExit={() => this.cardTextHandler(this.state.projectCards[0].id, false)} />
+
         </SectionWrapper>
 
       </div>

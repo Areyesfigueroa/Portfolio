@@ -1,22 +1,22 @@
 import React from 'react';
 import classes from '../../containers/App.module.css';
+import {Spring} from 'react-spring/renderprops'
+
 
 const ShadowBox = (props) => {
-    
-    const style = {
-        display: 'none'
-    }
-    
-    if(props.isActive){
-        //display
-        style.display = 'block';
-    } else {
-        //hide
-        style.display = 'none';
-    }
 
     return (
-        <div style={style} className={classes.shadowBox}></div>
+
+        <Spring
+        from={{opacity: props.isActive===true ? 0:1}}
+        to={{opacity: props.isActive===true ? 1:0}}
+        config={{ duration: 300 }}
+        >
+        {props => (
+            <div style={props} className={classes.shadowBox}></div>
+        )}
+        </Spring>
+
     );
 };
 

@@ -34,6 +34,7 @@ a {
 
 a:hover {
   border-bottom: 2px solid var(--accent-color);
+  transition: border-bottom 0.2s;
 }
 
 button {
@@ -211,6 +212,8 @@ section:nth-child(odd) {
   font-size: 150%;
   color: white;
   z-index: 999;
+
+  /* animation: fadein 2s; */
 }
 
 .projectCardText a {
@@ -229,7 +232,24 @@ section:nth-child(odd) {
   height: 100%;
   background-color: rgba(65, 65, 65, 90%);
   z-index: 999;
+
+  /* animation: fadein 2s; */
 }
+
+/*
+----- ANIMATIONS ------
+*/
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
 
 
 /*
