@@ -152,6 +152,16 @@ section:nth-child(odd) {
 /*
 ----- POJECT CARDS ------
 */
+
+.projectCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
 .projectCard {
   background-color: #f3f3f3;
   padding: 0;
@@ -163,6 +173,7 @@ section:nth-child(odd) {
   grid-template-rows: 128.47px 1fr;
   align-items: center;
   justify-content: start;
+  margin: 30px;
 }
 
 .cardHeader {

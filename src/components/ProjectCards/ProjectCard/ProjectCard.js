@@ -1,8 +1,8 @@
 import React from 'react';
-import classes from '../../containers/App.module.css';
+import classes from '../../../containers/App.module.css';
 
-import ShadowBox from '../ShadowBox/ShadowBox';
-import ProjectCardText from '../ProjectCard/ProjectCardText'
+import ShadowBox from '../../ShadowBox/ShadowBox';
+import ProjectCardText from '../ProjectCardText/ProjectCardText'
 
 const projectCard = (props) => {
 

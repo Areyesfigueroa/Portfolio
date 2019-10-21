@@ -9,17 +9,12 @@ import Textbox from '../components/Textbox/Textbox';
 import Button from '../components/Button/Button';
 import Cards from '../components/Cards/Cards';
 import ProjectCard from '../components/ProjectCard/ProjectCard';
+import ProjectCards from '../components/ProjectCards/ProjectCards';
 
 //Local Assets
 import alielLogo from '../assets/aliel-logo.png';
 import cardBanner from '../assets/cardHeader.png';
 import cardBackground from '../assets/skateboard-example.png'
-
-/**
- * Task Planner:
- * About Section
- * 1. About Title
- */
 
 
 class App extends Component {
@@ -64,13 +59,25 @@ class App extends Component {
       {
         id: 0,
         title: 'Skateboard Builder',
-        description: "Create your own custom skateboard",
+        description: "Create your own custom skateboard.",
+        banner: cardBanner,
+        background: cardBackground,
         showText: false 
       },
       {
         id: 1,
-        title: 'Skateboard Builder 2',
-        description: "Create your own custom skateboard 2",
+        title: 'Performance Evaluation Portal',
+        description: "Web portal for employees to see their evaluation.",
+        banner: cardBanner,
+        background: cardBackground,
+        showText: false 
+      },
+      {
+        id: 2,
+        title: 'Anime Reviews',
+        description: 'Check out the latest anime reviews.',
+        banner: cardBanner,
+        background: cardBackground,
         showText: false 
       }
     ]
@@ -105,6 +112,16 @@ class App extends Component {
           <Cards cards={this.state.cards}/>
         </div>
     );
+
+    const projectCards = (
+      <div className={classes.projectCards}>
+        <ProjectCards 
+        projectCards={this.state.projectCards}
+        hover={this.cardTextHandler} 
+        hoverExit={this.cardTextHandler}
+        />
+      </div>
+    )
 
     return (
       <div className="App">
@@ -147,15 +164,7 @@ class App extends Component {
 
         {/** Projects Section */}
         <SectionWrapper title="Projects">
-          <ProjectCard 
-          title={this.state.projectCards[0].title}
-          description={this.state.projectCards[0].description}
-          showText={this.state.projectCards[0].showText} 
-          banner={cardBanner}
-          backgroundImg={cardBackground}
-          hover={() => this.cardTextHandler(this.state.projectCards[0].id, true)}
-          hoverExit={() => this.cardTextHandler(this.state.projectCards[0].id, false)} />
-
+          {projectCards}
         </SectionWrapper>
 
       </div>

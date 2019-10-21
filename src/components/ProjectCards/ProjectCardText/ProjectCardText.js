@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from '../../containers/App.module.css';
+import classes from '../../../containers/App.module.css';
 import { Spring } from 'react-spring/renderprops';
 
 const ProjectCardText = (props) => {
