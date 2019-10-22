@@ -13,6 +13,7 @@ const ProjectCards = (props) => {
         backgroundImg={card.background}
         hover={() => props.hover(index, true)}
         hoverExit={() => props.hoverExit(index, false)}
+        clicked={ (event) => props.clicked(event, card.id, true) }
         />
     )));
 };

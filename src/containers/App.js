@@ -8,8 +8,8 @@ import SectionWrapper from '../components/SectionWrapper/SectionWrapper';
 import Textbox from '../components/Textbox/Textbox';
 import Button from '../components/Button/Button';
 import Cards from '../components/Cards/Cards';
-import ProjectCard from '../components/ProjectCard/ProjectCard';
 import ProjectCards from '../components/ProjectCards/ProjectCards';
+import Modal from '../components/Modal/Modal';
 
 //Local Assets
 import alielLogo from '../assets/aliel-logo.png';
@@ -80,7 +80,21 @@ class App extends Component {
         background: cardBackground,
         showText: false 
       }
-    ]
+    ],
+    modal: {
+      showModal: false,
+      cardID: 0
+    }
+  }
+
+  modalHandler = (event, id, isActive) => {
+    //Set modal element information
+    this.setState({
+      modal: {
+        showModal: isActive,
+        cardID: id
+      }
+    });
   }
 
   cardTextHandler = (id, isActive) => {
@@ -119,6 +133,7 @@ class App extends Component {
         projectCards={this.state.projectCards}
         hover={this.cardTextHandler} 
         hoverExit={this.cardTextHandler}
+        clicked={this.modalHandler}
         />
       </div>
     )
@@ -165,6 +180,11 @@ class App extends Component {
         {/** Projects Section */}
         <SectionWrapper title="Projects">
           {projectCards}
+          <Modal
+          title={this.state.projectCards[this.state.modal.cardID].title}
+          showModal={this.state.modal.showModal} 
+          clicked={(event) => this.modalHandler(event, this.state.modal.cardID, false)}
+          />
         </SectionWrapper>
 
       </div>

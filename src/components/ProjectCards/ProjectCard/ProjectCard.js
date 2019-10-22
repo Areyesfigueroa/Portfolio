@@ -26,7 +26,8 @@ const projectCard = (props) => {
                 
                 <ProjectCardText 
                 isActive={props.showText}
-                description={props.description}/>
+                description={props.description}
+                clicked={props.clicked}/>
             </div>
         </div>
     );

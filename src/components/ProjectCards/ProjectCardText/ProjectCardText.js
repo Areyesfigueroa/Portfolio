@@ -3,7 +3,7 @@ import classes from '../../../containers/App.module.css';
 import { Spring } from 'react-spring/renderprops';
 
 const ProjectCardText = (props) => {
-    
+
     return (
         <Spring
         from={{opacity: props.isActive===true ? 0:1}}
@@ -12,7 +12,7 @@ const ProjectCardText = (props) => {
             {style => (
                 <div style={style} className={classes.projectCardText}>
                     <p>{props.description}</p>
-                    <a href="www.google.com">See more</a>
+                    <a onClick={props.clicked}>See more</a>
                 </div>
             )}
         </Spring>
