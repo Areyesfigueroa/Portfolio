@@ -275,6 +275,10 @@ section:nth-child(odd) {
   border-radius: 5px;
 }
 
+.activeModal {
+  display: flex;
+}
+
 /*
 --------------------------------
 -------- HEADER SECTION --------

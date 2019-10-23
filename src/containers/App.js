@@ -15,6 +15,7 @@ import Modal from '../components/Modal/Modal';
 import alielLogo from '../assets/aliel-logo.png';
 import cardBanner from '../assets/cardHeader.png';
 import cardBackground from '../assets/skateboard-example.png'
+import { NONAME } from 'dns';
 
 
 class App extends Component {
@@ -83,18 +84,51 @@ class App extends Component {
     ],
     modal: {
       showModal: false,
+      closeModal: true,
+      animDuration: 200,
       cardID: 0
     }
   }
 
-  modalHandler = (event, id, isActive) => {
-    //Set modal element information
+
+  /**
+   * 1. Create a new method for 
+   */
+
+  showModal = (id) => {
+    const animDuration = this.state.modal.animDuration;
+
     this.setState({
       modal: {
-        showModal: isActive,
+        showModal: true,
+        closeModal: false,
+        animDuration: animDuration,
         cardID: id
       }
     });
+  }
+
+  closeModal = (event) => {
+    const animDuration = this.state.modal.animDuration;
+    const id = this.state.modal.cardID;
+
+    this.setState({
+      modal: {
+        showModal: false,
+        animDuration: animDuration,
+        cardID: id
+      }
+    });
+
+    setTimeout(()=>{
+      this.setState({
+        modal: {
+          closeModal: true,
+          animDuration: animDuration,
+          cardID: id
+        }
+      })
+    }, animDuration);
   }
 
   cardTextHandler = (id, isActive) => {
@@ -133,10 +167,23 @@ class App extends Component {
         projectCards={this.state.projectCards}
         hover={this.cardTextHandler} 
         hoverExit={this.cardTextHandler}
-        clicked={this.modalHandler}
+        clicked={this.showModal}
         />
       </div>
     )
+
+    const modalHandler = () => {      
+      if(!this.state.modal.closeModal) {
+        console.log(this.state.modal.cardID);
+        return(
+          <Modal
+          title={this.state.projectCards[this.state.modal.cardID].title}
+          modal={this.state.modal} 
+          clicked={(event) => this.closeModal(event)}
+          />
+        );
+      }
+    }
 
     return (
       <div className="App">
@@ -180,11 +227,7 @@ class App extends Component {
         {/** Projects Section */}
         <SectionWrapper title="Projects">
           {projectCards}
-          <Modal
-          title={this.state.projectCards[this.state.modal.cardID].title}
-          showModal={this.state.modal.showModal} 
-          clicked={(event) => this.modalHandler(event, this.state.modal.cardID, false)}
-          />
+          {modalHandler()}
         </SectionWrapper>
 
       </div>

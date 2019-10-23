@@ -1,25 +1,24 @@
 import React from 'react';
 import classes from '../../containers/App.module.css';
 import { Spring } from 'react-spring/renderprops';
-import { NONAME } from 'dns';
 
 //TODO: Create animation for fadein modal. 
 
 const Modal = (props) => {
 
     const myStyle = {
-        display: 'none'
-    } 
+        visibility: 'hide',
+    }
 
-    if(props.showModal){
-        myStyle.display = 'flex';
+    if(props.modal.showModal) {
+        myStyle.visibility = 'visible';
     }
 
     return (
         <Spring
-        from={{ opacity: props.showModal===true ? 0:1 }}
-        to={{ opacity: props.showModal===true ? 1:0 }}
-        config={{ duration: 200 }}
+        from={{ opacity: props.modal.showModal===true ? 0:1}}
+        to={{ opacity: props.modal.showModal===true ? 1:0 }}
+        config={{ duration: props.modal.animDuration }}
         >
             {style => (
                 <div style={{...style, ...myStyle}} className={classes.modalShadow} onClick={props.clicked}>
