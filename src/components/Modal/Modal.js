@@ -21,7 +21,7 @@ const Modal = (props) => {
         config={{ duration: props.modal.animDuration }}
         >
             {style => (
-                <div style={{...style, ...myStyle}} className={classes.modalShadow} onClick={props.clicked}>
+                <div id={props.id} style={{...style, ...myStyle}} className={classes.modalShadow} onClick={props.clicked}>
                     <div className={classes.modal}>
                         {props.title}
                     </div>

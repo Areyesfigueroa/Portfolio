@@ -83,6 +83,7 @@ class App extends Component {
       }
     ],
     modal: {
+      id: 0,
       showModal: false,
       closeModal: true,
       animDuration: 200,
@@ -90,45 +91,50 @@ class App extends Component {
     }
   }
 
-
   /**
    * 1. Create a new method for 
    */
 
-  showModal = (id) => {
+  showModal = (cardID) => {
     const animDuration = this.state.modal.animDuration;
 
     this.setState({
       modal: {
+        id: 0,
         showModal: true,
         closeModal: false,
         animDuration: animDuration,
-        cardID: id
+        cardID: cardID
       }
     });
   }
 
   closeModal = (event) => {
     const animDuration = this.state.modal.animDuration;
-    const id = this.state.modal.cardID;
+    const cardID = this.state.modal.cardID;
 
-    this.setState({
-      modal: {
-        showModal: false,
-        animDuration: animDuration,
-        cardID: id
-      }
-    });
-
-    setTimeout(()=>{
+    //If I click on the modal's shadow.
+    if(parseInt(event.target.id) === this.state.modal.id) {
       this.setState({
         modal: {
-          closeModal: true,
+          id: 0,
+          showModal: false,
           animDuration: animDuration,
-          cardID: id
+          cardID: cardID
         }
-      })
-    }, animDuration);
+      });
+
+      setTimeout(()=>{
+        this.setState({
+          modal: {
+            id: 0,
+            closeModal: true,
+            animDuration: animDuration,
+            cardID: cardID
+          }
+        })
+      }, animDuration);
+    }
   }
 
   cardTextHandler = (id, isActive) => {
@@ -174,9 +180,9 @@ class App extends Component {
 
     const modalHandler = () => {      
       if(!this.state.modal.closeModal) {
-        console.log(this.state.modal.cardID);
         return(
           <Modal
+          id={this.state.modal.id}
           title={this.state.projectCards[this.state.modal.cardID].title}
           modal={this.state.modal} 
           clicked={(event) => this.closeModal(event)}
