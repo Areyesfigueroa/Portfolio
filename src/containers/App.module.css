@@ -1,79 +1,4 @@
-.App {
-  text-align: center;
-}
-/*
---------------------------------
--------- GLOBAL SECTION --------
---------------------------------
-*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /* border: 1px solid rgb(80, 223, 241); */
-}
 
-:root {
-  --accent-color: #ff8a47;
-  
-  --btn-hover-color: #e77e41;
-  --btn-text-color: #f3f3f3;
-
-  --textbox-bg-color: #f9f8f8;
-  --textbox-outline-color: #9f9f9f;
-
-  --border-bottom-size: 2px;
-
-  --shadow-color: rgba(65, 65, 65, 90%);
-}
-
-a {
-  text-decoration: none;
-  color: black;
-  padding-bottom: 5px;
-}
-
-a:hover {
-  border-bottom: 2px solid var(--accent-color);
-  transition: border-bottom 0.2s;
-}
-
-button {
-  font-size: 25px;
-  color: var(--btn-text-color);
-  background-color: var(--accent-color);
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 5px;
-}
-
-button:hover {
-  background-color: var(--btn-hover-color);
-}
-
-header {
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr;
-  grid-template-areas:
-  'navbar navbar'
-  'page-title .';
-
-  background: url(../assets/header-bg.png) no-repeat center;
-  background-size: cover;
-}
-
-section {
-  padding: 100px 0;
-}
-
-section:nth-child(odd) {
-  background-color: #eef3f5;
-}
 /*
 --------------------------------
 -------- CUSTOM/REUSABLE CSS ---
@@ -90,11 +15,9 @@ section:nth-child(odd) {
 }
 
 .sectionTitle {
-  margin-bottom: 40px;
-  font-size: 50px;
+  margin-bottom: 30px;
   border-bottom: 2px solid var(--accent-color);
   padding-bottom: 5px;
-  padding: 0 5px;  
 }
 
 .textbox {
@@ -186,11 +109,11 @@ section:nth-child(odd) {
   align-items: center;
   color: white;
   justify-content: center;
-  z-index: 999;
+  z-index: 2;
 }
 
-.cardHeader h1 {
-  z-index: 999;
+.cardHeader h4 {
+  z-index: 0;
 }
 
 .cardHeader img {
@@ -292,7 +215,7 @@ section:nth-child(odd) {
   grid-area: navbar;
   display: grid;
   grid-template-columns: .5fr 1fr;
-  font-size: 24px;
+  font-size: 100%;
 }
 
 .navbar img {
@@ -305,6 +228,7 @@ section:nth-child(odd) {
   margin: auto 0;
   list-style-type: none;
   justify-content: space-evenly;
+  font-size: 130%;
 }
 
 /*
@@ -312,18 +236,23 @@ section:nth-child(odd) {
 */
 
 .pageTitle {
+  position: absolute;
   grid-area: page-title;
   text-align: left;
+  justify-self: center;
+  align-self: center;
+  margin-bottom: 130px;
 }
 
 .pageTitle div {
   display: grid;
   grid-template-columns: 1fr;
-  font-size: 200%;
   justify-items: start;
-  margin-top: 20%;
-  margin-left: 25%;
   row-gap: 30%;
+}
+
+.pageTitle div button {
+  font-size: 150%;
 }
 
 /*

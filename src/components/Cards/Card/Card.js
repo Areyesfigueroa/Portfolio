@@ -20,7 +20,7 @@ const card = (props) => {
         <div className={classList.join(' ')}>
             {/* <img src={props.imgSrc} alt='Card Image'/> */}
             <h1>{"</>"}</h1>
-            <h2>{props.card.title}</h2>
+            <h4>{props.card.title}</h4>
             <ul>
                 {listItems}
             </ul>

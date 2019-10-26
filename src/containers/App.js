@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import classes from './App.module.css';
 
+
+
 /** Components */
 import Navbar from '../components/Navbar/Navbar';
 import PageTitle from '../components/PageTitle/PageTitle';
@@ -11,11 +13,15 @@ import Cards from '../components/Cards/Cards';
 import ProjectCards from '../components/ProjectCards/ProjectCards';
 import Modal from '../components/Modal/Modal';
 
+
+/** Bootstrap Components */
+import {Alert} from "react-bootstrap";
+
+
 //Local Assets
 import alielLogo from '../assets/aliel-logo.png';
 import cardBanner from '../assets/cardHeader.png';
 import cardBackground from '../assets/skateboard-example.png'
-import { NONAME } from 'dns';
 
 
 class App extends Component {
@@ -203,6 +209,9 @@ class App extends Component {
           btnText={this.state.headerInfo.btnText}
           />
         </header>
+        <Alert variant='warning'>
+            This is a alert—check it out!
+        </Alert>
 
         {/** About Section */}
         <SectionWrapper title="About">

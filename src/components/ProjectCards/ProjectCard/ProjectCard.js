@@ -18,7 +18,7 @@ const projectCard = (props) => {
             
             <div className={classes.cardHeader}>
                 <img src={props.banner} alt="Card banner"/>
-                <h1>{props.title}</h1>
+                <h4>{props.title}</h4>
             </div>
             
             <div className={classes.projectCardBG}>
