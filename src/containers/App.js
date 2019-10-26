@@ -1,21 +1,19 @@
 import React, { Component } from 'react';
 import classes from './App.module.css';
 
-
-
 /** Components */
 import Navbar from '../components/Navbar/Navbar';
 import PageTitle from '../components/PageTitle/PageTitle';
 import SectionWrapper from '../components/SectionWrapper/SectionWrapper';
 import Textbox from '../components/Textbox/Textbox';
-import Button from '../components/Button/Button';
 import Cards from '../components/Cards/Cards';
 import ProjectCards from '../components/ProjectCards/ProjectCards';
 import Modal from '../components/Modal/Modal';
 
 
 /** Bootstrap Components */
-import {Alert} from "react-bootstrap";
+import {Carousel} from "react-bootstrap";
+import { Button, Alert } from 'react-bootstrap';
 
 
 //Local Assets
@@ -209,9 +207,6 @@ class App extends Component {
           btnText={this.state.headerInfo.btnText}
           />
         </header>
-        <Alert variant='warning'>
-            This is a alert—check it out!
-        </Alert>
 
         {/** About Section */}
         <SectionWrapper title="About">
@@ -231,7 +226,7 @@ class App extends Component {
 
             I look forward to meeting future employers.
           </Textbox>
-          <Button>Download Resume</Button>
+          <button>Download Resume</button>
         </SectionWrapper>
 
         {/** Technologies Section */}

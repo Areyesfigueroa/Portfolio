@@ -189,8 +189,8 @@
 
 .modal {
   position: absolute;
-  width: 60vw;
-  height: 500px;
+  width: 80vw;
+  height: 600px;
   background-color: var(--textbox-bg-color);
   z-index: 999;
   transform: translate(0, -40px);
