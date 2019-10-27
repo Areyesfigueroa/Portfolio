@@ -2,6 +2,7 @@ import React from 'react';
 import classes from '../../containers/App.module.css';
 import { Spring } from 'react-spring/renderprops';
 import {Carousel} from 'react-bootstrap';
+import InfoBox from '../InfoBox/InfoBox';
 
 //TODO: Create animation for fadein modal. 
 
@@ -16,9 +17,9 @@ const Modal = (props) => {
     }
 
     const carouselStyle = {
-        position: 'absolute',
         width: "100%",
-        height: 'auto'
+        overflow: 'hidden',
+        borderBottom: '2px solid #000'
     }
 
     return (
@@ -30,44 +31,43 @@ const Modal = (props) => {
             {style => (
                 <div id={props.id} style={{...style, ...myStyle}} className={classes.modalShadow} onClick={props.clicked}>
                     <div className={classes.modal}>
-                        {props.title}
-                        <Carousel style={carouselStyle}>
-                            <Carousel.Item>
-                                <img
-                                className="d-block w-100"
-                                src={require('../../assets/carousel-imgs/stock_img1.jpg')}
-                                alt="First slide"
-                                />
-                                <Carousel.Caption>
-                                <h3>First slide label</h3>
-                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                className="d-block w-100"
-                                src={require('../../assets/carousel-imgs/stock_img2.jpg')}
-                                alt="Third slide"
-                                />
-
-                                <Carousel.Caption>
-                                <h3>Second slide label</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                className="d-block w-100"
-                                src={require('../../assets/carousel-imgs/stock_img3.jpg')}
-                                alt="Third slide"
-                                />
-
-                                <Carousel.Caption>
-                                <h3>Third slide label</h3>
-                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                        </Carousel>
+                        <div className={classes.modalContent}>
+                            <Carousel style={carouselStyle}>
+                                <Carousel.Item>
+                                    <img
+                                    className="d-block w-100"
+                                    width='100%'
+                                    height='450px'
+                                    src={require('../../assets/carousel-imgs/stock_img1.jpg')}
+                                    alt="First slide"
+                                    />
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img
+                                    className="d-block w-100"
+                                    width="100%"
+                                    height='450px'
+                                    src={require('../../assets/carousel-imgs/stock_img2.jpg')}
+                                    alt="Third slide"
+                                    />
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img
+                                    className="d-block w-100"
+                                    width='100%'
+                                    height='450px'
+                                    src={require('../../assets/carousel-imgs/stock_img3.jpg')}
+                                    alt="Third slide"
+                                    />
+                                </Carousel.Item>
+                            </Carousel>
+                            <InfoBox 
+                            title= {props.card.title}
+                            subtitle= {props.card.tech}
+                            >
+                            {props.card.longDesc}
+                            </InfoBox>                            
+                        </div>
                     </div>
                 </div>
             )}

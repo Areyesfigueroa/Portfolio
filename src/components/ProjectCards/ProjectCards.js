@@ -7,7 +7,7 @@ const ProjectCards = (props) => {
         <ProjectCard 
         key={card.id}
         title={card.title}
-        description={card.description}
+        description={card.shortDesc}
         showText={card.showText} 
         banner={card.banner}
         backgroundImg={card.background}

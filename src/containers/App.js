@@ -64,7 +64,9 @@ class App extends Component {
       {
         id: 0,
         title: 'Skateboard Builder',
-        description: "Create your own custom skateboard.",
+        shortDesc: "Create your own custom skateboard",
+        longDesc: "Custom skateboard is a crowd-funding, media sharing website, that has you donating actions instead of money out of your pocket. Single page App built with Node.js on Sails and Angular 2.0. Features social media sharing and large scale crowd-funding.",
+        // tech: 'Built using HTML, CSS, JavaScript and React',
         banner: cardBanner,
         background: cardBackground,
         showText: false 
@@ -72,7 +74,9 @@ class App extends Component {
       {
         id: 1,
         title: 'Performance Evaluation Portal',
-        description: "Web portal for employees to see their evaluation.",
+        shortDesc: "Employee Web Portal",
+        longDesc: "Employee Web Portal is a crowd-funding, media sharing website, that has you donating actions instead of money out of your pocket. Single page App built with Node.js on Sails and Angular 2.0. Features social media sharing and large scale crowd-funding.",
+        // tech: 'Built using HTML, CSS, JavaScript, PHP and MySQL',
         banner: cardBanner,
         background: cardBackground,
         showText: false 
@@ -80,7 +84,9 @@ class App extends Component {
       {
         id: 2,
         title: 'Anime Reviews',
-        description: 'Check out the latest anime reviews.',
+        shortDesc: 'Latest anime reviews',
+        longDesc: 'Anime Review, media sharing website, that has you donating actions instead of money out of your pocket. Single page App built with Node.js on Sails and Angular 2.0. Features social media sharing and large scale crowd-funding.',
+        // tech: 'Built using HTML, CSS, JavaScript and React',
         banner: cardBanner,
         background: cardBackground,
         showText: false 
@@ -187,7 +193,7 @@ class App extends Component {
         return(
           <Modal
           id={this.state.modal.id}
-          title={this.state.projectCards[this.state.modal.cardID].title}
+          card={this.state.projectCards[this.state.modal.cardID]}
           modal={this.state.modal} 
           clicked={(event) => this.closeModal(event)}
           />

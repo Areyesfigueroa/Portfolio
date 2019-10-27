@@ -17,7 +17,7 @@
 --btn-text-color: #f3f3f3;
 
 --textbox-bg-color: #f9f8f8;
---textbox-outline-color: #9f9f9f;
+--textbox-outline-color: #858484;
 
 --border-bottom-size: 2px;
 
@@ -31,7 +31,7 @@ html, body {
 }
 
   /*----HEADERS-----*/
-  h1,h2,h3,h4 {
+  h1,h2,h3,h4,h5,h6 {
       margin: 0;
       padding: 0;
   }
@@ -103,5 +103,11 @@ html, body {
   
   button:hover {
     background-color: var(--btn-hover-color);
+  }
+
+  hr {
+    background-color: #000;
+    padding: 1px;
+    width: 100%;
   }
 
