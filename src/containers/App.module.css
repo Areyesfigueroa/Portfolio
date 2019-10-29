@@ -222,9 +222,37 @@
   background-color: #858484;
 }
 
-.activeModal {
-  display: flex;
+.closeBtn {
+  position: absolute;
+  font-size: 170%;
+  color: var(--textbox-outline-color);
+  cursor: pointer;
+  top: 3px;
+  right: 7px;
+  z-index: 999;
+  border: 0;
 }
+
+a.closeBtn:not([href]):not([tabindex]):hover {
+  border: 0;
+  color: var(--accent-color);
+  transition: color .2s;
+}
+
+.modalBtns {
+  position: absolute;
+  bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.modalBtn {
+  font-size: 100%;
+  padding: 10px;
+}
+
 
 /*
 --------------------------------
