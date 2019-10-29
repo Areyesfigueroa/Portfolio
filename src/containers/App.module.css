@@ -1,7 +1,7 @@
 
 /*
 --------------------------------
--------- CUSTOM/REUSABLE CSS ---
+-------- LAYOUT ---
 --------------------------------
 */
 
@@ -20,6 +20,72 @@
   padding-bottom: 5px;
 }
 
+/*
+--------------------------------
+-------- HEADER SECTION --------
+--------------------------------
+*/
+
+/*
+----- NAVBAR------
+*/
+.navbar {
+  grid-area: navbar;
+  display: grid;
+  grid-template-columns: .5fr 1fr;
+  font-size: 100%;
+}
+
+.stickyNavbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background-color: white;
+}
+
+.navbar img {
+  margin-left: 20px;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  margin: auto 0;
+  list-style-type: none;
+  justify-content: space-evenly;
+  font-size: 130%;
+}
+
+/*
+----- HEADER TITLE -----
+*/
+
+.pageTitle {
+  position: absolute;
+  grid-area: page-title;
+  text-align: left;
+  justify-self: center;
+  align-self: center;
+  margin-bottom: 130px;
+}
+
+.pageTitle div {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: start;
+  row-gap: 30%;
+}
+
+.pageTitle div button {
+  font-size: 150%;
+}
+
+/*
+--------------------------------
+-------- ABOUT SECTION ---
+--------------------------------
+*/
+
 .textbox {
   background-color: var(--textbox-bg-color);
   border: 2px solid var(--textbox-outline-color);
@@ -29,6 +95,12 @@
   max-width: 50%;
   text-align: center;
 }
+
+/*
+--------------------------------
+-------- TECHNOLOGY SECTION ---
+--------------------------------
+*/
 
 /*
 ----- CARD BASE ------
@@ -75,7 +147,9 @@
 }
 
 /*
------ POJECT CARDS ------
+--------------------------------
+-------- POJECTS SECTION ---
+--------------------------------
 */
 
 .projectCards {
@@ -159,21 +233,18 @@
   cursor: pointer;
 }
 
-/*
------ SHADOW BOX ------
-*/
-
 .shadowBox {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: var(--shadow-color);
   z-index: 1;
-
 }
 
 /*
------ Modal ------
+--------------------------------
+-------- MODAL SECTION ---
+--------------------------------
 */
 
 .modalShadow {
@@ -253,92 +324,6 @@ a.closeBtn:not([href]):not([tabindex]):hover {
   font-size: 100%;
   padding: 10px;
 }
-
-
-/*
---------------------------------
--------- HEADER SECTION --------
---------------------------------
-*/
-
-/*
------ NAVBAR------
-*/
-.navbar {
-  grid-area: navbar;
-  display: grid;
-  grid-template-columns: .5fr 1fr;
-  font-size: 100%;
-}
-
-.navbar img {
-  margin-left: 20px;
-}
-
-.navbar ul {
-  display: flex;
-  flex-direction: row;
-  margin: auto 0;
-  list-style-type: none;
-  justify-content: space-evenly;
-  font-size: 130%;
-}
-
-/*
------ HEADER TITLE -----
-*/
-
-.pageTitle {
-  position: absolute;
-  grid-area: page-title;
-  text-align: left;
-  justify-self: center;
-  align-self: center;
-  margin-bottom: 130px;
-}
-
-.pageTitle div {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: start;
-  row-gap: 30%;
-}
-
-.pageTitle div button {
-  font-size: 150%;
-}
-
-/*
---------------------------------
--------- ABOUT SECTION --------
---------------------------------
-*/
-
-.carousel-indicators li {
-  background-color: var(--accent-color);
-}
-
-a.carousel-control-next,
-a.carousel-control-prev {
-  background-color: #5c5959a8;
-  height: 15%;
-  top: 382.5px;
-  border: 0;
-}
-
-a.carousel-control-next:hover,
-a.carousel-control-prev:hover  {
-  background-color: #4d4b4be0;
-  border: 0;
-}
-
-/*
--------------------------------------
---------  TECHNOLOGY SECTION --------
--------------------------------------
-*/
-
-
 
 
 

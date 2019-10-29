@@ -15,7 +15,6 @@ import Modal from '../components/Modal/Modal';
 import {Carousel} from "react-bootstrap";
 import { Button, Alert } from 'react-bootstrap';
 
-
 //Local Assets
 import alielLogo from '../assets/aliel-logo.png';
 import cardBanner from '../assets/cardHeader.png';
@@ -169,6 +168,10 @@ class App extends Component {
     });
   }
 
+  navbarHandler = () => {
+    console.log('Hello');
+  }
+
   render() {
     
     const techCards = (
@@ -206,7 +209,10 @@ class App extends Component {
 
         {/** Header Section */}
         <header>
-          <Navbar img={alielLogo}/>
+          <Navbar 
+          img={alielLogo}
+          scrolled={this.navbarHandler}
+          />
           <PageTitle 
           title={this.state.headerInfo.title}
           subtitle={this.state.headerInfo.subtitle}
