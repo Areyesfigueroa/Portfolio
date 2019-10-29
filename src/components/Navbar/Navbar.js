@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from '../../containers/App.module.css';
+import { goToTop } from 'react-scrollable-anchor';
 
 const navbar = (props) => {
 
@@ -11,12 +12,12 @@ const navbar = (props) => {
 
     return (
         <div className={classList.join(' ')}>
-            <img src={props.img} alt='Aliel Logo'/>
+            <a className={classes.homeBtn} href='#header'><img src={props.img} alt='Aliel Logo'/></a>
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Technologies</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#aboutSection">About</a></li>
+                <li><a href="#technologiesSection">Technologies</a></li>
+                <li><a href="#projectsSection">Projects</a></li>
+                <li><a href="#contactSection">Contact</a></li>
             </ul>
         </div>
     );

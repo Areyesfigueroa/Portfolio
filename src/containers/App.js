@@ -12,6 +12,8 @@ import Modal from '../components/Modal/Modal';
 
 /** Waypoint Component */
 import { Waypoint } from 'react-waypoint';
+import ScrollableAnchor from 'react-scrollable-anchor'
+
 
 //Local Assets
 import alielLogo from '../assets/aliel-logo.png';
@@ -219,23 +221,25 @@ class App extends Component {
       <div className="App">
 
         {/** Header Section */}
-        <Waypoint topOffset={'788px'} onEnter={this.hideStickyNav} onLeave={this.showStickyNav}>
-          <header>
-            <Navbar 
-            img={alielLogo}
-            stickyNav={this.state.navbar.stickyNav}
-            scrolled={this.navbarHandler}
-            />
-            <PageTitle 
-            title={this.state.headerInfo.title}
-            subtitle={this.state.headerInfo.subtitle}
-            btnText={this.state.headerInfo.btnText}
-            />
-          </header>
-        </Waypoint>
+        <ScrollableAnchor id={'header'}>
+          <Waypoint topOffset={'788px'} onEnter={this.hideStickyNav} onLeave={this.showStickyNav}>
+              <header>
+                <Navbar 
+                img={alielLogo}
+                stickyNav={this.state.navbar.stickyNav}
+                scrolled={this.navbarHandler}
+                />
+                <PageTitle 
+                title={this.state.headerInfo.title}
+                subtitle={this.state.headerInfo.subtitle}
+                btnText={this.state.headerInfo.btnText}
+                />
+              </header>
+          </Waypoint>
+        </ScrollableAnchor>
 
         {/** About Section */}
-        <SectionWrapper title="About">
+        <SectionWrapper title="About" scrollID={'aboutSection'}>
           <Textbox>
             Hello my name is Aliel Reyes, I am a Front End Engineer based in 
             the bay area.
@@ -256,12 +260,12 @@ class App extends Component {
         </SectionWrapper>
 
         {/** Technologies Section */}
-        <SectionWrapper title="Technologies">
+        <SectionWrapper title="Technologies" scrollID={'technologiesSection'}>
           {techCards}
         </SectionWrapper>
 
         {/** Projects Section */}
-        <SectionWrapper title="Projects">
+        <SectionWrapper title="Projects" scrollID={'projectsSection'}>
           {projectCards}
           {modalHandler()}
         </SectionWrapper>

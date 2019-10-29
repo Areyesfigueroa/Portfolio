@@ -29,6 +29,19 @@
 /*
 ----- NAVBAR------
 */
+a.homeBtn {
+  border: none;
+  background-color: green;
+  width: 0;
+  cursor: pointer;
+}
+
+a.homeBtn:hover {
+  border: none;
+  background-color: green;
+  cursor: pointer;
+}
+
 .navbar {
   grid-area: navbar;
   display: grid;
