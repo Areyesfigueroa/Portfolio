@@ -59,6 +59,7 @@
   grid-template-rows: 70px 50px auto;
   row-gap: 10px;
   background-color: #fefdfd;
+  margin: 30px;
 }
 
 /*TEMPORARY - TODO: REPLACE WITH IMG*/
@@ -312,6 +313,24 @@ a.closeBtn:not([href]):not([tabindex]):hover {
 -------- ABOUT SECTION --------
 --------------------------------
 */
+
+.carousel-indicators li {
+  background-color: var(--accent-color);
+}
+
+a.carousel-control-next,
+a.carousel-control-prev {
+  background-color: #5c5959a8;
+  height: 15%;
+  top: 382.5px;
+  border: 0;
+}
+
+a.carousel-control-next:hover,
+a.carousel-control-prev:hover  {
+  background-color: #4d4b4be0;
+  border: 0;
+}
 
 /*
 -------------------------------------
