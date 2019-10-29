@@ -10,10 +10,8 @@ import Cards from '../components/Cards/Cards';
 import ProjectCards from '../components/ProjectCards/ProjectCards';
 import Modal from '../components/Modal/Modal';
 
-
-/** Bootstrap Components */
-import {Carousel} from "react-bootstrap";
-import { Button, Alert } from 'react-bootstrap';
+/** Waypoint Component */
+import { Waypoint } from 'react-waypoint';
 
 //Local Assets
 import alielLogo from '../assets/aliel-logo.png';
@@ -28,6 +26,9 @@ class App extends Component {
       title: "Aliel Reyes",
       subtitle: "Front End Engineer", 
       btnText: "See Portfolio"
+    },
+    navbar: {
+      stickyNav: false
     },
     cards: [
       {
@@ -100,10 +101,6 @@ class App extends Component {
     }
   }
 
-  /**
-   * 1. Create a new method for 
-   */
-
   showModal = (cardID) => {
     const animDuration = this.state.modal.animDuration;
 
@@ -168,8 +165,22 @@ class App extends Component {
     });
   }
 
-  navbarHandler = () => {
-    console.log('Hello');
+  showStickyNav = () => {
+    console.log('Show Sticky Navbar: ' + true);
+    this.setState({
+      navbar: {
+        stickyNav: true
+      }
+    });
+  }
+
+  hideStickyNav = () => {    
+    console.log('Hide Sticky Navbar: ' + false);
+    this.setState({
+      navbar: {
+        stickyNav: false
+      }
+    });
   }
 
   render() {
@@ -208,17 +219,20 @@ class App extends Component {
       <div className="App">
 
         {/** Header Section */}
-        <header>
-          <Navbar 
-          img={alielLogo}
-          scrolled={this.navbarHandler}
-          />
-          <PageTitle 
-          title={this.state.headerInfo.title}
-          subtitle={this.state.headerInfo.subtitle}
-          btnText={this.state.headerInfo.btnText}
-          />
-        </header>
+        <Waypoint topOffset={'788px'} onEnter={this.hideStickyNav} onLeave={this.showStickyNav}>
+          <header>
+            <Navbar 
+            img={alielLogo}
+            stickyNav={this.state.navbar.stickyNav}
+            scrolled={this.navbarHandler}
+            />
+            <PageTitle 
+            title={this.state.headerInfo.title}
+            subtitle={this.state.headerInfo.subtitle}
+            btnText={this.state.headerInfo.btnText}
+            />
+          </header>
+        </Waypoint>
 
         {/** About Section */}
         <SectionWrapper title="About">
