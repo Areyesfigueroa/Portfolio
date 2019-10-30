@@ -9,6 +9,7 @@ import Textbox from '../components/Textbox/Textbox';
 import Cards from '../components/Cards/Cards';
 import ProjectCards from '../components/ProjectCards/ProjectCards';
 import Modal from '../components/Modal/Modal';
+import ContactForm from '../components/ContactForm/ContactForm';
 
 /** Waypoint Component */
 import { Waypoint } from 'react-waypoint';
@@ -270,6 +271,10 @@ class App extends Component {
           {modalHandler()}
         </SectionWrapper>
 
+        {/** Contact Form Section */}
+        <SectionWrapper title='Contact' scrollID={'contactSection'}>
+          <ContactForm />
+        </SectionWrapper>
       </div>
     );
   }

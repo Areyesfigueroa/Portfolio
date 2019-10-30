@@ -111,6 +111,31 @@ hr {
   width: 100%;
 }
 
+input {
+  padding: 10px 15px;
+}
+
+textarea {
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  background-color: white;
+  resize: auto;
+  cursor: text;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  margin: 0em;
+  width: 500px;
+  height: 150px;
+  min-width: 300px;
+  min-height: 100px;
+  padding: 10px 15px;
+}
+
 /*
 --------------------------------
 -------- BOOTSTRAP SECTION --------

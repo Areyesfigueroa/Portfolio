@@ -7,7 +7,7 @@ const pageTitle = (props) => {
             <div>
                 <h1>{props.title}</h1>
                 <h3>{props.subtitle}</h3>
-                <button>{props.btnText}</button>
+                <a className={classes.button} href={'#projectsSection'}>{props.btnText}</a>
             </div>
         </div>
     );

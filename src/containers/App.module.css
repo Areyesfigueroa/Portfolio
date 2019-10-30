@@ -72,6 +72,24 @@ a.homeBtn:hover {
   font-size: 130%;
 }
 
+a.button,
+.button {
+  font-size: 120%;
+  color: var(--btn-text-color);
+  background-color: var(--accent-color);
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+a.button:hover,
+.button:hover {
+  background-color: var(--btn-hover-color);
+  border: none;
+}
+
 /*
 ----- HEADER TITLE -----
 */
@@ -341,5 +359,23 @@ a.closeBtn:not([href]):not([tabindex]):hover {
   padding: 10px;
 }
 
+/*
+--------------------------------
+-------- CONTACT SECTION ---
+--------------------------------
+*/
 
+.contactForm {
+  display: flex;
+  flex-direction: column;
+}
 
+.contactForm input, 
+.contactForm textarea {
+  outline: none;
+  margin-bottom: 3px;
+}
+
+.contactForm input[type=submit] {
+  margin-left: auto;
+}
