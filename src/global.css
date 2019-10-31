@@ -136,6 +136,16 @@ textarea {
   padding: 10px 15px;
 }
 
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: white;
+  padding: 30px;
+  width: 100%;
+  background-color: rgb(56, 56, 56);
+}
+
 /*
 --------------------------------
 -------- BOOTSTRAP SECTION --------

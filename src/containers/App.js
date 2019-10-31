@@ -10,16 +10,17 @@ import Cards from '../components/Cards/Cards';
 import ProjectCards from '../components/ProjectCards/ProjectCards';
 import Modal from '../components/Modal/Modal';
 import ContactForm from '../components/ContactForm/ContactForm';
+import Footer from '../components/Footer/Footer';
 
 /** Waypoint Component */
 import { Waypoint } from 'react-waypoint';
-import ScrollableAnchor from 'react-scrollable-anchor'
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 
 //Local Assets
 import alielLogo from '../assets/aliel-logo.png';
 import cardBanner from '../assets/cardHeader.png';
-import cardBackground from '../assets/skateboard-example.png'
+import cardBackground from '../assets/skateboard-example.png';
 
 
 class App extends Component {
@@ -275,6 +276,8 @@ class App extends Component {
         <SectionWrapper title='Contact' scrollID={'contactSection'}>
           <ContactForm />
         </SectionWrapper>
+
+        <Footer />
       </div>
     );
   }

@@ -379,3 +379,14 @@ a.closeBtn:not([href]):not([tabindex]):hover {
 .contactForm input[type=submit] {
   margin-left: auto;
 }
+
+/*
+--------------------------------
+-------- FOOTER SECTION ---
+--------------------------------
+*/
+
+.socialLink {
+  width: 50px;
+  height: 50px;
+}
