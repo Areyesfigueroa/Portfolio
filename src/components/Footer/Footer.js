@@ -4,15 +4,18 @@ import classes from '../../containers/App.module.css';
 const Footer = (props) => {
     return (
         <footer>
-            <a href={'#'} 
+            <a href={'mailto:alielreyes@gmail.com'} 
+            target={'_blank'}
             className={classes.socialLink}>
                 <ion-icon name="mail"></ion-icon>
             </a>
-            <a href={'#'} 
+            <a href={'https://github.com/Areyesfigueroa'} 
+            target={'_blank'}
             className={classes.socialLink}>
                 <ion-icon name="logo-github"></ion-icon>
             </a>
-            <a href={'#'}
+            <a href={'https://www.linkedin.com/in/aliel-reyes-7a216ab5/'}
+            target={'_blank'}
             className={classes.socialLink}>
                 <ion-icon name="logo-linkedin"></ion-icon>
             </a>
