@@ -22,13 +22,18 @@ import alielLogo from '../assets/aliel-logo.png';
 import cardBanner from '../assets/cardHeader.png';
 import cardBackground from '../assets/skateboard-example.png';
 
+/**
+ * Queries: 
+ * 1. Test if global changes affect the module classes. 
+ * 2. If not check if within the app.module classes we can do queries
+ */
 
 class App extends Component {
 
   state = {
     headerInfo: {
       title: "Aliel Reyes",
-      subtitle: "Front End Engineer", 
+      subtitle: "Software Developer", 
       btnText: "See Portfolio"
     },
     navbar: {

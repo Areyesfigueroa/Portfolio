@@ -7,8 +7,10 @@
     "react": "^16.10.2",
     "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "^16.10.2",
+    "react-media": "^1.10.0",
     "react-scripts": "3.2.0",
     "react-scrollable-anchor": "^0.6.1",
+    "react-slide-toggle": "^0.3.3",
     "react-spring": "^8.0.27",
     "react-waypoint": "^9.0.2"
   },

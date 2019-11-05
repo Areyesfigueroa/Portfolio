@@ -51,6 +51,19 @@ a.homeBtn:hover {
   transition: background-color .3s;
 }
 
+.navbarContent {
+  margin: auto 0;
+}
+
+.navbarLinks {
+  padding-bottom: 10px;
+}
+
+.mobileNavbarBtn {
+  display: none;
+}
+
+
 .stickyNavbar {
   position: fixed;
   width: 100%;
@@ -401,4 +414,54 @@ a.closeBtn:not([href]):not([tabindex]):hover {
 .socialLink ion-icon {
   width: 100%;
   height: 100%;
+}
+
+/*
+--------------------------------
+-------- MEDIA QUERIES ---
+--------------------------------
+*/
+
+@media (max-width: 600px) {
+
+  /*
+  --------------------------------
+  -------- NAVBAR QUERIES ---
+  --------------------------------
+  */
+
+  a.mobileNavbarBtn {
+    display: flex;
+    margin-left: auto;
+    margin-right: 20px;
+    border: 0;
+    padding: 0;
+  }
+
+  a.mobileNavbarBtn img {
+    width: auto;
+    height: 50px;
+    margin: auto 0;
+    padding: 0;
+  }
+
+  .navbar {
+    background-color: white;
+  }
+  
+  .navbar img {
+    margin-left: 20px;
+    height: 60px;
+  }
+  
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 20px 0 auto;
+    list-style-type: none;
+    justify-content: end;
+    font-size: 130%;
+  }
+  
 }

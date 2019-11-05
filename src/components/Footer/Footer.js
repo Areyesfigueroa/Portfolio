@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from '../../containers/App.module.css';
 
-const Footer = (props) => {
+const Footer = () => {
     return (
         <footer>
             <a href={'mailto:alielreyes@gmail.com'} 
