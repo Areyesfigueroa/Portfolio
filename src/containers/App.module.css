@@ -94,11 +94,8 @@ a.button:hover,
 
 .pageTitle {
   position: absolute;
-  grid-area: page-title;
   text-align: left;
-  justify-self: center;
-  align-self: center;
-  margin-bottom: 130px;
+  margin: 150px 0 130px 7%;
 }
 
 .pageTitle div {
@@ -106,10 +103,6 @@ a.button:hover,
   grid-template-columns: 1fr;
   justify-items: start;
   row-gap: 30%;
-}
-
-.pageTitle div button {
-  font-size: 150%;
 }
 
 /*
@@ -407,6 +400,7 @@ a.closeBtn:not([href]):not([tabindex]):hover {
 --------------------------------
 */
 
+/*Medium Size*/
 @media (max-width: 767px) {
 
   /*
@@ -416,6 +410,19 @@ a.closeBtn:not([href]):not([tabindex]):hover {
   */
   .navbar {
     background-color: white;
+  }
+
+  .pageTitle {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    left: 0;
+    right: 0;
+  }
+
+  .pageTitle div {
+    justify-items: center;
   }
   
 }
