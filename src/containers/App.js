@@ -22,12 +22,6 @@ import alielLogo from '../assets/aliel-logo.png';
 import cardBanner from '../assets/cardHeader.png';
 import cardBackground from '../assets/skateboard-example.png';
 
-/**
- * Queries: 
- * 1. Test if global changes affect the module classes. 
- * 2. If not check if within the app.module classes we can do queries
- */
-
 class App extends Component {
 
   state = {
@@ -229,20 +223,23 @@ class App extends Component {
 
         {/** Header Section */}
         <ScrollableAnchor id={'header'}>
-          <Waypoint topOffset={'788px'} onEnter={this.hideStickyNav} onLeave={this.showStickyNav}>
               <header>
-                <Navbar 
-                img={alielLogo}
-                stickyNav={this.state.navbar.stickyNav}
-                scrolled={this.navbarHandler}
-                />
+                <Waypoint onEnter={this.hideStickyNav} onLeave={this.showStickyNav}>
+                  <div>
+                    <Navbar 
+                    img={alielLogo}
+                    stickyNav={this.state.navbar.stickyNav}
+                    scrolled={this.navbarHandler}
+                    />
+                  </div>
+                </Waypoint>
                 <PageTitle 
                 title={this.state.headerInfo.title}
                 subtitle={this.state.headerInfo.subtitle}
                 btnText={this.state.headerInfo.btnText}
                 />
               </header>
-          </Waypoint>
+
         </ScrollableAnchor>
 
         {/** About Section */}

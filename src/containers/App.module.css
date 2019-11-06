@@ -31,38 +31,34 @@
 */
 a.homeBtn {
   border: none;
-  background-color: green;
-  width: 0;
   cursor: pointer;
 }
 
 a.homeBtn:hover {
   border: none;
-  background-color: green;
   cursor: pointer;
 }
 
 .navbar {
-  grid-area: navbar;
-  display: grid;
-  grid-template-columns: .5fr 1fr;
+  width: 100%;
   font-size: 100%;
   background-color: none;
   transition: background-color .3s;
 }
 
-.navbarContent {
-  margin: auto 0;
+.navlinks {
+  display: flex;
+  width: 100%;
+  list-style-type: none;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  font-size: 130%;
 }
 
-.navbarLinks {
-  padding-bottom: 10px;
+button.navbarMobileBtn:hover {
+  background: none;
 }
-
-.mobileNavbarBtn {
-  display: none;
-}
-
 
 .stickyNavbar {
   position: fixed;
@@ -70,19 +66,6 @@ a.homeBtn:hover {
   z-index: 999; 
   background-color: white;
   transition: background-color .3s;
-}
-
-.navbar img {
-  margin-left: 20px;
-}
-
-.navbar ul {
-  display: flex;
-  flex-direction: row;
-  margin: auto 0;
-  list-style-type: none;
-  justify-content: space-evenly;
-  font-size: 130%;
 }
 
 a.button,
@@ -102,6 +85,8 @@ a.button:hover,
   background-color: var(--btn-hover-color);
   border: none;
 }
+
+
 
 /*
 ----- HEADER TITLE -----
@@ -422,46 +407,15 @@ a.closeBtn:not([href]):not([tabindex]):hover {
 --------------------------------
 */
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
 
   /*
   --------------------------------
   -------- NAVBAR QUERIES ---
   --------------------------------
   */
-
-  a.mobileNavbarBtn {
-    display: flex;
-    margin-left: auto;
-    margin-right: 20px;
-    border: 0;
-    padding: 0;
-  }
-
-  a.mobileNavbarBtn img {
-    width: auto;
-    height: 50px;
-    margin: auto 0;
-    padding: 0;
-  }
-
   .navbar {
     background-color: white;
-  }
-  
-  .navbar img {
-    margin-left: 20px;
-    height: 60px;
-  }
-  
-  .navbar ul {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: 0 20px 0 auto;
-    list-style-type: none;
-    justify-content: end;
-    font-size: 130%;
   }
   
 }

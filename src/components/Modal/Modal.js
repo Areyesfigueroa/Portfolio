@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from '../../containers/App.module.css';
 import { Spring } from 'react-spring/renderprops';
-import {Carousel, Button} from 'react-bootstrap';
+import {Carousel} from 'react-bootstrap';
 import InfoBox from '../InfoBox/InfoBox';
 
 //TODO: Create animation for fadein modal. 
