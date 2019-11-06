@@ -77,7 +77,8 @@ a {
   padding-bottom: 5px;
 }
 
-a:hover {
+a:hover,
+a.nav-link.active {
   color: black;
   text-decoration: none;
   border-bottom: 2px solid var(--accent-color);
@@ -167,4 +168,18 @@ a.carousel-control-next:hover,
 a.carousel-control-prev:hover  {
   background-color: #4d4b4be0;
   border: 0;
+}
+
+
+/*Medium Size*/
+@media (max-width: 767px) {
+
+  a.nav-link.active,
+  a.nav-link:hover {
+    color: var(--accent-color) !important;
+    text-decoration: none;
+    border-bottom: none;
+    transition: color 0.2s;
+  }
+
 }
