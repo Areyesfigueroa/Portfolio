@@ -16,6 +16,8 @@ const Modal = (props) => {
         myStyle.visibility = 'visible';
     }
 
+    const carouselImgClassList=['d-block', 'w-100', classes.carouselImg];
+
     const carouselStyle = {
         width: "100%",
         overflow: 'hidden',
@@ -36,27 +38,21 @@ const Modal = (props) => {
                             <Carousel style={carouselStyle}>
                                 <Carousel.Item>
                                     <img
-                                    className="d-block w-100"
-                                    width='100%'
-                                    height='450px'
+                                    className={carouselImgClassList.join(' ')}
                                     src={require('../../assets/carousel-imgs/stock_img1.jpg')}
                                     alt="First slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
-                                    className="d-block w-100"
-                                    width="100%"
-                                    height='450px'
+                                    className={carouselImgClassList.join(' ')}
                                     src={require('../../assets/carousel-imgs/stock_img2.jpg')}
                                     alt="Third slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
-                                    className="d-block w-100"
-                                    width='100%'
-                                    height='450px'
+                                    className={carouselImgClassList.join(' ')}
                                     src={require('../../assets/carousel-imgs/stock_img3.jpg')}
                                     alt="Third slide"
                                     />

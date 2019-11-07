@@ -170,6 +170,11 @@ a.carousel-control-prev:hover  {
   border: 0;
 }
 
+/*
+--------------------------------
+-------- MEDIA QUERIES ---
+--------------------------------
+*/
 
 /*Medium Size*/
 @media (max-width: 767px) {
@@ -180,6 +185,15 @@ a.carousel-control-prev:hover  {
     text-decoration: none;
     border-bottom: none;
     transition: color 0.2s;
+  }
+
+
+  a.carousel-control-next,
+  a.carousel-control-prev {
+    background-color: #5c5959a8;
+    height: 15%;
+    top: 255px;
+    border: 0;
   }
 
 }
