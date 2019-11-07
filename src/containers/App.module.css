@@ -11,7 +11,7 @@
   grid-template-rows: auto;
   row-gap: 50px;
   justify-items: center;
-  margin: 0 120px;
+  margin: 0 10%;
 }
 
 .sectionTitle {
@@ -118,7 +118,8 @@ a.button:hover,
   line-height: 1.5em;
   border-radius: 5px;
   padding: 20px;
-  max-width: 50%;
+  max-width: 60%;
+  min-width: 400px;
   text-align: center;
 }
 
@@ -359,6 +360,7 @@ a.closeBtn:not([href]):not([tabindex]):hover {
 
 .contactForm {
   display: flex;
+  width: 100%;
   flex-direction: column;
 }
 
@@ -366,6 +368,7 @@ a.closeBtn:not([href]):not([tabindex]):hover {
 .contactForm textarea {
   outline: none;
   margin-bottom: 3px;
+  resize: vertical;
 }
 
 .contactForm input[type=submit] {
@@ -424,6 +427,10 @@ a.closeBtn:not([href]):not([tabindex]):hover {
 
   .pageTitle div {
     justify-items: center;
+  }
+
+  .contactForm textarea {
+    width: 50%;
   }
   
 }
