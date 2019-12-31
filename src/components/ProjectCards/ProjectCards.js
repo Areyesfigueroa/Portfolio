@@ -1,5 +1,4 @@
 import React from 'react';
-import classes from '../../containers/App.module.css';
 import ProjectCard from './ProjectCard/ProjectCard';
 
 const ProjectCards = (props) => {

@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 import classes from './App.module.css';
 
+//TODO: 
+/**
+ * TODO:
+ * 
+ * 1. Change project description for card index 1
+ * 2. 
+ */
+
 /** Components */
 import Navbar from '../components/Navbar/Navbar';
 import PageTitle from '../components/PageTitle/PageTitle';
@@ -16,11 +24,13 @@ import Footer from '../components/Footer/Footer';
 import { Waypoint } from 'react-waypoint';
 import ScrollableAnchor from 'react-scrollable-anchor';
 
-
 //Local Assets
 import alielLogo from '../assets/aliel-logo.png';
 import cardBanner from '../assets/cardHeader.png';
 import cardBackground from '../assets/skateboard-example.png';
+
+//Carousel Assets
+import {performanceEvalImgs, carouselImgs} from '../assets/_images';
 
 class App extends Component {
 
@@ -72,7 +82,8 @@ class App extends Component {
         // tech: 'Built using HTML, CSS, JavaScript and React',
         banner: cardBanner,
         background: cardBackground,
-        showText: false 
+        showText: false,
+        images: carouselImgs 
       },
       {
         id: 1,
@@ -81,8 +92,9 @@ class App extends Component {
         longDesc: "Employee Web Portal is a crowd-funding, media sharing website, that has you donating actions instead of money out of your pocket. Single page App built with Node.js on Sails and Angular 2.0. Features social media sharing and large scale crowd-funding.",
         // tech: 'Built using HTML, CSS, JavaScript, PHP and MySQL',
         banner: cardBanner,
-        background: cardBackground,
-        showText: false 
+        background: performanceEvalImgs.bg,
+        showText: false,
+        images: performanceEvalImgs 
       },
       {
         id: 2,
@@ -92,7 +104,8 @@ class App extends Component {
         // tech: 'Built using HTML, CSS, JavaScript and React',
         banner: cardBanner,
         background: cardBackground,
-        showText: false 
+        showText: false,
+        images: carouselImgs 
       }
     ],
     modal: {
