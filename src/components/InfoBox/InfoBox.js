@@ -7,7 +7,7 @@ const InfoBox = (props) => {
             <h4>{props.title}</h4>
             <h5>{props.subtitle}</h5>
             <hr />
-            <p>{props.children}</p>
+            <textarea readOnly value={props.children}></textarea>
         </div>
     );
 };

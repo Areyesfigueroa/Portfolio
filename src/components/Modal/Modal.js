@@ -16,6 +16,19 @@ const Modal = (props) => {
         myStyle.visibility = 'visible';
     }
 
+    //Open URL Page on new tab
+    const openURL = (url) => {
+        //If url is blank exit.
+        if(!url){
+            return;
+        }
+
+        const win = window.open(url, '_blank');
+        if(win != null) {
+            win.focus();
+        }
+    }
+
     return (
         <Spring
         from={{ opacity: props.modal.showModal===true ? 0:1}}
@@ -38,9 +51,9 @@ const Modal = (props) => {
                             </InfoBox>
                         </div>
                         <div className={classes.modalBtns}>
-                            <button className={classes.modalBtn}>Demo</button>
-                            <button className={classes.modalBtn}>Website</button>
-                            <button className={classes.modalBtn}>Github</button>
+                            <button onClick={()=>openURL(props.card.links.demoURL)} className={classes.modalBtn}>Demo</button>
+                            <button onClick={()=>openURL(props.card.links.websiteURL)} className={classes.modalBtn}>Website</button>
+                            <button onClick={()=>openURL(props.card.links.githubURL)} className={classes.modalBtn}>Github</button>
                         </div>   
                     </div>
                 </div>

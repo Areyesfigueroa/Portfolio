@@ -326,6 +326,12 @@ a.button:hover,
   background-color: #858484;
 }
 
+.infoBox textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+}
+
 .closeBtn {
   position: absolute;
   font-size: 170%;
@@ -465,6 +471,10 @@ a.closeBtn:not([href]):not([tabindex]):hover {
   .carouselImg {
     width: 100%;
     height: 300px;
+  }
+
+  .infoBox textarea {
+    height: 150px;
   }
   
 }

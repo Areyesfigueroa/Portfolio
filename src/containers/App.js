@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import classes from './App.module.css';
 
-//TODO: 
 /**
  * TODO:
  * 
  * 1. Change project description for card index 1
- * 2. 
+ * 2. Add Project Links
  */
 
 /** Components */
@@ -59,7 +58,8 @@ class App extends Component {
         title: 'Server',
         items: [
           {id: "0", value: 'PHP'},
-          {id: "1", value: 'Python'}
+          {id: "1", value: 'Python'},
+          {id: "2", value: 'MySQL'},
         ]
       },
       {
@@ -67,9 +67,8 @@ class App extends Component {
         title: 'Tools',
         items: [
           {id: "0", value: 'NPM'},
-          {id: "1", value: 'Git'},
-          {id: "2", value: 'Github'},
-          {id: "3", value: 'SourceTree'}
+          {id: "1", value: 'Git/Github'},
+          {id: "2", value: 'SourceTree'}
         ]
       }
     ],
@@ -83,18 +82,28 @@ class App extends Component {
         banner: cardBanner,
         background: cardBackground,
         showText: false,
-        images: carouselImgs 
+        images: carouselImgs,
+        links: {
+          demoURL: null,
+          websiteURL: null,
+          githubURL: null
+        } 
       },
       {
         id: 1,
         title: 'Performance Evaluation Portal',
         shortDesc: "Employee Web Portal",
-        longDesc: "Employee Web Portal is a crowd-funding, media sharing website, that has you donating actions instead of money out of your pocket. Single page App built with Node.js on Sails and Angular 2.0. Features social media sharing and large scale crowd-funding.",
+        longDesc: "Performance evaluation is a web app where an employee can log in and see their performance evaluations submitted by their managers so that the employee can self-improve. If the user has admin privileges they can manage other user’s roles, passwords resets, user creation and deletion.\n\nThe web app is built using HTML, CSS, Javascript, and Bootstrap for Front End and PHP for backend alongside MySQL as the database.",
         // tech: 'Built using HTML, CSS, JavaScript, PHP and MySQL',
         banner: cardBanner,
         background: performanceEvalImgs.bg,
         showText: false,
-        images: performanceEvalImgs 
+        images: performanceEvalImgs, 
+        links: {
+          demoURL: null,
+          websiteURL: 'http://performance-eval.000webhostapp.com/LoginSystem/login.php',
+          githubURL: 'https://github.com/Areyesfigueroa/Performance-Evaluation'
+        }
       },
       {
         id: 2,
@@ -105,7 +114,12 @@ class App extends Component {
         banner: cardBanner,
         background: cardBackground,
         showText: false,
-        images: carouselImgs 
+        images: carouselImgs,
+        links: {
+          demoURL: null,
+          websiteURL: null,
+          githubURL: null
+        }
       }
     ],
     modal: {
