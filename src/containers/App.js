@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
 import classes from './App.module.css';
 
-/**
- * TODO:
- * 
- * 1. Change project description for card index 1
- * 2. Add Project Links
- */
-
 /** Components */
 import Navbar from '../components/Navbar/Navbar';
 import PageTitle from '../components/PageTitle/PageTitle';
@@ -29,7 +22,7 @@ import cardBanner from '../assets/cardHeader.png';
 import cardBackground from '../assets/skateboard-example.png';
 
 //Carousel Assets
-import {performanceEvalImgs, carouselImgs} from '../assets/_images';
+import {performanceEvalImgs, skateBuilderImgs, carouselImgs} from '../assets/_images';
 
 class App extends Component {
 
@@ -75,18 +68,18 @@ class App extends Component {
     projectCards: [
       {
         id: 0,
-        title: 'Skateboard Builder',
+        title: 'Skate Builder',
         shortDesc: "Create your own custom skateboard",
-        longDesc: "Custom skateboard is a crowd-funding, media sharing website, that has you donating actions instead of money out of your pocket. Single page App built with Node.js on Sails and Angular 2.0. Features social media sharing and large scale crowd-funding.",
+        longDesc: "Allows for the user to see their dream skateboard in 3D and orbit around it. User can modify the boards components such as the wheels, trucks, bottom of the board and the top of the board. This website was built using React, P5 react library for the 3D interactions and React Bootstrap for the styling.",
         // tech: 'Built using HTML, CSS, JavaScript and React',
         banner: cardBanner,
-        background: cardBackground,
+        background: skateBuilderImgs.bg,
         showText: false,
-        images: carouselImgs,
+        images: skateBuilderImgs,
         links: {
           demoURL: null,
-          websiteURL: null,
-          githubURL: null
+          websiteURL: 'https://skatebuilder.netlify.com/',
+          githubURL: 'https://github.com/Areyesfigueroa/SkateBuilder'
         } 
       },
       {
