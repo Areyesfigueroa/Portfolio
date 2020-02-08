@@ -4,8 +4,6 @@ import { Spring } from 'react-spring/renderprops';
 import InfoBox from '../InfoBox/InfoBox';
 import CarouselSlides from '../CarouselSlides/CarouselSlides';
 
-//TODO: Create animation for fadein modal. 
-
 const Modal = (props) => {
 
     const myStyle = {
@@ -47,7 +45,7 @@ const Modal = (props) => {
                             title= {props.card.title}
                             subtitle= {props.card.shortDesc}
                             >
-                            {props.card.longDesc}
+                            {`Description:\n${props.card.longDesc}\n\nTechnology:\n${props.card.techDesc}`}
                             </InfoBox>
                         </div>
                         <div className={classes.modalBtns}>

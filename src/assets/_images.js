@@ -21,6 +21,18 @@ export const skateBuilderImgs = {
         {src: require("./skate-builder-imgs/interactive-page-2.png"), alt: "Interactive Page 2"},
     ]
 }
+//Vi Parking Carousel Images
+export const viParkingImgs = {
+    bg: require("./vi-parking-imgs/vehicles.png"),
+    slides: [        
+        {src: require("./vi-parking-imgs/about.png"), alt: "About Page"},
+        {src: require("./vi-parking-imgs/apartments.png"), alt: "Apartments Page"},
+        {src: require("./vi-parking-imgs/details.png"), alt: "Details Page"},
+        {src: require("./vi-parking-imgs/history.png"), alt: "History Page"},
+        {src: require("./vi-parking-imgs/relational-logic.png"), alt: "Relational Logic"},
+        {src: require("./vi-parking-imgs/vehicles.png"), alt: "Vehicles Page"},
+    ]
+}
 //Placeholder Carousel Images
 export const carouselImgs = {
     slides: [

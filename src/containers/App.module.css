@@ -308,7 +308,7 @@ a.button:hover,
 
 .carouselImg {
   width: 100%;
-  height: 450px;
+  height: 350px;
 }
 
 .infoBox {
@@ -316,6 +316,7 @@ a.button:hover,
   flex-direction: column;
   align-items: start;
   margin: 10px;
+  height: 280px;
 }
 
 .infoBox h5 {
@@ -351,7 +352,7 @@ a.closeBtn:not([href]):not([tabindex]):hover {
 
 .modalBtns {
   position: absolute;
-  bottom: 5px;
+  bottom: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
