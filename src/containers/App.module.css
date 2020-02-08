@@ -122,6 +122,17 @@ a.button:hover,
   min-width: 300px;
   text-align: center;
 }
+/*
+--------------------------------
+-------- RESUME SECTION ---
+--------------------------------
+*/
+
+.resumeContainer {
+  max-width: 600px;
+  min-width: 300px;
+  height: auto;
+}
 
 /*
 --------------------------------

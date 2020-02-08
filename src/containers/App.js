@@ -16,10 +16,12 @@ import Footer from '../components/Footer/Footer';
 import { Waypoint } from 'react-waypoint';
 import ScrollableAnchor from 'react-scrollable-anchor';
 
+/** Bootstrap Component */
+import Image from 'react-bootstrap/Image';
+
 //Local Assets
 import alielLogo from '../assets/aliel-logo.png';
 import cardBanner from '../assets/cardHeader.png';
-//import cardBackground from '../assets/skateboard-example.png';
 
 //Carousel Assets
 import {performanceEvalImgs, skateBuilderImgs, viParkingImgs} from '../assets/_images';
@@ -281,6 +283,13 @@ class App extends Component {
 
             I look forward to meeting future employers.
           </Textbox>
+        </SectionWrapper>
+        
+        {/** About Section */}
+        <SectionWrapper title="Resume" scrollID={'resumeSection'}>
+          <div className={classes.resumeContainer}>
+            <Image src={require('../assets/Aliel_Resume_08-13-2019.png')} fluid/>
+          </div>
           <button>Download Resume</button>
         </SectionWrapper>
 
