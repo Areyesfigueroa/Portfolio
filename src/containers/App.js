@@ -61,7 +61,8 @@ class App extends Component {
         items: [
           {id: "0", value: 'NPM'},
           {id: "1", value: 'Git/Github'},
-          {id: "2", value: 'SourceTree'}
+          {id: "2", value: 'SourceTree'},
+          {id: "3", value: 'Appsheet'}
         ]
       }
     ],
