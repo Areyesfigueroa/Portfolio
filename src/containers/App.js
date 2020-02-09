@@ -209,6 +209,10 @@ class App extends Component {
     });
   }
 
+  downloadResumeHandler = () => {
+    window.location.replace("https://drive.google.com/uc?export=download&id=1rzdK_pd4ByNFVz2lmWSYKH21DQQvUxPa");
+  }
+
   render() {
     
     const techCards = (
@@ -290,7 +294,7 @@ class App extends Component {
           <div className={classes.resumeContainer}>
             <Image src={require('../assets/Aliel_Resume_08-13-2019.png')} fluid/>
           </div>
-          <button>Download Resume</button>
+          <button onClick={this.downloadResumeHandler}>Download Resume</button>
         </SectionWrapper>
 
         {/** Technologies Section */}
