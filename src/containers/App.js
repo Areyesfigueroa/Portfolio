@@ -16,13 +16,15 @@ import Footer from '../components/Footer/Footer';
 import { Waypoint } from 'react-waypoint';
 import ScrollableAnchor from 'react-scrollable-anchor';
 
+/** Bootstrap Component */
+import Image from 'react-bootstrap/Image';
+
 //Local Assets
 import alielLogo from '../assets/aliel-logo.png';
 import cardBanner from '../assets/cardHeader.png';
-import cardBackground from '../assets/skateboard-example.png';
 
 //Carousel Assets
-import {performanceEvalImgs, skateBuilderImgs, carouselImgs} from '../assets/_images';
+import {performanceEvalImgs, skateBuilderImgs, viParkingImgs} from '../assets/_images';
 
 class App extends Component {
 
@@ -61,7 +63,8 @@ class App extends Component {
         items: [
           {id: "0", value: 'NPM'},
           {id: "1", value: 'Git/Github'},
-          {id: "2", value: 'SourceTree'}
+          {id: "2", value: 'SourceTree'},
+          {id: "3", value: 'Appsheet'}
         ]
       }
     ],
@@ -70,8 +73,8 @@ class App extends Component {
         id: 0,
         title: 'Skate Builder',
         shortDesc: "Create your own custom skateboard",
-        longDesc: "Allows for the user to see their dream skateboard in 3D and orbit around it. User can modify the boards components such as the wheels, trucks, bottom of the board and the top of the board. This website was built using React, P5 react library for the 3D interactions and React Bootstrap for the styling.",
-        // tech: 'Built using HTML, CSS, JavaScript and React',
+        longDesc: "Allows for the user to see their dream skateboard in 3D and orbit around it. User can modify the board components such as the wheels, trucks, bottom of the board and the top of the board.",
+        techDesc: 'This web app was built using React, P5 react library for the 3D interactions and React Bootstrap for the styling.',
         banner: cardBanner,
         background: skateBuilderImgs.bg,
         showText: false,
@@ -86,8 +89,8 @@ class App extends Component {
         id: 1,
         title: 'Performance Evaluation Portal',
         shortDesc: "Employee Web Portal",
-        longDesc: "Performance evaluation is a web app where an employee can log in and see their performance evaluations submitted by their managers so that the employee can self-improve. If the user has admin privileges they can manage other user’s roles, passwords resets, user creation and deletion.\n\nThe web app is built using HTML, CSS, Javascript, and Bootstrap for Front End and PHP for backend alongside MySQL as the database.",
-        // tech: 'Built using HTML, CSS, JavaScript, PHP and MySQL',
+        longDesc: "Performance evaluation is a web app where an employee can log in and see their performance evaluations submitted by their managers so that the employee can self-improve. If the user has admin privileges they can manage other user’s roles, passwords resets, user creation and deletion.",
+        techDesc: 'The website is built using HTML, CSS, Javascript, and Bootstrap for Front End and PHP for backend alongside MySQL as the database.',
         banner: cardBanner,
         background: performanceEvalImgs.bg,
         showText: false,
@@ -100,14 +103,14 @@ class App extends Component {
       },
       {
         id: 2,
-        title: 'Anime Reviews',
-        shortDesc: 'Latest anime reviews',
-        longDesc: 'Anime Review, media sharing website, that has you donating actions instead of money out of your pocket. Single page App built with Node.js on Sails and Angular 2.0. Features social media sharing and large scale crowd-funding.',
-        // tech: 'Built using HTML, CSS, JavaScript and React',
+        title: 'Vi Parking App',
+        shortDesc: 'Parking Management Software',
+        longDesc: 'All About Parking vehicle management app for valets at the Vi. Keeps track of vehicle information to easily monitor and update vehicle location and status. This app has been used in operations for over a year and it is still being used to this date within the company.',
+        techDesc: 'Built using Appsheet, Google App Scripts API and Javascript',
         banner: cardBanner,
-        background: cardBackground,
+        background: viParkingImgs.bg,
         showText: false,
-        images: carouselImgs,
+        images: viParkingImgs,
         links: {
           demoURL: null,
           websiteURL: null,
@@ -206,6 +209,10 @@ class App extends Component {
     });
   }
 
+  downloadResumeHandler = () => {
+    window.location.replace("https://drive.google.com/uc?export=download&id=1rzdK_pd4ByNFVz2lmWSYKH21DQQvUxPa");
+  }
+
   render() {
     
     const techCards = (
@@ -280,7 +287,14 @@ class App extends Component {
 
             I look forward to meeting future employers.
           </Textbox>
-          <button>Download Resume</button>
+        </SectionWrapper>
+        
+        {/** About Section */}
+        <SectionWrapper title="Resume" scrollID={'resumeSection'}>
+          <div className={classes.resumeContainer}>
+            <Image src={require('../assets/Aliel_Resume_08-13-2019.png')} fluid/>
+          </div>
+          <button onClick={this.downloadResumeHandler}>Download Resume</button>
         </SectionWrapper>
 
         {/** Technologies Section */}

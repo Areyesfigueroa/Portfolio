@@ -22,6 +22,7 @@ const navbar = (props) => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className={navClassList.join(' ')}>
                         <Nav.Link href="#aboutSection">About</Nav.Link>
+                        <Nav.Link href="#resumeSection">Resume</Nav.Link>
                         <Nav.Link href="#technologiesSection">Technologies</Nav.Link>
                         <Nav.Link href="#projectsSection">Projects</Nav.Link>
                         <Nav.Link href="#contactSection">Contact</Nav.Link>
