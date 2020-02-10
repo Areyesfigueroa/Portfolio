@@ -153,13 +153,23 @@ a.button:hover,
 
 .cardBase {
   position: relative;
-  border: 3px solid #9f9f9f;
+  border: 3px solid var(--textbox-outline-color);
   border-radius: 8px;
   width: 255px;
   height: 330px;
   text-align: center;
   padding: 10px 0;
 }
+
+.cardBase img {
+  margin: auto;
+}
+
+.cardBase h4 {
+  margin-top: 20px;
+  align-self: center;
+}
+
 
 /*
 ----- TECH CARDS ------
@@ -207,7 +217,7 @@ a.button:hover,
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 128.47px 1fr;
+  grid-template-rows: 140px 1fr;
   align-items: center;
   justify-content: start;
   margin: 30px;
@@ -215,24 +225,22 @@ a.button:hover,
 
 .cardHeader {
   display: flex;
+  flex-direction: column;
   position: relative;
+  border-bottom: 3px solid var(--textbox-outline-color);
+  background-color: var(--textbox-bg-color);
+  color: #212529;
   top:0;
   width: 100%;
   height: 100%;
   align-items: center;
-  color: white;
   justify-content: center;
   z-index: 2;
 }
 
 .cardHeader h4 {
   z-index: 0;
-}
-
-.cardHeader img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  padding-bottom: 9px;
 }
 
 .projectCardBG {

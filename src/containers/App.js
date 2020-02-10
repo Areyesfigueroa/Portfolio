@@ -40,6 +40,7 @@ class App extends Component {
     cards: [
       {
         id: '0A', 
+        icon: require('../assets/icons/frontend.png'),
         title: 'Frontend',
         items: [
           {id: '0', value: 'HTML'},
@@ -50,6 +51,7 @@ class App extends Component {
       }, 
       {
         id: '1B',
+        icon: require('../assets/icons/gears.png'),
         title: 'Server',
         items: [
           {id: "0", value: 'PHP'},
@@ -59,6 +61,7 @@ class App extends Component {
       },
       {
         id: '2C',
+        icon: require('../assets/icons/wrench.png'),
         title: 'Tools',
         items: [
           {id: "0", value: 'NPM'},
@@ -71,6 +74,7 @@ class App extends Component {
     projectCards: [
       {
         id: 0,
+        icon: require('../assets/icons/skate.png'),
         title: 'Skate Builder',
         shortDesc: "Create your own custom skateboard",
         longDesc: "Allows for the user to see their dream skateboard in 3D and orbit around it. User can modify the board components such as the wheels, trucks, bottom of the board and the top of the board.",
@@ -87,7 +91,8 @@ class App extends Component {
       },
       {
         id: 1,
-        title: 'Performance Evaluation Portal',
+        title: 'Evaluation Portal',
+        icon: require('../assets/icons/eval.png'),
         shortDesc: "Employee Web Portal",
         longDesc: "Performance evaluation is a web app where an employee can log in and see their performance evaluations submitted by their managers so that the employee can self-improve. If the user has admin privileges they can manage other user’s roles, passwords resets, user creation and deletion.",
         techDesc: 'The website is built using HTML, CSS, Javascript, and Bootstrap for Front End and PHP for backend alongside MySQL as the database.',
@@ -103,6 +108,7 @@ class App extends Component {
       },
       {
         id: 2,
+        icon: require('../assets/icons/car.png'),
         title: 'Vi Parking App',
         shortDesc: 'Parking Management Software',
         longDesc: 'All About Parking vehicle management app for valets at the Vi. Keeps track of vehicle information to easily monitor and update vehicle location and status. This app has been used in operations for over a year and it is still being used to this date within the company.',
