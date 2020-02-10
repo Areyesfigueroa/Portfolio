@@ -1,21 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.88277137.chunk.css",
-    "main.js": "/static/js/main.e5b024ba.chunk.js",
-    "main.js.map": "/static/js/main.e5b024ba.chunk.js.map",
+    "main.css": "/static/css/main.5e557c24.chunk.css",
+    "main.js": "/static/js/main.d84c76be.chunk.js",
+    "main.js.map": "/static/js/main.d84c76be.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.67a84473.js",
     "runtime-main.js.map": "/static/js/runtime-main.67a84473.js.map",
     "static/css/2.0624914a.chunk.css": "/static/css/2.0624914a.chunk.css",
-    "static/js/2.bd8ac6e2.chunk.js": "/static/js/2.bd8ac6e2.chunk.js",
-    "static/js/2.bd8ac6e2.chunk.js.map": "/static/js/2.bd8ac6e2.chunk.js.map",
+    "static/js/2.dd82afd9.chunk.js": "/static/js/2.dd82afd9.chunk.js",
+    "static/js/2.dd82afd9.chunk.js.map": "/static/js/2.dd82afd9.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.cbf4f5d1eda2f871f85d4975ac99f39c.js": "/precache-manifest.cbf4f5d1eda2f871f85d4975ac99f39c.js",
+    "precache-manifest.244032bd6f31628964c343c8a1bec023.js": "/precache-manifest.244032bd6f31628964c343c8a1bec023.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.0624914a.chunk.css.map": "/static/css/2.0624914a.chunk.css.map",
-    "static/css/main.88277137.chunk.css.map": "/static/css/main.88277137.chunk.css.map",
+    "static/css/main.5e557c24.chunk.css.map": "/static/css/main.5e557c24.chunk.css.map",
+    "static/media/Aliel_Resume_08-13-2019.png": "/static/media/Aliel_Resume_08-13-2019.46f9d3ed.png",
+    "static/media/about.png": "/static/media/about.b18e7539.png",
     "static/media/aliel-logo.png": "/static/media/aliel-logo.206f71b5.png",
+    "static/media/apartments.png": "/static/media/apartments.ff24f814.png",
     "static/media/cardHeader.png": "/static/media/cardHeader.cd092590.png",
+    "static/media/details.png": "/static/media/details.abbd2029.png",
     "static/media/global.css": "/static/media/header-bg.8583cb4d.png",
+    "static/media/history.png": "/static/media/history.851cdcdd.png",
     "static/media/home-modal.png": "/static/media/home-modal.d1e2cd96.png",
     "static/media/home-page.png": "/static/media/home-page.cf82a3bb.png",
     "static/media/interactive-page-1.png": "/static/media/interactive-page-1.91b50845.png",
@@ -24,17 +29,18 @@
     "static/media/manage-users-actions.png": "/static/media/manage-users-actions.78895ad0.png",
     "static/media/manage-users.png": "/static/media/manage-users.0fbd214d.png",
     "static/media/mobile-page-1.png": "/static/media/mobile-page-1.b4571ead.png",
+    "static/media/relational-logic.png": "/static/media/relational-logic.6f9c457e.png",
     "static/media/reset-pwd.png": "/static/media/reset-pwd.126b1f7c.png",
-    "static/media/skateboard-example.png": "/static/media/skateboard-example.b49b7264.png",
     "static/media/stock_img1.jpg": "/static/media/stock_img1.003b8e87.jpg",
     "static/media/stock_img2.jpg": "/static/media/stock_img2.814dc171.jpg",
-    "static/media/stock_img3.jpg": "/static/media/stock_img3.d2c63e33.jpg"
+    "static/media/stock_img3.jpg": "/static/media/stock_img3.d2c63e33.jpg",
+    "static/media/vehicles.png": "/static/media/vehicles.27a528ac.png"
   },
   "entrypoints": [
     "static/js/runtime-main.67a84473.js",
     "static/css/2.0624914a.chunk.css",
-    "static/js/2.bd8ac6e2.chunk.js",
-    "static/css/main.88277137.chunk.css",
-    "static/js/main.e5b024ba.chunk.js"
+    "static/js/2.dd82afd9.chunk.js",
+    "static/css/main.5e557c24.chunk.css",
+    "static/js/main.d84c76be.chunk.js"
   ]
 }
