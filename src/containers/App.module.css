@@ -176,6 +176,7 @@ a.button:hover,
   height: 330px;
   text-align: center;
   padding: 10px 0;
+  margin: 30px 0;
 }
 
 .cardBase img {
@@ -196,7 +197,7 @@ a.button:hover,
   grid-template-rows: 70px 50px auto;
   row-gap: 10px;
   background-color: #fefdfd;
-  margin: 30px 53px;
+  /* margin: 30px 53px; */
 }
 
 /*TEMPORARY - TODO: REPLACE WITH IMG*/
@@ -237,7 +238,7 @@ a.button:hover,
   grid-template-rows: 140px 1fr;
   align-items: center;
   justify-content: start;
-  margin: 30px;
+  /* margin: 30px; */
 }
 
 .cardHeader {
@@ -318,7 +319,7 @@ a.button:hover,
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: var(--shadow-color);
   z-index: 999;
 }
@@ -326,7 +327,7 @@ a.button:hover,
 .modal {
   position: absolute;
   width: 50%;
-  min-width: 400px;
+  min-width: 350px;
   height: 714px;
   background-color: var(--textbox-bg-color);
   z-index: 999;
@@ -340,19 +341,28 @@ a.button:hover,
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
+}
+
+.carouselImgContainer {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: black;
 }
 
 .carouselImg {
-  width: 100%;
+  max-width: 1080px;
   height: 350px;
+  margin: auto;
 }
 
 .infoBox {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 10px;
-  height: 280px;
+  margin: 10px 10px 0px 10px;
+  min-height: 230px;
 }
 
 .infoBox h5 {
@@ -387,12 +397,11 @@ a.closeBtn:not([href]):not([tabindex]):hover {
 }
 
 .modalBtns {
-  position: absolute;
-  bottom: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
+  padding: 10px 0;
 }
 
 .modalBtn {
@@ -452,8 +461,14 @@ a.closeBtn:not([href]):not([tabindex]):hover {
 --------------------------------
 */
 
+/*Large Size iPads*/
+@media (max-width: 1024px) {
+  .modal {
+    width: 80%;
+  }
+}
 /*Medium Size*/
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
   /*
   --------------------------------
@@ -502,14 +517,16 @@ a.closeBtn:not([href]):not([tabindex]):hover {
   .modal {
     height: 614px;
   }
-
   .carouselImg {
     width: 100%;
-    height: 300px;
-  }
-
-  .infoBox textarea {
-    height: 150px;
   }
   
+}
+
+/*Small Size*/
+@media (max-width: 375px) {
+  .modal {
+    height: 580px;
+    transform: translate(0,0);
+  }
 }

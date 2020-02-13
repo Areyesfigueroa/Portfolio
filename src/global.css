@@ -177,7 +177,7 @@ a.carousel-control-prev:hover  {
 */
 
 /*Medium Size*/
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
   a.nav-link.active,
   a.nav-link:hover {
@@ -196,4 +196,12 @@ a.carousel-control-prev:hover  {
     border: 0;
   }
 
+}
+
+/*Small Size*/
+@media (max-width: 375px) {
+  a.carousel-control-next,
+  a.carousel-control-prev {
+    top: 226px;
+  }
 }
