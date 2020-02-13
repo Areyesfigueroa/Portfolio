@@ -18,7 +18,7 @@ const card = (props) => {
 
     return (
         <div className={classList.join(' ')}>
-            <img src={props.card.icon} alt='Card Image'/>
+            <img src={props.card.icon} alt='Card'/>
             {/* <h1>{"</>"}</h1> */}
             <h4>{props.card.title}</h4>
             <ul>

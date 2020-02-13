@@ -36,7 +36,7 @@ const Modal = (props) => {
             {style => (
                 <div id={props.id} style={{...style, ...myStyle}} className={classes.modalShadow} onClick={props.clicked}>
                     <div className={classes.modal}>
-                        <a id={props.id} onClick={props.clicked} className={classes.closeBtn}>X</a>
+                        <a id={props.id} onClick={props.clicked} href={window.location.href} className={classes.closeBtn}>X</a>
                         <div className={classes.modalContent}>
                             <CarouselSlides 
                             slides={props.card.images.slides}

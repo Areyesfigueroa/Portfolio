@@ -13,7 +13,6 @@ import ContactForm from '../components/ContactForm/ContactForm';
 import Footer from '../components/Footer/Footer';
 
 /** Waypoint Component */
-import { Waypoint } from 'react-waypoint';
 import ScrollableAnchor from 'react-scrollable-anchor';
 
 /** Bootstrap Component */
@@ -269,20 +268,15 @@ class App extends Component {
         {/** About Section */}
         <SectionWrapper title="About" scrollID={'aboutSection'}>
           <Textbox>
-            Hello my name is Aliel Reyes, I am a Front End Engineer based in 
-            the bay area.
-            <br/><br/>
-
-            I consider myself a tinkerer, I love to explore new technologies. I 
+            <p><Image src={require('../assets/icons/about-icon.png')} fluid/></p>
+            <p>Hello my name is Aliel Reyes, I am a Front End Engineer based in 
+            the bay area.</p>
+            <p>I consider myself a tinkerer, I love to explore new technologies. I 
             am currently working for a company creating Javascript tools and 
-            data management.
-            <br/><br/>
-
-            I am focused in creating web applications as a Front End Engineer 
-            but my goal is to become a full stack developer.
-            <br/><br/>
-
-            I look forward to meeting future employers.
+            data management.</p>
+            <p>I am focused in creating web applications as a Front End Engineer 
+            but my goal is to become a full stack developer.</p>
+            <p>I look forward to meeting future employers.</p>
           </Textbox>
         </SectionWrapper>
         
