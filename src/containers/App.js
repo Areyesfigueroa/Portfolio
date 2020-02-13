@@ -35,7 +35,7 @@ class App extends Component {
       btnText: "See Portfolio"
     },
     navbar: {
-      stickyNav: false
+      stickyNav: true
     },
     cards: [
       {
@@ -256,23 +256,14 @@ class App extends Component {
 
         {/** Header Section */}
         <ScrollableAnchor id={'header'}>
-              <header>
-                <Waypoint onEnter={this.hideStickyNav} onLeave={this.showStickyNav}>
-                  <div>
-                    <Navbar 
-                    img={alielLogo}
-                    stickyNav={this.state.navbar.stickyNav}
-                    scrolled={this.navbarHandler}
-                    />
-                  </div>
-                </Waypoint>
-                <PageTitle 
-                title={this.state.headerInfo.title}
-                subtitle={this.state.headerInfo.subtitle}
-                btnText={this.state.headerInfo.btnText}
-                />
-              </header>
-
+          <header>
+            <Navbar img={alielLogo} />
+            <PageTitle 
+            title={this.state.headerInfo.title}
+            subtitle={this.state.headerInfo.subtitle}
+            btnText={this.state.headerInfo.btnText}
+            />
+          </header>
         </ScrollableAnchor>
 
         {/** About Section */}
