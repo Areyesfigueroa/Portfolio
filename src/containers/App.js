@@ -10,7 +10,7 @@ import Cards from '../components/Cards/Cards';
 import ProjectCards from '../components/ProjectCards/ProjectCards';
 import Modal from '../components/Modal/Modal';
 import ContactForm from '../components/ContactForm/ContactForm';
-import Resume from '../components/Resume/Resume';
+import PDFViewer from '../components/PDFViewer/PDFViewer';
 import Footer from '../components/Footer/Footer';
 
 /** Waypoint Component */
@@ -283,10 +283,10 @@ class App extends Component {
         
         {/** About Section */}
         <SectionWrapper title="Resume" scrollID={'resumeSection'}>
-          <div className={classes.resumeContainer}>
-            {/* <Image src={require('../assets/Aliel_Resume_08-13-2019.png')} fluid/> */}
-            <Resume />
-          </div>
+          <PDFViewer 
+          file={require('../assets/documents/AlielReyesResume-2020.pdf')}
+          height={1000}
+          />
           <button onClick={this.downloadResumeHandler}>Download Resume</button>
         </SectionWrapper>
 

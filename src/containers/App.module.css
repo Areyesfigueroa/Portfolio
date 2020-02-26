@@ -146,11 +146,11 @@ a.button:hover,
 */
 
 .resumeContainer {
-  max-width: 600px;
+  max-width: 707px;
   min-width: 300px;
   overflow: hidden;
   overflow-y: scroll;
-  height: 700px;
+  height: 500px;
 }
 
 /*
