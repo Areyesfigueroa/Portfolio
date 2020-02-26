@@ -10,6 +10,7 @@ import Cards from '../components/Cards/Cards';
 import ProjectCards from '../components/ProjectCards/ProjectCards';
 import Modal from '../components/Modal/Modal';
 import ContactForm from '../components/ContactForm/ContactForm';
+import Resume from '../components/Resume/Resume';
 import Footer from '../components/Footer/Footer';
 
 /** Waypoint Component */
@@ -215,7 +216,7 @@ class App extends Component {
   }
 
   downloadResumeHandler = () => {
-    window.location.replace("https://drive.google.com/uc?export=download&id=1rzdK_pd4ByNFVz2lmWSYKH21DQQvUxPa");
+    window.location.replace("https://drive.google.com/uc?export=download&id=1FzkRnVOwaer8NLJXFFCxQWSBc5_r9A5s");
   }
 
   render() {
@@ -283,7 +284,8 @@ class App extends Component {
         {/** About Section */}
         <SectionWrapper title="Resume" scrollID={'resumeSection'}>
           <div className={classes.resumeContainer}>
-            <Image src={require('../assets/Aliel_Resume_08-13-2019.png')} fluid/>
+            {/* <Image src={require('../assets/Aliel_Resume_08-13-2019.png')} fluid/> */}
+            <Resume />
           </div>
           <button onClick={this.downloadResumeHandler}>Download Resume</button>
         </SectionWrapper>
