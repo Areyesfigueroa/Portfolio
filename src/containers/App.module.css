@@ -147,9 +147,8 @@ a.button:hover,
 
 .resumeContainer {
   max-width: 707px;
-  min-width: 300px;
   overflow: hidden;
-  overflow-y: scroll;
+  overflow: scroll;
   height: 500px;
 }
 

@@ -15,6 +15,7 @@ export const performanceEvalImgs = {
 export const skateBuilderImgs = {
     bg: require("./skate-builder-imgs/home-page.png"),
     slides: [        
+        {src: require("./skate-builder-imgs/skate-builder-demo.gif"), alt: "Demo Gif"},
         {src: require("./skate-builder-imgs/home-page.png"), alt: "Home Page"},
         {src: require("./skate-builder-imgs/interactive-page-1.png"), alt: "Interactive Page 1"},
         {src: require("./skate-builder-imgs/mobile-page-1.png"), alt: "Mobile Page 1"},
