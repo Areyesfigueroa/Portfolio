@@ -2,18 +2,25 @@ import React, { Component } from 'react';
 import classes from './App.module.css';
 
 /** Components */
-import Navbar from '../components/Navbar/Navbar';
+//UI
 import PageTitle from '../components/PageTitle/PageTitle';
-import SectionWrapper from '../components/SectionWrapper/SectionWrapper';
 import Textbox from '../components/Textbox/Textbox';
 import Cards from '../components/Cards/Cards';
 import ProjectCards from '../components/ProjectCards/ProjectCards';
 import Modal from '../components/Modal/Modal';
 import ContactForm from '../components/ContactForm/ContactForm';
 import PDFViewer from '../components/PDFViewer/PDFViewer';
+import Link from '../components/Link/Link';
+//Layout
+import Navbar from '../components/Navbar/Navbar';
+import SectionWrapper from '../components/SectionWrapper/SectionWrapper';
 import Footer from '../components/Footer/Footer';
 
+
 /** Waypoint Component */
+import { Waypoint } from 'react-waypoint';
+
+/** Scrollable Component */
 import ScrollableAnchor from 'react-scrollable-anchor';
 
 /** Bootstrap Component */
@@ -219,6 +226,22 @@ class App extends Component {
     window.location.replace("https://drive.google.com/uc?export=download&id=1FzkRnVOwaer8NLJXFFCxQWSBc5_r9A5s");
   }
 
+  scrollBtnFadeHandler = () => {
+    window.addEventListener('hashchange', () => {
+      if(window.location.hash !== '#header') {
+        console.log("Show!");
+      } else {
+        console.log("Hide!");
+      }
+    });
+  }
+
+  // Lyfecycle Methods
+  componentDidMount() {
+    console.log("Mounted!");
+    //this.scrollBtnFadeHandler();
+  }
+
   render() {
     
     const techCards = (
@@ -255,16 +278,22 @@ class App extends Component {
       <div className="App">
 
         {/** Header Section */}
-        <ScrollableAnchor id={'header'}>
-          <header>
-            <Navbar img={alielLogo} />
-            <PageTitle 
-            title={this.state.headerInfo.title}
-            subtitle={this.state.headerInfo.subtitle}
-            btnText={this.state.headerInfo.btnText}
-            />
-          </header>
-        </ScrollableAnchor>
+        
+          <ScrollableAnchor id={'header'}>
+            <Waypoint 
+            onEnter={()=>console.log("Entering")} 
+            onLeave={()=>console.log("Exiting")}
+            topOffset={"115px"}>
+              <header>
+                <Navbar img={alielLogo} />
+                <PageTitle
+                title={this.state.headerInfo.title}
+                subtitle={this.state.headerInfo.subtitle}
+                btnText={this.state.headerInfo.btnText}
+                />
+              </header>
+            </Waypoint>
+          </ScrollableAnchor>
 
         {/** About Section */}
         <SectionWrapper title="About" scrollID={'aboutSection'}>
@@ -281,7 +310,7 @@ class App extends Component {
           </Textbox>
         </SectionWrapper>
         
-        {/** About Section */}
+        {/** Resume Section */}
         <SectionWrapper title="Resume" scrollID={'resumeSection'}>
           <PDFViewer 
           file={require('../assets/documents/AlielReyesResume-2020.pdf')}
@@ -305,6 +334,11 @@ class App extends Component {
         <SectionWrapper title='Contact' scrollID={'contactSection'}>
           <ContactForm />
         </SectionWrapper>
+
+        {/* Fixed Layout Section */}
+        <Link class={classes.scrollToTopBtn} link="#header">
+          <ion-icon name="ios-arrow-up"></ion-icon>
+        </Link>
 
         <Footer />
       </div>
