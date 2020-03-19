@@ -160,7 +160,7 @@ a.carousel-control-next,
 a.carousel-control-prev {
   background-color: #5c5959a8;
   height: 15%;
-  top: 300px;
+  top: 290px;
   border: 0;
 }
 
@@ -190,10 +190,7 @@ a.carousel-control-prev:hover  {
 
   a.carousel-control-next,
   a.carousel-control-prev {
-    background-color: #5c5959a8;
-    height: 15%;
-    top: 255px;
-    border: 0;
+    top: 265px;
   }
 
 }
@@ -202,6 +199,6 @@ a.carousel-control-prev:hover  {
 @media (max-width: 375px) {
   a.carousel-control-next,
   a.carousel-control-prev {
-    top: 226px;
+    top: 235px;
   }
 }

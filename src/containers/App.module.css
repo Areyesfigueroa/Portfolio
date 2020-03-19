@@ -401,8 +401,9 @@ a.button:hover,
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 10px 10px 0px 10px;
+  padding: 10px 10px 0px 10px;
   min-height: 230px;
+  height: 60%;
 }
 
 .infoBox h5 {
@@ -428,7 +429,13 @@ a.button:hover,
   right: 7px;
   z-index: 999;
   border: 0;
+  padding: 3px;
 }
+.closeBtn:hover {
+  color: var(--btn-hover-color);
+  border: 0;
+}
+
 
 a.closeBtn:not([href]):not([tabindex]):hover {
   border: 0;
@@ -441,7 +448,7 @@ a.closeBtn:not([href]):not([tabindex]):hover {
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
-  padding: 10px 0;
+  padding: 10px;
 }
 
 .modalBtn {
