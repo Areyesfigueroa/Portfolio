@@ -10,7 +10,8 @@ import ProjectCards from '../components/ProjectCards/ProjectCards';
 import Modal from '../components/Modal/Modal';
 import ContactForm from '../components/ContactForm/ContactForm';
 import PDFViewer from '../components/PDFViewer/PDFViewer';
-import Link from '../components/Link/Link';
+import ScrollToTopBtn from '../components/ScrollToTopBtn/ScrollToTopBtn';
+
 //Layout
 import Navbar from '../components/Navbar/Navbar';
 import SectionWrapper from '../components/SectionWrapper/SectionWrapper';
@@ -137,6 +138,9 @@ class App extends Component {
       closeModal: true,
       animDuration: 200,
       cardID: 0
+    },
+    scrollToTopBtn: {
+      show: false
     }
   }
 
@@ -226,20 +230,12 @@ class App extends Component {
     window.location.replace("https://drive.google.com/uc?export=download&id=1FzkRnVOwaer8NLJXFFCxQWSBc5_r9A5s");
   }
 
-  scrollBtnFadeHandler = () => {
-    window.addEventListener('hashchange', () => {
-      if(window.location.hash !== '#header') {
-        console.log("Show!");
-      } else {
-        console.log("Hide!");
+  scrollToTopBtnFadeHandler = (showBtn) => {
+    this.setState({
+      scrollToTopBtn: {
+        show: showBtn
       }
     });
-  }
-
-  // Lyfecycle Methods
-  componentDidMount() {
-    console.log("Mounted!");
-    //this.scrollBtnFadeHandler();
   }
 
   render() {
@@ -278,11 +274,10 @@ class App extends Component {
       <div className="App">
 
         {/** Header Section */}
-        
-          <ScrollableAnchor id={'header'}>
+        <ScrollableAnchor id={'header'}>
             <Waypoint 
-            onEnter={()=>console.log("Entering")} 
-            onLeave={()=>console.log("Exiting")}
+            onEnter={()=>this.scrollToTopBtnFadeHandler(false)} 
+            onLeave={()=>this.scrollToTopBtnFadeHandler(true)}
             topOffset={"115px"}>
               <header>
                 <Navbar img={alielLogo} />
@@ -336,9 +331,7 @@ class App extends Component {
         </SectionWrapper>
 
         {/* Fixed Layout Section */}
-        <Link class={classes.scrollToTopBtn} link="#header">
-          <ion-icon name="ios-arrow-up"></ion-icon>
-        </Link>
+        <ScrollToTopBtn show={this.state.scrollToTopBtn.show}/>
 
         <Footer />
       </div>
