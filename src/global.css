@@ -16,8 +16,8 @@
 --btn-hover-color: #e77e41;
 --btn-text-color: #f3f3f3;
 
---textbox-bg-color: #f9f8f8;
---textbox-outline-color: #858484;
+--textbox-bg-color: #fefdfd;
+--textbox-outline-color: #9f9f9f;
 
 --border-bottom-size: 2px;
 
@@ -147,6 +147,16 @@ footer {
 
 /*
 --------------------------------
+-------- PDFViewer SECTION -----
+--------------------------------
+*/
+.react-pdf__Page__canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/*
+--------------------------------
 -------- BOOTSTRAP SECTION --------
 --------------------------------
 */
@@ -160,7 +170,7 @@ a.carousel-control-next,
 a.carousel-control-prev {
   background-color: #5c5959a8;
   height: 15%;
-  top: 300px;
+  top: 338px;
   border: 0;
 }
 
@@ -177,7 +187,7 @@ a.carousel-control-prev:hover  {
 */
 
 /*Medium Size*/
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
   a.nav-link.active,
   a.nav-link:hover {
@@ -190,10 +200,15 @@ a.carousel-control-prev:hover  {
 
   a.carousel-control-next,
   a.carousel-control-prev {
-    background-color: #5c5959a8;
-    height: 15%;
-    top: 255px;
-    border: 0;
+    top: 265px;
   }
 
+}
+
+/*Small Size*/
+@media (max-width: 375px) {
+  a.carousel-control-next,
+  a.carousel-control-prev {
+    top: 235px;
+  }
 }

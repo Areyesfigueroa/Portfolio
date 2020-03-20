@@ -1,3 +1,42 @@
+/*
+--------------------------------
+-- FIXED ELEMENTS SECTION ------
+--------------------------------
+*/
+.scrollToTopBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 1rem;
+  background-color: var(--accent-color);
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 900;
+}
+
+.scrollToTopBtn:hover {
+  border: 0;
+  background-color: var(--btn-hover-color);
+}
+
+.scrollToTopBtn ion-icon {
+  height: 40px;
+  width: 40px;
+}
+
+.fadeIn {
+  opacity: 1;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
 
 /*
 --------------------------------
@@ -29,14 +68,33 @@
 /*
 ----- NAVBAR------
 */
+header {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* grid-template-rows: auto calc(100vh - auto); */
+}
+
+.Navbar {
+  width: 100%;
+  height: 100%;
+}
+
 a.homeBtn {
+  margin: auto 0;
   border: none;
   cursor: pointer;
+  width: 80px;
+  height: auto;
 }
 
 a.homeBtn:hover {
   border: none;
   cursor: pointer;
+}
+
+a.homeBtn img {
+  width: 100%;
+  height: 100%;
 }
 
 .navbar {
@@ -96,7 +154,7 @@ a.button:hover,
   position: absolute;
   text-align: left;
   left: 15%;
-  margin-top: 200px;
+  top: 41%;
 }
 
 .pageTitle div {
@@ -128,10 +186,11 @@ a.button:hover,
 --------------------------------
 */
 
-.resumeContainer {
-  max-width: 600px;
-  min-width: 300px;
+.pdfWrapper {
+  max-width: 707px;
+  width: 100%;
   height: auto;
+  overflow: hidden;
 }
 
 /*
@@ -153,13 +212,24 @@ a.button:hover,
 
 .cardBase {
   position: relative;
-  border: 3px solid #9f9f9f;
+  border: 3px solid var(--textbox-outline-color);
   border-radius: 8px;
   width: 255px;
   height: 330px;
   text-align: center;
   padding: 10px 0;
+  margin: 30px 0;
 }
+
+.cardBase img {
+  margin: auto;
+}
+
+.cardBase h4 {
+  margin-top: 20px;
+  align-self: center;
+}
+
 
 /*
 ----- TECH CARDS ------
@@ -169,7 +239,7 @@ a.button:hover,
   grid-template-rows: 70px 50px auto;
   row-gap: 10px;
   background-color: #fefdfd;
-  margin: 30px 53px;
+  /* margin: 30px 53px; */
 }
 
 /*TEMPORARY - TODO: REPLACE WITH IMG*/
@@ -207,32 +277,30 @@ a.button:hover,
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 128.47px 1fr;
+  grid-template-rows: 140px 1fr;
   align-items: center;
   justify-content: start;
-  margin: 30px;
+  /* margin: 30px; */
 }
 
 .cardHeader {
   display: flex;
+  flex-direction: column;
   position: relative;
+  border-bottom: 3px solid var(--textbox-outline-color);
+  background-color: var(--textbox-bg-color);
+  color: #212529;
   top:0;
   width: 100%;
   height: 100%;
   align-items: center;
-  color: white;
   justify-content: center;
   z-index: 2;
 }
 
 .cardHeader h4 {
   z-index: 0;
-}
-
-.cardHeader img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  padding-bottom: 9px;
 }
 
 .projectCardBG {
@@ -293,7 +361,7 @@ a.button:hover,
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: var(--shadow-color);
   z-index: 999;
 }
@@ -301,7 +369,7 @@ a.button:hover,
 .modal {
   position: absolute;
   width: 50%;
-  min-width: 400px;
+  min-width: 350px;
   height: 714px;
   background-color: var(--textbox-bg-color);
   z-index: 999;
@@ -315,19 +383,29 @@ a.button:hover,
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
+}
+
+.carouselImgContainer {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: black;
 }
 
 .carouselImg {
-  width: 100%;
-  height: 350px;
+  max-width: 1080px;
+  height: 400px;
+  margin: auto;
 }
 
 .infoBox {
   display: flex;
   flex-direction: column;
-  align-items: start;
-  margin: 10px;
-  height: 280px;
+  align-items: flex-start;
+  padding: 10px 10px 0px 10px;
+  min-height: 230px;
+  height: 60%;
 }
 
 .infoBox h5 {
@@ -353,7 +431,13 @@ a.button:hover,
   right: 7px;
   z-index: 999;
   border: 0;
+  padding: 3px;
 }
+.closeBtn:hover {
+  color: var(--btn-hover-color);
+  border: 0;
+}
+
 
 a.closeBtn:not([href]):not([tabindex]):hover {
   border: 0;
@@ -362,12 +446,11 @@ a.closeBtn:not([href]):not([tabindex]):hover {
 }
 
 .modalBtns {
-  position: absolute;
-  bottom: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
+  padding: 10px;
 }
 
 .modalBtn {
@@ -427,8 +510,14 @@ a.closeBtn:not([href]):not([tabindex]):hover {
 --------------------------------
 */
 
+/*Large Size iPads*/
+@media (max-width: 1024px) {
+  .modal {
+    width: 80%;
+  }
+}
 /*Medium Size*/
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
   /*
   --------------------------------
@@ -439,11 +528,17 @@ a.closeBtn:not([href]):not([tabindex]):hover {
     background-color: white;
   }
 
+  a.homeBtn {
+    width: 60px;
+  }
+
+  .navbarMobileBtn {
+    margin: auto 0;
+  }
+
   .pageTitle {
-    position: absolute;
     display: flex;
     justify-content: center;
-    margin-top: 150px;
     left: 0;
     right: 0;
   }
@@ -479,14 +574,17 @@ a.closeBtn:not([href]):not([tabindex]):hover {
   .modal {
     height: 614px;
   }
-
   .carouselImg {
     width: 100%;
-    height: 300px;
-  }
-
-  .infoBox textarea {
-    height: 150px;
+    height: -webkit-fill-available;
   }
   
+}
+
+/*Small Size*/
+@media (max-width: 375px) {
+  .modal {
+    height: 580px;
+    transform: translate(0,0);
+  }
 }

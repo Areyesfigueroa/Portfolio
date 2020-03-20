@@ -5,6 +5,7 @@ const ProjectCards = (props) => {
     return (props.projectCards.map((card, index) => (
         <ProjectCard 
         key={card.id}
+        icon={card.icon}
         title={card.title}
         description={card.shortDesc}
         showText={card.showText} 

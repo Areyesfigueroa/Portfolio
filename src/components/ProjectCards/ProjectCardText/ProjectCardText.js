@@ -12,7 +12,7 @@ const ProjectCardText = (props) => {
             {style => (
                 <div style={style} className={classes.projectCardText}>
                     <p>{props.description}</p>
-                    <a onClick={props.clicked}>See more</a>
+                    <a onClick={props.clicked} href={window.location.href}>See more</a>
                 </div>
             )}
         </Spring>

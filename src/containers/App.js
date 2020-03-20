@@ -2,18 +2,26 @@ import React, { Component } from 'react';
 import classes from './App.module.css';
 
 /** Components */
-import Navbar from '../components/Navbar/Navbar';
+//UI
 import PageTitle from '../components/PageTitle/PageTitle';
-import SectionWrapper from '../components/SectionWrapper/SectionWrapper';
 import Textbox from '../components/Textbox/Textbox';
 import Cards from '../components/Cards/Cards';
 import ProjectCards from '../components/ProjectCards/ProjectCards';
 import Modal from '../components/Modal/Modal';
 import ContactForm from '../components/ContactForm/ContactForm';
+import PDFViewer from '../components/PDFViewer/PDFViewer';
+import ScrollToTopBtn from '../components/ScrollToTopBtn/ScrollToTopBtn';
+
+//Layout
+import Navbar from '../components/Navbar/Navbar';
+import SectionWrapper from '../components/SectionWrapper/SectionWrapper';
 import Footer from '../components/Footer/Footer';
+
 
 /** Waypoint Component */
 import { Waypoint } from 'react-waypoint';
+
+/** Scrollable Component */
 import ScrollableAnchor from 'react-scrollable-anchor';
 
 /** Bootstrap Component */
@@ -35,11 +43,12 @@ class App extends Component {
       btnText: "See Portfolio"
     },
     navbar: {
-      stickyNav: false
+      stickyNav: true
     },
     cards: [
       {
         id: '0A', 
+        icon: require('../assets/icons/frontend.png'),
         title: 'Frontend',
         items: [
           {id: '0', value: 'HTML'},
@@ -50,6 +59,7 @@ class App extends Component {
       }, 
       {
         id: '1B',
+        icon: require('../assets/icons/gears.png'),
         title: 'Server',
         items: [
           {id: "0", value: 'PHP'},
@@ -59,6 +69,7 @@ class App extends Component {
       },
       {
         id: '2C',
+        icon: require('../assets/icons/wrench.png'),
         title: 'Tools',
         items: [
           {id: "0", value: 'NPM'},
@@ -71,6 +82,7 @@ class App extends Component {
     projectCards: [
       {
         id: 0,
+        icon: require('../assets/icons/skate.png'),
         title: 'Skate Builder',
         shortDesc: "Create your own custom skateboard",
         longDesc: "Allows for the user to see their dream skateboard in 3D and orbit around it. User can modify the board components such as the wheels, trucks, bottom of the board and the top of the board.",
@@ -87,7 +99,8 @@ class App extends Component {
       },
       {
         id: 1,
-        title: 'Performance Evaluation Portal',
+        title: 'Evaluation Portal',
+        icon: require('../assets/icons/eval.png'),
         shortDesc: "Employee Web Portal",
         longDesc: "Performance evaluation is a web app where an employee can log in and see their performance evaluations submitted by their managers so that the employee can self-improve. If the user has admin privileges they can manage other user’s roles, passwords resets, user creation and deletion.",
         techDesc: 'The website is built using HTML, CSS, Javascript, and Bootstrap for Front End and PHP for backend alongside MySQL as the database.',
@@ -103,6 +116,7 @@ class App extends Component {
       },
       {
         id: 2,
+        icon: require('../assets/icons/car.png'),
         title: 'Vi Parking App',
         shortDesc: 'Parking Management Software',
         longDesc: 'All About Parking vehicle management app for valets at the Vi. Keeps track of vehicle information to easily monitor and update vehicle location and status. This app has been used in operations for over a year and it is still being used to this date within the company.',
@@ -124,6 +138,9 @@ class App extends Component {
       closeModal: true,
       animDuration: 200,
       cardID: 0
+    },
+    scrollToTopBtn: {
+      show: false
     }
   }
 
@@ -210,7 +227,15 @@ class App extends Component {
   }
 
   downloadResumeHandler = () => {
-    window.location.replace("https://drive.google.com/uc?export=download&id=1rzdK_pd4ByNFVz2lmWSYKH21DQQvUxPa");
+    window.location.replace("https://drive.google.com/uc?export=download&id=1FzkRnVOwaer8NLJXFFCxQWSBc5_r9A5s");
+  }
+
+  scrollToTopBtnFadeHandler = (showBtn) => {
+    this.setState({
+      scrollToTopBtn: {
+        show: showBtn
+      }
+    });
   }
 
   render() {
@@ -250,50 +275,42 @@ class App extends Component {
 
         {/** Header Section */}
         <ScrollableAnchor id={'header'}>
+            <Waypoint 
+            onEnter={()=>this.scrollToTopBtnFadeHandler(false)} 
+            onLeave={()=>this.scrollToTopBtnFadeHandler(true)}
+            topOffset={"115px"}>
               <header>
-                <Waypoint onEnter={this.hideStickyNav} onLeave={this.showStickyNav}>
-                  <div>
-                    <Navbar 
-                    img={alielLogo}
-                    stickyNav={this.state.navbar.stickyNav}
-                    scrolled={this.navbarHandler}
-                    />
-                  </div>
-                </Waypoint>
-                <PageTitle 
+                <Navbar img={alielLogo} />
+                <PageTitle
                 title={this.state.headerInfo.title}
                 subtitle={this.state.headerInfo.subtitle}
                 btnText={this.state.headerInfo.btnText}
                 />
               </header>
-
-        </ScrollableAnchor>
+            </Waypoint>
+          </ScrollableAnchor>
 
         {/** About Section */}
         <SectionWrapper title="About" scrollID={'aboutSection'}>
           <Textbox>
-            Hello my name is Aliel Reyes, I am a Front End Engineer based in 
-            the bay area.
-            <br/><br/>
-
-            I consider myself a tinkerer, I love to explore new technologies. I 
+            <p><Image src={require('../assets/icons/about-icon.png')} fluid/></p>
+            <p>Hello my name is Aliel Reyes, I am a Front End Engineer based in 
+            the bay area.</p>
+            <p>I consider myself a tinkerer, I love to explore new technologies. I 
             am currently working for a company creating Javascript tools and 
-            data management.
-            <br/><br/>
-
-            I am focused in creating web applications as a Front End Engineer 
-            but my goal is to become a full stack developer.
-            <br/><br/>
-
-            I look forward to meeting future employers.
+            data management.</p>
+            <p>I am focused in creating web applications as a Front End Engineer 
+            but my goal is to become a full stack developer.</p>
+            <p>I look forward to meeting future employers.</p>
           </Textbox>
         </SectionWrapper>
         
-        {/** About Section */}
+        {/** Resume Section */}
         <SectionWrapper title="Resume" scrollID={'resumeSection'}>
-          <div className={classes.resumeContainer}>
-            <Image src={require('../assets/Aliel_Resume_08-13-2019.png')} fluid/>
-          </div>
+          <PDFViewer 
+          file={require('../assets/documents/AlielReyesResume-2020.pdf')}
+          height={1000}
+          />
           <button onClick={this.downloadResumeHandler}>Download Resume</button>
         </SectionWrapper>
 
@@ -312,6 +329,9 @@ class App extends Component {
         <SectionWrapper title='Contact' scrollID={'contactSection'}>
           <ContactForm />
         </SectionWrapper>
+
+        {/* Fixed Layout Section */}
+        <ScrollToTopBtn show={this.state.scrollToTopBtn.show}/>
 
         <Footer />
       </div>
