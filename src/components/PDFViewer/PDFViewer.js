@@ -8,7 +8,7 @@ const PDFViewer = (props) => {
     const pageNum = 1;
 
     return (
-        <div className={classes.resumeContainer}>
+        <div className={classes.pdfWrapper}>
             <Document file={props.file}>
                 <Page 
                 pageNumber={pageNum}

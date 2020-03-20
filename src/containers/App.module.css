@@ -184,11 +184,10 @@ a.button:hover,
 --------------------------------
 */
 
-.resumeContainer {
+.pdfWrapper {
   max-width: 707px;
   width: 100%;
-  overflow: scroll;
-  height: 500px;
+  height: auto;
 }
 
 /*
