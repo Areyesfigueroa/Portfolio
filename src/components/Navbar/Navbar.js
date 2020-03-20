@@ -7,8 +7,8 @@ import { Navbar, Nav} from 'react-bootstrap';
 const navbar = (props) => {
 
     return (
-        <div className={classes.Navbar}>
-            <Navbar collapseOnSelect expand="md" bg='none' className={classes.stickyNavbar}>
+        <div className={classes.Navbar} className={classes.stickyNavbar}>
+            <Navbar collapseOnSelect expand="md" bg='none'>
                 <Navbar.Brand href="#header" className={classes.homeBtn}><img src={props.img} alt='Aliel Logo'/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" className={classes.navbarMobileBtn}/>
                 <Navbar.Collapse id="responsive-navbar-nav">
@@ -21,6 +21,7 @@ const navbar = (props) => {
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
+            
         </div>
     );
 };

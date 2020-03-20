@@ -71,7 +71,7 @@
 header {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 115px calc(100vh - 115px);
+  /* grid-template-rows: auto calc(100vh - auto); */
 }
 
 .Navbar {
@@ -80,9 +80,11 @@ header {
 }
 
 a.homeBtn {
+  margin: auto 0;
   border: none;
   cursor: pointer;
-  height: 100px;
+  width: 80px;
+  height: auto;
 }
 
 a.homeBtn:hover {
@@ -91,7 +93,7 @@ a.homeBtn:hover {
 }
 
 a.homeBtn img {
-  width: auto;
+  width: 100%;
   height: 100%;
 }
 
@@ -152,7 +154,7 @@ a.button:hover,
   position: absolute;
   text-align: left;
   left: 15%;
-  top: 44%;
+  top: 41%;
 }
 
 .pageTitle div {
@@ -188,6 +190,7 @@ a.button:hover,
   max-width: 707px;
   width: 100%;
   height: auto;
+  overflow: hidden;
 }
 
 /*
@@ -523,6 +526,14 @@ a.closeBtn:not([href]):not([tabindex]):hover {
   */
   .navbar {
     background-color: white;
+  }
+
+  a.homeBtn {
+    width: 60px;
+  }
+
+  .navbarMobileBtn {
+    margin: auto 0;
   }
 
   .pageTitle {
