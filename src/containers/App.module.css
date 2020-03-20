@@ -393,7 +393,7 @@ a.button:hover,
 
 .carouselImg {
   max-width: 1080px;
-  height: 350px;
+  height: 400px;
   margin: auto;
 }
 
@@ -566,6 +566,7 @@ a.closeBtn:not([href]):not([tabindex]):hover {
   }
   .carouselImg {
     width: 100%;
+    height: -webkit-fill-available;
   }
   
 }
