@@ -4,12 +4,12 @@ import classes from '../../containers/App.module.css';
 const ContactForm = () => {
     return (
         <div>
-            <form className={classes.contactForm} action="POST" data-netlify="true">
-                <input type='text' id='name' placeholder='Name'/>
-                <input type='email' id='email' placeholder='Enter Email'/>
-                <textarea id='message' name='message' placeholder='Your Message'></textarea>
-                <div data-netlify-recaptcha="true"></div>
-                <input className={classes.button} type='submit' id='submitBtn' value='Submit'/>
+            <form className={classes.contactForm} method="POST">
+                <input type="hidden" name="form-name" value="contact"/>
+                <input type='text' name="name" id='name' placeholder='Name'/>
+                <input type='email' name="email" id='email' placeholder='Enter Email'/>
+                <textarea id='message' name="message" name='message' placeholder='Your Message'></textarea>
+                <input className={classes.button} type='submit' name="submit" id='submitBtn' value='Submit'/>
             </form>
         </div>
     );
