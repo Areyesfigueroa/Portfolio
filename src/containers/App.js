@@ -92,7 +92,6 @@ class App extends Component {
         showText: false,
         images: skateBuilderImgs,
         links: {
-          demoURL: null,
           websiteURL: 'https://skatebuilder.netlify.com/',
           githubURL: 'https://github.com/Areyesfigueroa/SkateBuilder'
         } 
@@ -109,8 +108,7 @@ class App extends Component {
         showText: false,
         images: performanceEvalImgs, 
         links: {
-          demoURL: null,
-          websiteURL: 'http://performance-eval.000webhostapp.com/LoginSystem/login.php',
+          websiteURL: 'https://performance-eval.herokuapp.com/LoginSystem/login.php',
           githubURL: 'https://github.com/Areyesfigueroa/Performance-Evaluation'
         }
       },
@@ -126,7 +124,6 @@ class App extends Component {
         showText: false,
         images: viParkingImgs,
         links: {
-          demoURL: null,
           websiteURL: null,
           githubURL: null
         }
@@ -257,7 +254,7 @@ class App extends Component {
       </div>
     )
 
-    const modalHandler = () => {      
+    const modalHandler = () => {
       if(!this.state.modal.closeModal) {
         return(
           <Modal
