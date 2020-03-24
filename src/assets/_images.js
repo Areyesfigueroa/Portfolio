@@ -3,6 +3,7 @@
 export const performanceEvalImgs = {
     bg: require("./performance-eval-imgs/login-page.png"),
     slides: [        
+        {src: require("./performance-eval-imgs/performance-evaluation-demo.gif"), alt: "Demo Gif"},
         {src: require("./performance-eval-imgs/login-page.png"), alt: "Login Page"},
         {src: require("./performance-eval-imgs/home-page.png"), alt: "Home Page"},
         {src: require("./performance-eval-imgs/home-modal.png"), alt: "Home Modal"},
@@ -26,6 +27,7 @@ export const skateBuilderImgs = {
 export const viParkingImgs = {
     bg: require("./vi-parking-imgs/vehicles.png"),
     slides: [        
+        {src: require("./vi-parking-imgs/vi-app-demo.gif"), alt: "Demo Gif"},
         {src: require("./vi-parking-imgs/about.png"), alt: "About Page"},
         {src: require("./vi-parking-imgs/apartments.png"), alt: "Apartments Page"},
         {src: require("./vi-parking-imgs/details.png"), alt: "Details Page"},

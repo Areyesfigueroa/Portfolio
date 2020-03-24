@@ -92,7 +92,6 @@ class App extends Component {
         showText: false,
         images: skateBuilderImgs,
         links: {
-          demoURL: null,
           websiteURL: 'https://skatebuilder.netlify.com/',
           githubURL: 'https://github.com/Areyesfigueroa/SkateBuilder'
         } 
@@ -109,8 +108,7 @@ class App extends Component {
         showText: false,
         images: performanceEvalImgs, 
         links: {
-          demoURL: null,
-          websiteURL: 'http://performance-eval.000webhostapp.com/LoginSystem/login.php',
+          websiteURL: 'https://performance-eval.herokuapp.com/LoginSystem/login.php',
           githubURL: 'https://github.com/Areyesfigueroa/Performance-Evaluation'
         }
       },
@@ -126,7 +124,6 @@ class App extends Component {
         showText: false,
         images: viParkingImgs,
         links: {
-          demoURL: null,
           websiteURL: null,
           githubURL: null
         }
@@ -257,7 +254,7 @@ class App extends Component {
       </div>
     )
 
-    const modalHandler = () => {      
+    const modalHandler = () => {
       if(!this.state.modal.closeModal) {
         return(
           <Modal
@@ -294,14 +291,15 @@ class App extends Component {
         <SectionWrapper title="About" scrollID={'aboutSection'}>
           <Textbox>
             <p><Image src={require('../assets/icons/about-icon.png')} fluid/></p>
-            <p>Hello my name is Aliel Reyes, I am a Front End Engineer based in 
+            <p>Hello my name is Aliel Reyes, I am a Software Developer based out of
             the bay area.</p>
-            <p>I consider myself a tinkerer, I love to explore new technologies. I 
-            am currently working for a company creating Javascript tools and 
-            data management.</p>
-            <p>I am focused in creating web applications as a Front End Engineer 
-            but my goal is to become a full stack developer.</p>
-            <p>I look forward to meeting future employers.</p>
+            <p>I consider myself a flexible engineer that loves to explore new technologies. 
+            I am currently working for a company creating Javascript tools that 
+            facilitate data management.</p>
+            <p>Currently, my passion is in creating web applications as a Front End Developer 
+            but my goal is to become a Full-Stack Developer.</p>
+            <p>Please take a look around my site at some of my different web application projects. 
+            Feel free to reach out to me and let me know what you think.</p>
           </Textbox>
         </SectionWrapper>
         
