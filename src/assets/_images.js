@@ -12,6 +12,19 @@ export const performanceEvalImgs = {
         {src: require("./performance-eval-imgs/reset-pwd.png"), alt: "Reset Password"}
     ]
 }
+//VGScout Carousel Images
+export const vgsImgs = {
+    bg: require("./vgs-imgs/VGS_Desktop_01.png"),
+    slides: [        
+        {src: require("./vgs-imgs/VGS_Demo_01.gif"), alt: "Demo Gif"},
+        {src: require("./vgs-imgs/VGS_Phone_01.png"), alt: "Home Phone"},
+        {src: require("./vgs-imgs/VGS_Desktop_01.png"), alt: "Home Desktop"},
+        {src: require("./vgs-imgs/VGS_Phone_02.png"), alt: "Search"},
+        {src: require("./vgs-imgs/VGS_Phone_03.png"), alt: "Game Info"},
+        {src: require("./vgs-imgs/VGS_Phone_04.png"), alt: "Reddit Posts"},
+        {src: require("./vgs-imgs/VGS_Desktop_02.png"), alt: "Desktop App"}
+    ]
+}
 //Skate Builder Carousel Images
 export const skateBuilderImgs = {
     bg: require("./skate-builder-imgs/home-page.png"),
@@ -34,13 +47,5 @@ export const viParkingImgs = {
         {src: require("./vi-parking-imgs/history.png"), alt: "History Page"},
         {src: require("./vi-parking-imgs/relational-logic.png"), alt: "Relational Logic"},
         {src: require("./vi-parking-imgs/vehicles.png"), alt: "Vehicles Page"},
-    ]
-}
-//Placeholder Carousel Images
-export const carouselImgs = {
-    slides: [
-        {src: require("./carousel-imgs/stock_img1.jpg"), alt: "Stock Img 1"}, 
-        {src: require("./carousel-imgs/stock_img2.jpg"), alt: "Stock Img 2"},
-        {src: require("./carousel-imgs/stock_img3.jpg"), alt: "Stock Img 3"}
     ]
 }

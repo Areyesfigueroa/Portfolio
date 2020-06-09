@@ -32,7 +32,7 @@ import alielLogo from '../assets/aliel-logo.png';
 import cardBanner from '../assets/cardHeader.png';
 
 //Carousel Assets
-import {performanceEvalImgs, skateBuilderImgs, viParkingImgs} from '../assets/_images';
+import {performanceEvalImgs, skateBuilderImgs, viParkingImgs, vgsImgs} from '../assets/_images';
 
 class App extends Component {
 
@@ -83,6 +83,22 @@ class App extends Component {
       {
         id: 0,
         icon: require('../assets/icons/skate.png'),
+        title: 'VGScout',
+        shortDesc: "Learn more about your favorite video game.",
+        longDesc: "Allows the user to search through a database of video games to get informations such as who are the developers, publishers, reviews and more. It also includes a reddit comments section where you can view what everyone else has said about the game.",
+        techDesc: 'This web app was built using React, Axios(Promise based HTTP client for the browser and node.js) and RAWG Database and API.',
+        banner: cardBanner,
+        background: vgsImgs.bg,
+        showText: false,
+        images: vgsImgs,
+        links: {
+          websiteURL: 'https://vgscout.netlify.app/',
+          githubURL: 'https://github.com/Areyesfigueroa/VideoGameSearch'
+        } 
+      },
+      {
+        id: 1,
+        icon: require('../assets/icons/skate.png'),
         title: 'Skate Builder',
         shortDesc: "Create your own custom skateboard",
         longDesc: "Allows for the user to see their dream skateboard in 3D and orbit around it. User can modify the board components such as the wheels, trucks, bottom of the board and the top of the board.",
@@ -97,7 +113,7 @@ class App extends Component {
         } 
       },
       {
-        id: 1,
+        id: 2,
         title: 'Evaluation Portal',
         icon: require('../assets/icons/eval.png'),
         shortDesc: "Employee Web Portal",
@@ -113,7 +129,7 @@ class App extends Component {
         }
       },
       {
-        id: 2,
+        id: 3,
         icon: require('../assets/icons/car.png'),
         title: 'Vi Parking App',
         shortDesc: 'Parking Management Software',
@@ -309,7 +325,7 @@ class App extends Component {
           file={require('../assets/documents/AlielReyesResume-2020.pdf')}
           height={1000}
           />
-          <button onClick={this.downloadResumeHandler}>Download Resume</button>
+          <button className={classes.button} onClick={this.downloadResumeHandler}>Download Resume</button>
         </SectionWrapper>
 
         {/** Technologies Section */}

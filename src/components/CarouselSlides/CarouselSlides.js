@@ -17,6 +17,7 @@ const carouselSlides = (props) => {
             {props.slides.map((slide) => (
             <Carousel.Item key={slide.alt}>
                 <div className={classes.carouselImgContainer}>
+                    <button className={classes.carouselSlideBtn} onClick={()=> console.log("Zoom In")}></button>
                     <img 
                     className={carouselImgStyles.join(' ')}
                     src={slide.src}
