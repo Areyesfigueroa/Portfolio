@@ -83,7 +83,7 @@ class App extends Component {
     projectCards: [
       {
         id: 0,
-        icon: require('../assets/icons/skate.png'),
+        icon: require('../assets/icons/search.png'),
         title: 'VGScout',
         shortDesc: "Learn more about your favorite video game.",
         longDesc: "Allows the user to search through a database of video games to get informations such as who are the developers, publishers, reviews and more. It also includes a reddit comments section where you can view what everyone else has said about the game.",
