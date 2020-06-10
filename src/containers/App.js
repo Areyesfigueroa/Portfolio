@@ -33,6 +33,7 @@ import cardBanner from '../assets/cardHeader.png';
 
 //Carousel Assets
 import {performanceEvalImgs, skateBuilderImgs, viParkingImgs, vgsImgs} from '../assets/_images';
+import MagnifyImg from '../components/MagnifyImg/MagnifyImg';
 
 class App extends Component {
 
@@ -150,7 +151,9 @@ class App extends Component {
       showModal: false,
       closeModal: true,
       animDuration: 200,
-      cardID: 0
+      cardID: 0,
+      zoomedIn: false,
+      currentSlide: null
     },
     scrollToTopBtn: {
       show: false
@@ -251,6 +254,28 @@ class App extends Component {
     });
   }
 
+  enableZoom = (slideData) => {
+    if(this.state.zoomedIn) return;
+    console.log("Enable Zoom");
+
+    let newModal = {...this.state.modal};
+    newModal.zoomedIn = true;
+    newModal.currentSlide = slideData.src;
+    
+    this.setState({ modal: newModal });
+  }
+
+  disableZoom = () => {
+    console.log("disable", this.state.modal.zoomedIn);
+    if(this.state.zoomedIn === false) return;
+    console.log("Disable Zoom", this.state.zoomedIn);
+    
+    let newModal = {...this.state.modal};
+    newModal.zoomedIn = false;
+
+    this.setState({ modal: newModal });
+  }
+
   render() {
     
     const techCards = (
@@ -278,6 +303,7 @@ class App extends Component {
           card={this.state.projectCards[this.state.modal.cardID]}
           modal={this.state.modal} 
           clicked={(event) => this.closeModal(event)}
+          enableZoom={this.enableZoom}
           />
         );
       }
@@ -285,6 +311,8 @@ class App extends Component {
 
     return (
       <div className="App">
+
+       {this.state.modal.zoomedIn ? <MagnifyImg src={this.state.modal.currentSlide} alt={'test'} clicked={this.disableZoom}/>: null}
 
         {/** Header Section */}
         <ScrollableAnchor id={'header'}>

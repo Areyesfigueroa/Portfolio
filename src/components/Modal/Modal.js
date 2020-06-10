@@ -40,6 +40,7 @@ const Modal = (props) => {
                         <div className={classes.modalContent}>
                             <CarouselSlides 
                             slides={props.card.images.slides}
+                            clicked={props.enableZoom}
                             />
                             <InfoBox 
                             title= {props.card.title}
