@@ -16,7 +16,7 @@ export const performanceEvalImgs = {
 export const vgsImgs = {
     bg: require("./vgs-imgs/VGS_Desktop_01.png"),
     slides: [        
-        {src: require("./vgs-imgs/VGS_Demo_01.gif"), alt: "Demo Gif"},
+        {src: require("./vgs-imgs/VGS_Demo_05.gif"), alt: "Demo Gif"},
         {src: require("./vgs-imgs/VGS_Phone_01.png"), alt: "Home Phone"},
         {src: require("./vgs-imgs/VGS_Desktop_01.png"), alt: "Home Desktop"},
         {src: require("./vgs-imgs/VGS_Phone_02.png"), alt: "Search"},
