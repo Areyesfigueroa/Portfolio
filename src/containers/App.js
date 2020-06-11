@@ -29,10 +29,10 @@ import Image from 'react-bootstrap/Image';
 
 //Local Assets
 import alielLogo from '../assets/aliel-logo.png';
-import cardBanner from '../assets/cardHeader.png';
 
 //Carousel Assets
-import {performanceEvalImgs, skateBuilderImgs, viParkingImgs} from '../assets/_images';
+import {performanceEvalImgs, skateBuilderImgs, viParkingImgs, vgsImgs} from '../assets/_images';
+import MagnifyImg from '../components/MagnifyImg/MagnifyImg';
 
 class App extends Component {
 
@@ -82,12 +82,26 @@ class App extends Component {
     projectCards: [
       {
         id: 0,
+        icon: require('../assets/icons/search.png'),
+        title: 'VGScout',
+        shortDesc: "Learn more about your favorite video game",
+        longDesc: "Allows the user to search through a database of video games to get informations such as who are the developers, publishers, reviews and more. It also includes a reddit comments section where you can view what everyone else has said about the game.",
+        techDesc: 'This web app was built using React, Axios(Promise based HTTP client for the browser and node.js) and RAWG Database and API.',
+        background: vgsImgs.bg,
+        showText: false,
+        images: vgsImgs,
+        links: {
+          websiteURL: 'https://vgscout.netlify.app/',
+          githubURL: 'https://github.com/Areyesfigueroa/VideoGameSearch'
+        } 
+      },
+      {
+        id: 1,
         icon: require('../assets/icons/skate.png'),
         title: 'Skate Builder',
         shortDesc: "Create your own custom skateboard",
         longDesc: "Allows for the user to see their dream skateboard in 3D and orbit around it. User can modify the board components such as the wheels, trucks, bottom of the board and the top of the board.",
         techDesc: 'This web app was built using React, P5 react library for the 3D interactions and React Bootstrap for the styling.',
-        banner: cardBanner,
         background: skateBuilderImgs.bg,
         showText: false,
         images: skateBuilderImgs,
@@ -97,13 +111,12 @@ class App extends Component {
         } 
       },
       {
-        id: 1,
+        id: 2,
         title: 'Evaluation Portal',
         icon: require('../assets/icons/eval.png'),
         shortDesc: "Employee Web Portal",
         longDesc: "Performance evaluation is a web app where an employee can log in and see their performance evaluations submitted by their managers so that the employee can self-improve. If the user has admin privileges they can manage other user’s roles, passwords resets, user creation and deletion.",
         techDesc: 'The website is built using HTML, CSS, Javascript, and Bootstrap for Front End and PHP for backend alongside MySQL as the database.',
-        banner: cardBanner,
         background: performanceEvalImgs.bg,
         showText: false,
         images: performanceEvalImgs, 
@@ -113,13 +126,12 @@ class App extends Component {
         }
       },
       {
-        id: 2,
+        id: 3,
         icon: require('../assets/icons/car.png'),
         title: 'Vi Parking App',
         shortDesc: 'Parking Management Software',
         longDesc: 'All About Parking vehicle management app for valets at the Vi. Keeps track of vehicle information to easily monitor and update vehicle location and status. This app has been used in operations for over a year and it is still being used to this date within the company.',
         techDesc: 'Built using Appsheet, Google App Scripts API and Javascript',
-        banner: cardBanner,
         background: viParkingImgs.bg,
         showText: false,
         images: viParkingImgs,
@@ -134,7 +146,9 @@ class App extends Component {
       showModal: false,
       closeModal: true,
       animDuration: 200,
-      cardID: 0
+      cardID: 0,
+      zoomedIn: false,
+      currentSlide: null
     },
     scrollToTopBtn: {
       show: false
@@ -235,6 +249,28 @@ class App extends Component {
     });
   }
 
+  enableZoom = (slideData) => {
+    if(this.state.zoomedIn) return;
+    console.log("Enable Zoom");
+
+    let newModal = {...this.state.modal};
+    newModal.zoomedIn = true;
+    newModal.currentSlide = slideData.src;
+    
+    this.setState({ modal: newModal });
+  }
+
+  disableZoom = () => {
+    console.log("disable", this.state.modal.zoomedIn);
+    if(this.state.zoomedIn === false) return;
+    console.log("Disable Zoom", this.state.zoomedIn);
+    
+    let newModal = {...this.state.modal};
+    newModal.zoomedIn = false;
+
+    this.setState({ modal: newModal });
+  }
+
   render() {
     
     const techCards = (
@@ -262,6 +298,7 @@ class App extends Component {
           card={this.state.projectCards[this.state.modal.cardID]}
           modal={this.state.modal} 
           clicked={(event) => this.closeModal(event)}
+          enableZoom={this.enableZoom}
           />
         );
       }
@@ -269,6 +306,8 @@ class App extends Component {
 
     return (
       <div className="App">
+
+       {this.state.modal.zoomedIn ? <MagnifyImg src={this.state.modal.currentSlide} alt={'test'} clicked={this.disableZoom}/>: null}
 
         {/** Header Section */}
         <ScrollableAnchor id={'header'}>
@@ -309,7 +348,7 @@ class App extends Component {
           file={require('../assets/documents/AlielReyesResume-2020.pdf')}
           height={1000}
           />
-          <button onClick={this.downloadResumeHandler}>Download Resume</button>
+          <button className={classes.button} onClick={this.downloadResumeHandler}>Download Resume</button>
         </SectionWrapper>
 
         {/** Technologies Section */}

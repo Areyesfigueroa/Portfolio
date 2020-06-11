@@ -40,6 +40,7 @@ const Modal = (props) => {
                         <div className={classes.modalContent}>
                             <CarouselSlides 
                             slides={props.card.images.slides}
+                            clicked={props.enableZoom}
                             />
                             <InfoBox 
                             title= {props.card.title}
@@ -48,8 +49,15 @@ const Modal = (props) => {
                             {`Description:\n${props.card.longDesc}\n\nTechnology:\n${props.card.techDesc}`}
                             </InfoBox>
                             <div className={classes.modalBtns}>
-                                <button onClick={()=>openURL(props.card.links.websiteURL)} className={classes.modalBtn}>{props.card.links.websiteURL != null ? "Visit Website": "Confidential Website"}</button>
-                                <button onClick={()=>openURL(props.card.links.githubURL)} className={classes.modalBtn}>{props.card.links.githubURL != null ? "Visit Github": "Confidential Github"}</button>
+                                {props.card.links.websiteURL ? 
+                                <button className={classes.button} onClick={()=>openURL(props.card.links.websiteURL)} >Visit Website</button>
+                                :
+                                <p style={{padding: '4px'}}>Confidential website</p>}
+
+                                {props.card.links.githubURL ?
+                                 <button className={classes.button} onClick={()=>openURL(props.card.links.githubURL)} >Visit Github</button>
+                                 :
+                                 <p style={{padding: '4px'}}>Confidential Github</p>}
                             </div>  
                         </div>
  

@@ -85,7 +85,7 @@ a.nav-link.active {
   transition: border-bottom 0.2s;
 }
 
-button {
+.button {
   font-size: 120%;
   color: var(--btn-text-color);
   background-color: var(--accent-color);
@@ -94,13 +94,14 @@ button {
   cursor: pointer;
   padding: 10px;
   border-radius: 5px;
+  border: none;
 }
 
 button:focus {
   outline:0;
 }
 
-button:hover {
+.button:hover {
   background-color: var(--btn-hover-color);
 }
 

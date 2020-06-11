@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import classes from '../../containers/App.module.css';
 import {Carousel} from 'react-bootstrap';
+import MagnifyImg from '../MagnifyImg/MagnifyImg';
 
 const carouselImgStyles=['d-block', classes.carouselImg]; //w-100
 
@@ -11,21 +12,26 @@ const carouselStyle = {
     borderBottom: '2px solid #000'
 }
 
-const carouselSlides = (props) => {
-    return (
-        <Carousel style={carouselStyle} interval={null} touch={true}>
-            {props.slides.map((slide) => (
-            <Carousel.Item key={slide.alt}>
-                <div className={classes.carouselImgContainer}>
-                    <img 
-                    className={carouselImgStyles.join(' ')}
-                    src={slide.src}
-                    alt={slide.alt}
-                    />
-                </div>
-            </Carousel.Item>))}
-        </Carousel>
-        );
+class CarouselSlides extends Component {
+    render() {
+        return (
+            <Fragment>
+                <Carousel style={carouselStyle} interval={null} touch={true}>
+                    {this.props.slides.map((slide) => (
+                    <Carousel.Item key={slide.alt}>
+                        <div className={classes.carouselImgContainer}>
+                            <button className={classes.carouselSlideBtn} onClick={() => this.props.clicked(slide)}></button>
+                            <img 
+                            className={carouselImgStyles.join(' ')}
+                            src={slide.src}
+                            alt={slide.alt}
+                            />
+                        </div>
+                    </Carousel.Item>))}
+                </Carousel>
+            </Fragment>
+            );
+    }
 };
 
-export default carouselSlides;
+export default CarouselSlides;
