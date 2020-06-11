@@ -49,8 +49,15 @@ const Modal = (props) => {
                             {`Description:\n${props.card.longDesc}\n\nTechnology:\n${props.card.techDesc}`}
                             </InfoBox>
                             <div className={classes.modalBtns}>
-                                <button className={classes.button} onClick={()=>openURL(props.card.links.websiteURL)} >{props.card.links.websiteURL != null ? "Visit Website": "Confidential Website"}</button>
-                                <button className={classes.button} onClick={()=>openURL(props.card.links.githubURL)} >{props.card.links.githubURL != null ? "Visit Github": "Confidential Github"}</button>
+                                {props.card.links.websiteURL ? 
+                                <button className={classes.button} onClick={()=>openURL(props.card.links.websiteURL)} >Visit Website</button>
+                                :
+                                <p style={{padding: '4px'}}>Confidential website</p>}
+
+                                {props.card.links.githubURL ?
+                                 <button className={classes.button} onClick={()=>openURL(props.card.links.githubURL)} >Visit Github</button>
+                                 :
+                                 <p style={{padding: '4px'}}>Confidential Github</p>}
                             </div>  
                         </div>
  

@@ -9,7 +9,6 @@ const ProjectCards = (props) => {
         title={card.title}
         description={card.shortDesc}
         showText={card.showText} 
-        banner={card.banner}
         backgroundImg={card.background}
         hover={() => props.hover(index, true)}
         hoverExit={() => props.hoverExit(index, false)}
