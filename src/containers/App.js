@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classes from './App.module.css';
+import ReactGA from 'react-ga';
 
 /** Components */
 //UI
@@ -16,7 +17,6 @@ import ScrollToTopBtn from '../components/ScrollToTopBtn/ScrollToTopBtn';
 import Navbar from '../components/Navbar/Navbar';
 import SectionWrapper from '../components/SectionWrapper/SectionWrapper';
 import Footer from '../components/Footer/Footer';
-
 
 /** Waypoint Component */
 import { Waypoint } from 'react-waypoint';
@@ -303,6 +303,13 @@ class App extends Component {
         );
       }
     }
+
+    const initializeGoogleAnalytics = () => {
+      const trackingId = "UA-164947982-1"; // Replace with your Google Analytics tracking ID
+      ReactGA.initialize(trackingId);
+      ReactGA.pageview(window.location.pathname + window.location.search);
+    }
+    initializeGoogleAnalytics();
 
     return (
       <div className="App">
