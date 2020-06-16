@@ -1,0 +1,215 @@
+/*
+--------------------------------
+-------- GLOBAL SECTION --------
+--------------------------------
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid rgb(80, 223, 241); */
+}
+
+:root {
+--accent-color: #ff8a47;
+
+--btn-hover-color: #e77e41;
+--btn-text-color: #f3f3f3;
+
+--textbox-bg-color: #fefdfd;
+--textbox-outline-color: #9f9f9f;
+
+--border-bottom-size: 2px;
+
+--shadow-color: rgba(65, 65, 65, 90%);
+
+}
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+/*----HEADERS-----*/
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.6rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  min-height: 600px;
+
+  background: url(../src/assets/header-bg.png) no-repeat center;
+  background-size: cover;
+}
+
+section {
+  padding: 100px 0;
+}
+
+section:nth-child(odd) {
+  background-color: #eef3f5;
+}
+
+/*----LINKS----*/
+a {
+  text-decoration: none;
+  color: black;
+  padding-bottom: 5px;
+}
+
+a:hover,
+a.nav-link.active {
+  color: black;
+  text-decoration: none;
+  border-bottom: 2px solid var(--accent-color);
+  transition: border-bottom 0.2s;
+}
+
+.button {
+  font-size: 120%;
+  color: var(--btn-text-color);
+  background-color: var(--accent-color);
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+button:focus {
+  outline:0;
+}
+
+.button:hover {
+  background-color: var(--btn-hover-color);
+}
+
+hr {
+  background-color: #000;
+  padding: 1px;
+  width: 100%;
+}
+
+input {
+  padding: 10px 15px;
+}
+
+textarea {
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  background-color: white;
+  resize: auto;
+  cursor: text;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  margin: 0em;
+  width: 500px;
+  height: 150px;
+  min-width: 300px;
+  min-height: 100px;
+  padding: 10px 15px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: white;
+  padding: 30px;
+  width: 100%;
+  background-color: rgb(56, 56, 56);
+}
+
+/*
+--------------------------------
+-------- PDFViewer SECTION -----
+--------------------------------
+*/
+.react-pdf__Page__canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/*
+--------------------------------
+-------- BOOTSTRAP SECTION --------
+--------------------------------
+*/
+
+/*----CAROUSEL----*/
+.carousel-indicators li {
+  background-color: var(--accent-color);
+}
+
+a.carousel-control-next,
+a.carousel-control-prev {
+  background-color: #5c5959a8;
+  height: 15%;
+  top: 338px;
+  border: 0;
+}
+
+a.carousel-control-next:hover,
+a.carousel-control-prev:hover  {
+  background-color: #4d4b4be0;
+  border: 0;
+}
+
+/*
+--------------------------------
+-------- MEDIA QUERIES ---
+--------------------------------
+*/
+
+/*Medium Size*/
+@media (max-width: 768px) {
+
+  a.nav-link.active,
+  a.nav-link:hover {
+    color: var(--accent-color) !important;
+    text-decoration: none;
+    border-bottom: none;
+    transition: color 0.2s;
+  }
+
+
+  a.carousel-control-next,
+  a.carousel-control-prev {
+    top: 265px;
+  }
+
+}
+
+/*Small Size*/
+@media (max-width: 375px) {
+  a.carousel-control-next,
+  a.carousel-control-prev {
+    top: 235px;
+  }
+}
