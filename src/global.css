@@ -14,7 +14,7 @@
 --accent-color: #ff8a47;
 
 --btn-hover-color: #e77e41;
---btn-text-color: #f3f3f3;
+--btn-text-color: white;
 
 --textbox-bg-color: #fefdfd;
 --textbox-outline-color: #9f9f9f;
@@ -152,8 +152,14 @@ footer {
 --------------------------------
 */
 .react-pdf__Page__canvas {
+  position: relative;
   width: 100% !important;
   height: auto !important;
+}
+
+.react-pdf__Page__textContent {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 /*
