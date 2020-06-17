@@ -186,10 +186,26 @@ a.button:hover,
 */
 
 .pdfWrapper {
-  max-width: 707px;
+  max-width: 900px; /* Canvas Stretch */
   width: 100%;
   height: auto;
   overflow: hidden;
+}
+
+.pagination {
+  margin: 0 auto;
+  text-align: center;
+  z-index: 999;
+
+}
+
+.pagination p{
+  display: inline-block;
+}
+
+.pagination button {
+  padding: 5px;
+  margin-left: 15px;
 }
 
 /*
@@ -591,7 +607,7 @@ a.closeBtn:not([href]):not([tabindex]):hover {
   --------------------------------
   */
   .container {
-    margin: 0 20px;
+    margin: 0px;
   }
 
      /*

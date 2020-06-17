@@ -352,7 +352,7 @@ class App extends Component {
         {/** Resume Section */}
         <SectionWrapper title="Resume" scrollID={'resumeSection'}>
           <PDFViewer 
-          file={require('../assets/documents/AlielReyesResume-2020.pdf')}
+          file={require('../assets/documents/20_06_15_AlielReyes_Resume.pdf')}
           height={1000}
           />
           <button className={classes.button} onClick={this.downloadResumeHandler}>Download Resume</button>
