@@ -238,7 +238,7 @@ class App extends Component {
   }
 
   downloadResumeHandler = () => {
-    window.location.replace("https://drive.google.com/uc?export=download&id=1FzkRnVOwaer8NLJXFFCxQWSBc5_r9A5s");
+    window.location.replace("https://drive.google.com/uc?export=download&id=1IbFn6ZGfzEb533h1BQ6B-2upLlh5NQiy");
   }
 
   scrollToTopBtnFadeHandler = (showBtn) => {
@@ -353,7 +353,6 @@ class App extends Component {
         <SectionWrapper title="Resume" scrollID={'resumeSection'}>
           <PDFViewer 
           file={require('../assets/documents/20_06_15_AlielReyes_Resume.pdf')}
-          height={1000}
           />
           <button className={classes.button} onClick={this.downloadResumeHandler}>Download Resume</button>
         </SectionWrapper>
