@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.19c299e8.chunk.css",
-    "main.js": "/static/js/main.aa646898.chunk.js",
-    "main.js.map": "/static/js/main.aa646898.chunk.js.map",
+    "main.css": "/static/css/main.78367f01.chunk.css",
+    "main.js": "/static/js/main.a865dcd7.chunk.js",
+    "main.js.map": "/static/js/main.a865dcd7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.736723a6.js",
     "runtime-main.js.map": "/static/js/runtime-main.736723a6.js.map",
     "static/css/2.2ec3db0d.chunk.css": "/static/css/2.2ec3db0d.chunk.css",
-    "static/js/2.e6cdb332.chunk.js": "/static/js/2.e6cdb332.chunk.js",
-    "static/js/2.e6cdb332.chunk.js.map": "/static/js/2.e6cdb332.chunk.js.map",
+    "static/js/2.c433f3c5.chunk.js": "/static/js/2.c433f3c5.chunk.js",
+    "static/js/2.c433f3c5.chunk.js.map": "/static/js/2.c433f3c5.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.7ad529501b74eb73ec8b40d33634264d.js": "/precache-manifest.7ad529501b74eb73ec8b40d33634264d.js",
+    "precache-manifest.3308eaf4340fa90141872ce40ff33c16.js": "/precache-manifest.3308eaf4340fa90141872ce40ff33c16.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.2ec3db0d.chunk.css.map": "/static/css/2.2ec3db0d.chunk.css.map",
-    "static/css/main.19c299e8.chunk.css.map": "/static/css/main.19c299e8.chunk.css.map",
-    "static/js/2.e6cdb332.chunk.js.LICENSE.txt": "/static/js/2.e6cdb332.chunk.js.LICENSE.txt",
-    "static/media/AlielReyesResume-2020.pdf": "/static/media/AlielReyesResume-2020.f0cf1ffc.pdf",
+    "static/css/main.78367f01.chunk.css.map": "/static/css/main.78367f01.chunk.css.map",
+    "static/js/2.c433f3c5.chunk.js.LICENSE.txt": "/static/js/2.c433f3c5.chunk.js.LICENSE.txt",
+    "static/media/20_06_15_AlielReyes_Resume.pdf": "/static/media/20_06_15_AlielReyes_Resume.32e9145d.pdf",
     "static/media/VGS_Demo_05.gif": "/static/media/VGS_Demo_05.55519b04.gif",
     "static/media/VGS_Desktop_01.png": "/static/media/VGS_Desktop_01.a0c23c78.png",
     "static/media/VGS_Desktop_02.png": "/static/media/VGS_Desktop_02.5ee4e87d.png",
@@ -45,8 +45,8 @@
   "entrypoints": [
     "static/js/runtime-main.736723a6.js",
     "static/css/2.2ec3db0d.chunk.css",
-    "static/js/2.e6cdb332.chunk.js",
-    "static/css/main.19c299e8.chunk.css",
-    "static/js/main.aa646898.chunk.js"
+    "static/js/2.c433f3c5.chunk.js",
+    "static/css/main.78367f01.chunk.css",
+    "static/js/main.a865dcd7.chunk.js"
   ]
 }
