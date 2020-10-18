@@ -26,14 +26,6 @@ import MagnifyImg from '../components/MagnifyImg/MagnifyImg';
 class App extends Component {
 
   state = {
-    headerInfo: {
-      title: "Aliel Reyes",
-      subtitle: "Software Developer", 
-      btnText: "See Portfolio"
-    },
-    navbar: {
-      stickyNav: true
-    },
     cards: [
       {
         id: '0A', 
@@ -205,24 +197,6 @@ class App extends Component {
     //set the state
     this.setState({
       projectCards: changedProjectCards
-    });
-  }
-
-  showStickyNav = () => {
-    console.log('Show Sticky Navbar: ' + true);
-    this.setState({
-      navbar: {
-        stickyNav: true
-      }
-    });
-  }
-
-  hideStickyNav = () => {    
-    console.log('Hide Sticky Navbar: ' + false);
-    this.setState({
-      navbar: {
-        stickyNav: false
-      }
     });
   }
 

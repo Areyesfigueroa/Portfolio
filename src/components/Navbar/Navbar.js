@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from '../../containers/App.module.css';
+import classes from "./Navbar.module.css";
 
 //Bootstrap Navbar
 import { Navbar, Nav} from 'react-bootstrap';
