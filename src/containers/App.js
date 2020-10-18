@@ -4,7 +4,7 @@ import ReactGA from 'react-ga';
 
 /** Components */
 //UI
-import PageTitle from '../components/PageTitle/PageTitle';
+import Header from '../components/Header/Header';
 import Textbox from '../components/Textbox/Textbox';
 import Cards from '../components/Cards/Cards';
 import ProjectCards from '../components/ProjectCards/ProjectCards';
@@ -12,23 +12,12 @@ import Modal from '../components/Modal/Modal';
 import ContactForm from '../components/ContactForm/ContactForm';
 import PDFViewer from '../components/PDFViewer/PDFViewer';
 import ScrollToTopBtn from '../components/ScrollToTopBtn/ScrollToTopBtn';
-
 //Layout
-import Navbar from '../components/Navbar/Navbar';
 import SectionWrapper from '../components/SectionWrapper/SectionWrapper';
 import Footer from '../components/Footer/Footer';
 
-/** Waypoint Component */
-import { Waypoint } from 'react-waypoint';
-
-/** Scrollable Component */
-import ScrollableAnchor from 'react-scrollable-anchor';
-
 /** Bootstrap Component */
 import Image from 'react-bootstrap/Image';
-
-//Local Assets
-import alielLogo from '../assets/aliel-logo.png';
 
 //Carousel Assets
 import {performanceEvalImgs, skateBuilderImgs, viParkingImgs, vgsImgs} from '../assets/_images';
@@ -317,21 +306,7 @@ class App extends Component {
        {this.state.modal.zoomedIn ? <MagnifyImg src={this.state.modal.currentSlide} alt={'test'} clicked={this.disableZoom}/>: null}
 
         {/** Header Section */}
-        <ScrollableAnchor id={'header'}>
-            <Waypoint 
-            onEnter={()=>this.scrollToTopBtnFadeHandler(false)} 
-            onLeave={()=>this.scrollToTopBtnFadeHandler(true)}
-            topOffset={"115px"}>
-              <header>
-                <Navbar img={alielLogo} />
-                <PageTitle
-                title={this.state.headerInfo.title}
-                subtitle={this.state.headerInfo.subtitle}
-                btnText={this.state.headerInfo.btnText}
-                />
-              </header>
-            </Waypoint>
-          </ScrollableAnchor>
+        <Header showScrollBtn={this.scrollToTopBtnFadeHandler}/>
 
         {/** About Section */}
         <SectionWrapper title="About" scrollID={'aboutSection'}>
