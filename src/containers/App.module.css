@@ -53,104 +53,6 @@
   margin: 0 120px;
 }
 
-.sectionTitle {
-  margin-bottom: 30px;
-  border-bottom: 2px solid var(--accent-color);
-  padding-bottom: 5px;
-}
-
-/*
---------------------------------
--------- HEADER SECTION --------
---------------------------------
-*/
-
-/*
------ NAVBAR------
-*/
-
-a.button,
-.button {
-  border: none;
-  font-size: 120%;
-  color: var(--btn-text-color);
-  background-color: var(--accent-color);
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-a.button:hover,
-.button:hover {
-  background-color: var(--btn-hover-color);
-  border: none;
-}
-
-/*
------ HEADER TITLE -----
-*/
-
-.pageTitle {
-  position: absolute;
-  text-align: left;
-  left: 15%;
-  top: 41%;
-}
-
-.pageTitle div {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: start;
-  row-gap: 30%;
-}
-
-/*
---------------------------------
--------- ABOUT SECTION ---
---------------------------------
-*/
-
-.textbox {
-  background-color: var(--textbox-bg-color);
-  border: 2px solid var(--textbox-outline-color);
-  line-height: 1.5em;
-  border-radius: 5px;
-  padding: 20px;
-  max-width: 50%;
-  min-width: 300px;
-  text-align: center;
-}
-/*
---------------------------------
--------- RESUME SECTION ---
---------------------------------
-*/
-
-.pdfWrapper {
-  max-width: 900px; /* Canvas Stretch */
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-}
-
-.pagination {
-  margin: 0 auto;
-  text-align: center;
-  z-index: 999;
-
-}
-
-.pagination p{
-  display: inline-block;
-}
-
-.pagination button {
-  padding: 5px;
-  margin-left: 15px;
-}
-
 /*
 --------------------------------
 -------- TECHNOLOGY SECTION ---
@@ -160,13 +62,13 @@ a.button:hover,
 /*
 ----- CARD BASE ------
 */
-.cards {
+/* .cards {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 100%;
-} 
+}  */
 
 .cardBase {
   position: relative;

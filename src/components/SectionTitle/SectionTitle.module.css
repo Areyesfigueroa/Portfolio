@@ -1,0 +1,5 @@
+.SectionTitle {
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+}

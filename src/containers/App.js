@@ -5,19 +5,18 @@ import ReactGA from 'react-ga';
 /** Components */
 //UI
 import Header from '../components/Header/Header';
-import Textbox from '../components/Textbox/Textbox';
+import AboutSection from '../components/Sections/AboutSection/AboutSection';
+import ResumeSection from '../components/Sections/ResumeSection/ResumeSection';
+import TechnologiesSection from '../components/Sections/TechnologySection/TechnologySection';
+
 import Cards from '../components/Cards/Cards';
 import ProjectCards from '../components/ProjectCards/ProjectCards';
 import Modal from '../components/Modal/Modal';
 import ContactForm from '../components/ContactForm/ContactForm';
-import PDFViewer from '../components/PDFViewer/PDFViewer';
 import ScrollToTopBtn from '../components/ScrollToTopBtn/ScrollToTopBtn';
 //Layout
 import SectionWrapper from '../components/SectionWrapper/SectionWrapper';
 import Footer from '../components/Footer/Footer';
-
-/** Bootstrap Component */
-import Image from 'react-bootstrap/Image';
 
 //Carousel Assets
 import {performanceEvalImgs, skateBuilderImgs, viParkingImgs, vgsImgs} from '../assets/_images';
@@ -26,40 +25,6 @@ import MagnifyImg from '../components/MagnifyImg/MagnifyImg';
 class App extends Component {
 
   state = {
-    cards: [
-      {
-        id: '0A', 
-        icon: require('../assets/icons/frontend.png'),
-        title: 'Frontend',
-        items: [
-          {id: '0', value: 'HTML'},
-          {id: '1', value: 'CSS'},
-          {id: '2', value: 'Javascript'},
-          {id: '3', value: 'React'}
-        ]
-      }, 
-      {
-        id: '1B',
-        icon: require('../assets/icons/gears.png'),
-        title: 'Server',
-        items: [
-          {id: "0", value: 'PHP'},
-          {id: "1", value: 'Python'},
-          {id: "2", value: 'MySQL'},
-        ]
-      },
-      {
-        id: '2C',
-        icon: require('../assets/icons/wrench.png'),
-        title: 'Tools',
-        items: [
-          {id: "0", value: 'NPM'},
-          {id: "1", value: 'Git/Github'},
-          {id: "2", value: 'SourceTree'},
-          {id: "3", value: 'Appsheet'}
-        ]
-      }
-    ],
     projectCards: [
       {
         id: 0,
@@ -235,12 +200,6 @@ class App extends Component {
   }
 
   render() {
-    
-    const techCards = (
-        <div className={classes.cards}>
-          <Cards cards={this.state.cards}/>
-        </div>
-    );
 
     const projectCards = (
       <div className={classes.projectCards}>
@@ -279,37 +238,10 @@ class App extends Component {
 
        {this.state.modal.zoomedIn ? <MagnifyImg src={this.state.modal.currentSlide} alt={'test'} clicked={this.disableZoom}/>: null}
 
-        {/** Header Section */}
         <Header showScrollBtn={this.scrollToTopBtnFadeHandler}/>
-
-        {/** About Section */}
-        <SectionWrapper title="About" scrollID={'aboutSection'}>
-          <Textbox>
-            <p><Image src={require('../assets/icons/about-icon.png')} fluid/></p>
-            <p>Hello my name is Aliel Reyes, I am a Software Developer based out of
-            the bay area.</p>
-            <p>I consider myself a flexible engineer that loves to explore new technologies. 
-            I am currently working for a company creating Javascript tools that 
-            facilitate data management.</p>
-            <p>Currently, my passion is in creating web applications as a Front End Developer 
-            but my goal is to become a Full-Stack Developer.</p>
-            <p>Please take a look around my site at some of my different web application projects. 
-            Feel free to reach out to me and let me know what you think.</p>
-          </Textbox>
-        </SectionWrapper>
-        
-        {/** Resume Section */}
-        <SectionWrapper title="Resume" scrollID={'resumeSection'}>
-          <PDFViewer 
-          file={require('../assets/documents/20_06_15_AlielReyes_Resume.pdf')}
-          />
-          <button className={classes.button} onClick={this.downloadResumeHandler}>Download Resume</button>
-        </SectionWrapper>
-
-        {/** Technologies Section */}
-        <SectionWrapper title="Technologies" scrollID={'technologiesSection'}>
-          {techCards}
-        </SectionWrapper>
+        <AboutSection />
+        <ResumeSection />
+        <TechnologiesSection />
 
         {/** Projects Section */}
         <SectionWrapper title="Projects" scrollID={'projectsSection'}>

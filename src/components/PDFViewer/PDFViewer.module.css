@@ -1,0 +1,21 @@
+.PDFViewer {
+    max-width: 900px; /* Canvas Stretch */
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.pagination {
+    margin: 0 auto;
+    text-align: center;
+    z-index: 999;
+}
+  
+.pagination p{
+    display: inline-block;
+}
+  
+.pagination button {
+    padding: 5px;
+    margin-left: 15px;
+}

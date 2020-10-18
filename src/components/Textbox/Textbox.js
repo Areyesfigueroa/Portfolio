@@ -1,9 +1,9 @@
 import React from 'react'
-import classes from '../../containers/App.module.css';
+import classes from './Textbox.module.css';
 
 const textbox = (props) => {
     return (
-        <div className={classes.textbox}>
+        <div className={classes.Textbox}>
             {props.children}
         </div>
     );

@@ -1,0 +1,13 @@
+.PageTitle {
+    position: absolute;
+    text-align: left;
+    left: 15%;
+    top: 41%;
+}
+  
+.PageTitle div {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: start;
+    row-gap: 30%;
+}

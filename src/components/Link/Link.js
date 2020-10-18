@@ -1,5 +1,14 @@
 import React from 'react';
+import classes from './Link.module.css';
 
-const Link = props => (<a className={props.class} href={props.link}>{props.children}</a>);
+const Link = props => {
+    return (
+        <a 
+        className={`${classes.Link} ${props.variants}`} 
+        href={props.link}>
+            {props.children}
+        </a>
+    )
+}
 
 export default Link;
