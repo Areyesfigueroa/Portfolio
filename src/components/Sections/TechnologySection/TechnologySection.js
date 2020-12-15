@@ -11,38 +11,38 @@ const TechnologySection = () => {
     
     const cards = [
         {
-          id: '0A', 
-          icon: frontEndIcon,
-          title: 'Frontend',
-          items: [
-            {id: '0', value: 'HTML'},
-            {id: '1', value: 'CSS'},
-            {id: '2', value: 'Javascript'},
-            {id: '3', value: 'React'}
-          ]
-        }, 
-        {
-          id: '1B',
-          icon: gearsIcon,
-          title: 'Server',
-          items: [
-            {id: "0", value: 'PHP'},
-            {id: "1", value: 'Python'},
-            {id: "2", value: 'MySQL'},
-          ]
+            id: '0A',
+            icon: frontEndIcon,
+            title: 'Frontend',
+            items: [
+                { id: '0', value: 'HTML' },
+                { id: '1', value: 'CSS' },
+                { id: '2', value: 'Javascript' },
+                { id: '3', value: 'React' }
+            ]
         },
         {
-          id: '2C',
-          icon: wrenchIcon,
-          title: 'Tools',
-          items: [
-            {id: "0", value: 'NPM'},
-            {id: "1", value: 'Git/Github'},
-            {id: "2", value: 'SourceTree'},
-            {id: "3", value: 'Appsheet'}
-          ]
+            id: '1B',
+            icon: gearsIcon,
+            title: 'Server',
+            items: [
+                { id: "0", value: 'PHP' },
+                { id: "1", value: 'Python' },
+                { id: "2", value: 'MySQL' },
+            ]
+        },
+        {
+            id: '2C',
+            icon: wrenchIcon,
+            title: 'Tools',
+            items: [
+                { id: "0", value: 'NPM' },
+                { id: "1", value: 'Git/Github' },
+                { id: "2", value: 'SourceTree' },
+                { id: "3", value: 'Appsheet' }
+            ]
         }
-      ];
+    ];
 
     return (
         <SectionWrapper title="Technologies" scrollID={'technologiesSection'}>

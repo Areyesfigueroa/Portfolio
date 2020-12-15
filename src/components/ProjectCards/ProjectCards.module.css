@@ -1,0 +1,22 @@
+.projectCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .projectCard {
+    background-color: #f3f3f3;
+    padding: 0;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 140px 1fr;
+    align-items: center;
+    justify-content: start;
+    /* margin: 30px; */
+  }

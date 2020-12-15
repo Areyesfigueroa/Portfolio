@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import classes from './App.module.css';
+import React, { useState } from 'react';
 import ReactGA from 'react-ga';
 
 /** Components */
@@ -9,258 +8,64 @@ import AboutSection from '../components/Sections/AboutSection/AboutSection';
 import ResumeSection from '../components/Sections/ResumeSection/ResumeSection';
 import TechnologiesSection from '../components/Sections/TechnologySection/TechnologySection';
 
-import Cards from '../components/Cards/Cards';
-import ProjectCards from '../components/ProjectCards/ProjectCards';
-import Modal from '../components/Modal/Modal';
 import ContactForm from '../components/ContactForm/ContactForm';
 import ScrollToTopBtn from '../components/ScrollToTopBtn/ScrollToTopBtn';
+
 //Layout
 import SectionWrapper from '../components/SectionWrapper/SectionWrapper';
 import Footer from '../components/Footer/Footer';
 
 //Carousel Assets
-import {performanceEvalImgs, skateBuilderImgs, viParkingImgs, vgsImgs} from '../assets/_images';
 import MagnifyImg from '../components/MagnifyImg/MagnifyImg';
+import ProjectSectionContainer from './Sections/ProjectSectionContainer/ProjectSectionContainer';
 
-class App extends Component {
+//Hooks
+import useModal from '../hooks/useModal';
 
-  state = {
-    projectCards: [
-      {
-        id: 0,
-        icon: require('../assets/icons/search.png'),
-        title: 'VGScout',
-        shortDesc: "Learn more about your favorite video game",
-        longDesc: "Allows the user to search through a database of video games to get informations such as who are the developers, publishers, reviews and more. It also includes a reddit comments section where you can view what everyone else has said about the game.",
-        techDesc: 'This web app was built using React, Axios(Promise based HTTP client for the browser and node.js) and RAWG Database and API.',
-        background: vgsImgs.bg,
-        showText: false,
-        images: vgsImgs,
-        links: {
-          websiteURL: 'https://vgscout.netlify.app/',
-          githubURL: 'https://github.com/Areyesfigueroa/VideoGameSearch'
-        } 
-      },
-      {
-        id: 1,
-        icon: require('../assets/icons/skate.png'),
-        title: 'Skate Builder',
-        shortDesc: "Create your own custom skateboard",
-        longDesc: "Allows for the user to see their dream skateboard in 3D and orbit around it. User can modify the board components such as the wheels, trucks, bottom of the board and the top of the board.",
-        techDesc: 'This web app was built using React, P5 react library for the 3D interactions and React Bootstrap for the styling.',
-        background: skateBuilderImgs.bg,
-        showText: false,
-        images: skateBuilderImgs,
-        links: {
-          websiteURL: 'https://skatebuilder.netlify.com/',
-          githubURL: 'https://github.com/Areyesfigueroa/SkateBuilder'
-        } 
-      },
-      {
-        id: 2,
-        title: 'Evaluation Portal',
-        icon: require('../assets/icons/eval.png'),
-        shortDesc: "Employee Web Portal",
-        longDesc: "Performance evaluation is a web app where an employee can log in and see their performance evaluations submitted by their managers so that the employee can self-improve. If the user has admin privileges they can manage other user’s roles, passwords resets, user creation and deletion.",
-        techDesc: 'The website is built using HTML, CSS, Javascript, and Bootstrap for Front End and PHP for backend alongside MySQL as the database.',
-        background: performanceEvalImgs.bg,
-        showText: false,
-        images: performanceEvalImgs, 
-        links: {
-          websiteURL: 'https://performance-eval.herokuapp.com/LoginSystem/login.php',
-          githubURL: 'https://github.com/Areyesfigueroa/Performance-Evaluation'
-        }
-      },
-      {
-        id: 3,
-        icon: require('../assets/icons/car.png'),
-        title: 'Vi Parking App',
-        shortDesc: 'Parking Management Software',
-        longDesc: 'All About Parking vehicle management app for valets at the Vi. Keeps track of vehicle information to easily monitor and update vehicle location and status. This app has been used in operations for over a year and it is still being used to this date within the company.',
-        techDesc: 'Built using Appsheet, Google App Scripts API and Javascript',
-        background: viParkingImgs.bg,
-        showText: false,
-        images: viParkingImgs,
-        links: {
-          websiteURL: null,
-          githubURL: null
-        }
-      }
-    ],
-    modal: {
-      id: 0,
-      showModal: false,
-      closeModal: true,
-      animDuration: 200,
-      cardID: 0,
-      zoomedIn: false,
-      currentSlide: null
-    },
-    scrollToTopBtn: {
-      show: false
-    }
+const App = () => {
+
+  const [showScrollToTopBtn, setShowScrollToTopBtn] = useState(false);
+  const [modal, showModalHandler, closeModalHandler, enableZoomHandler, disableZoomHandler] = useModal();
+
+  const scrollToTopBtnFadeHandler = (showBtn) => {
+    setShowScrollToTopBtn(showBtn);
   }
 
-  showModal = (cardID) => {
-    const animDuration = this.state.modal.animDuration;
-
-    this.setState({
-      modal: {
-        id: 0,
-        showModal: true,
-        closeModal: false,
-        animDuration: animDuration,
-        cardID: cardID
-      }
-    });
+  const initializeGoogleAnalytics = () => {
+    const trackingId = "UA-164947982-1"; // Replace with your Google Analytics tracking ID
+    ReactGA.initialize(trackingId);
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }
+  initializeGoogleAnalytics();
 
-  closeModal = (event) => {
-    const animDuration = this.state.modal.animDuration;
-    const cardID = this.state.modal.cardID;
+  return (
+    <div className="App">
 
-    //If I click on the modal's shadow.
-    if(parseInt(event.target.id) === this.state.modal.id) {
-      this.setState({
-        modal: {
-          id: 0,
-          showModal: false,
-          animDuration: animDuration,
-          cardID: cardID
-        }
-      });
+      {modal.zoomedIn ? <MagnifyImg src={modal.currentSlide} alt={'test'} clicked={disableZoomHandler} /> : null}
 
-      setTimeout(()=>{
-        this.setState({
-          modal: {
-            id: 0,
-            closeModal: true,
-            animDuration: animDuration,
-            cardID: cardID
-          }
-        })
-      }, animDuration);
-    }
-  }
+      <Header showScrollBtn={scrollToTopBtnFadeHandler}/>
+      <AboutSection />
+      <ResumeSection />
+      <TechnologiesSection />
 
-  cardTextHandler = (id, isActive) => {
-    //Get the index
-    const cardIndex = this.state.projectCards.findIndex((card) => card.id === id);
+      {/** Projects Section */}
+      <ProjectSectionContainer 
+      modal={modal} 
+      showModalHandler={showModalHandler}
+      closeModalHandler={closeModalHandler}
+      enableZoomHandler={enableZoomHandler} />
 
-    //get a copy of the state card
-    const card = {
-       ...this.state.projectCards[cardIndex]
-    }
+      {/** Contact Form Section */}
+      <SectionWrapper title='Contact' scrollID={'contactSection'}>
+        <ContactForm />
+      </SectionWrapper>
 
-    //Change the showText status.
-    card.showText = isActive; 
+      {/* Fixed Layout Section */}
+      <ScrollToTopBtn show={showScrollToTopBtn}/>
 
-    //get a copy of project cards and add the new changed card to it. 
-    const changedProjectCards = [...this.state.projectCards];
-    changedProjectCards[cardIndex] = card;
-
-    //set the state
-    this.setState({
-      projectCards: changedProjectCards
-    });
-  }
-
-  downloadResumeHandler = () => {
-    window.location.replace("https://drive.google.com/uc?export=download&id=1IbFn6ZGfzEb533h1BQ6B-2upLlh5NQiy");
-  }
-
-  scrollToTopBtnFadeHandler = (showBtn) => {
-    this.setState({
-      scrollToTopBtn: {
-        show: showBtn
-      }
-    });
-  }
-
-  enableZoom = (slideData) => {
-    if(this.state.zoomedIn) return;
-    console.log("Enable Zoom");
-
-    let newModal = {...this.state.modal};
-    newModal.zoomedIn = true;
-    newModal.currentSlide = slideData.src;
-    
-    this.setState({ modal: newModal });
-  }
-
-  disableZoom = () => {
-    console.log("disable", this.state.modal.zoomedIn);
-    if(this.state.zoomedIn === false) return;
-    console.log("Disable Zoom", this.state.zoomedIn);
-    
-    let newModal = {...this.state.modal};
-    newModal.zoomedIn = false;
-
-    this.setState({ modal: newModal });
-  }
-
-  render() {
-
-    const projectCards = (
-      <div className={classes.projectCards}>
-        <ProjectCards 
-        projectCards={this.state.projectCards}
-        hover={this.cardTextHandler} 
-        hoverExit={this.cardTextHandler}
-        clicked={this.showModal}
-        />
-      </div>
-    )
-
-    const modalHandler = () => {
-      if(!this.state.modal.closeModal) {
-        return(
-          <Modal
-          id={this.state.modal.id}
-          card={this.state.projectCards[this.state.modal.cardID]}
-          modal={this.state.modal} 
-          clicked={(event) => this.closeModal(event)}
-          enableZoom={this.enableZoom}
-          />
-        );
-      }
-    }
-
-    const initializeGoogleAnalytics = () => {
-      const trackingId = "UA-164947982-1"; // Replace with your Google Analytics tracking ID
-      ReactGA.initialize(trackingId);
-      ReactGA.pageview(window.location.pathname + window.location.search);
-    }
-    initializeGoogleAnalytics();
-
-    return (
-      <div className="App">
-
-       {this.state.modal.zoomedIn ? <MagnifyImg src={this.state.modal.currentSlide} alt={'test'} clicked={this.disableZoom}/>: null}
-
-        <Header showScrollBtn={this.scrollToTopBtnFadeHandler}/>
-        <AboutSection />
-        <ResumeSection />
-        <TechnologiesSection />
-
-        {/** Projects Section */}
-        <SectionWrapper title="Projects" scrollID={'projectsSection'}>
-          {projectCards}
-          {modalHandler()}
-        </SectionWrapper>
-
-        {/** Contact Form Section */}
-        <SectionWrapper title='Contact' scrollID={'contactSection'}>
-          <ContactForm />
-        </SectionWrapper>
-
-        {/* Fixed Layout Section */}
-        <ScrollToTopBtn show={this.state.scrollToTopBtn.show}/>
-
-        <Footer />
-      </div>
-    );
-  }
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
