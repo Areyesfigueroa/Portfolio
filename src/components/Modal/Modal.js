@@ -3,6 +3,8 @@ import classes from '../../containers/App.module.css';
 import { Spring } from 'react-spring/renderprops';
 import InfoBox from '../InfoBox/InfoBox';
 import CarouselSlides from '../CarouselSlides/CarouselSlides';
+import DescriptionBox from '../DesciptionBox/DescriptionBox';
+import ModalButtons from '../Modal/ModalButtons/ModalButtons';
 
 const Modal = (props) => {
 
@@ -12,19 +14,6 @@ const Modal = (props) => {
 
     if(props.modal.showModal) {
         myStyle.visibility = 'visible';
-    }
-
-    //Open URL Page on new tab
-    const openURL = (url) => {
-        //If url is blank exit.
-        if(!url){
-            return;
-        }
-
-        const win = window.open(url, '_blank');
-        if(win != null) {
-            win.focus();
-        }
     }
 
     return (
@@ -46,21 +35,12 @@ const Modal = (props) => {
                             title= {props.card.title}
                             subtitle= {props.card.shortDesc}
                             >
-                            {`Description:\n${props.card.longDesc}\n\nTechnology:\n${props.card.techDesc}`}
+                                <DescriptionBox longDesc={props.card.longDesc} techDesc={props.card.techDesc}/>
                             </InfoBox>
-                            <div className={classes.modalBtns}>
-                                {props.card.links.websiteURL ? 
-                                <button className={classes.button} onClick={()=>openURL(props.card.links.websiteURL)} >Visit Website</button>
-                                :
-                                <p style={{padding: '4px'}}>Confidential website</p>}
-
-                                {props.card.links.githubURL ?
-                                 <button className={classes.button} onClick={()=>openURL(props.card.links.githubURL)} >Visit Github</button>
-                                 :
-                                 <p style={{padding: '4px'}}>Confidential Github</p>}
-                            </div>  
+                            <ModalButtons 
+                            websiteURL={props.card.links.websiteURL} 
+                            githubURL={props.card.links.githubURL}/>
                         </div>
- 
                     </div>
                 </div>
             )}

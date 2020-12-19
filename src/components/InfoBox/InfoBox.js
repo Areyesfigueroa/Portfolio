@@ -1,13 +1,15 @@
 import React from 'react';
-import classes from '../../containers/App.module.css';
+import classes from './InfoBox.module.css';
 
 const InfoBox = (props) => {
     return (
-        <div className={classes.infoBox}>
+        <div className={classes.InfoBox}>
             <h4>{props.title}</h4>
             <h5>{props.subtitle}</h5>
             <hr />
-            <textarea readOnly value={props.children}></textarea>
+            <div className={classes.textArea}>
+                {props.children}
+            </div>
         </div>
     );
 };

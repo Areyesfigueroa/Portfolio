@@ -288,29 +288,6 @@
   height: auto;
 }
 
-.infoBox {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 10px 10px 0px 10px;
-  min-height: 230px;
-  height: 60%;
-}
-
-.infoBox h5 {
-  color: #858484;
-}
-
-.infoBox hr {
-  background-color: #858484;
-}
-
-.infoBox textarea {
-  width: 100%;
-  height: 100%;
-  resize: none;
-}
-
 .closeBtn {
   position: absolute;
   font-size: 170%;
@@ -332,14 +309,6 @@ a.closeBtn:not([href]):not([tabindex]):hover {
   border: 0;
   color: var(--accent-color);
   transition: color .2s;
-}
-
-.modalBtns {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 100%;
-  padding: 10px;
 }
 
 /*
