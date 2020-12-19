@@ -1,4 +1,57 @@
 
+
+//Fantasy Stocks Carousel Images
+export const fantasyStockImgs = {
+    bg: require("./fantasy-stocks-imgs/home.png"),
+    slides: [        
+        {src: require("./performance-eval-imgs/performance-evaluation-demo.gif"), alt: "Demo Gif"},
+        {src: require("./fantasy-stocks-imgs/home.png"), alt: "Home Page"},
+        {src: require("./fantasy-stocks-imgs/login.png"), alt: "Login Page"},
+        {src: require("./fantasy-stocks-imgs/portfolio.png"), alt: "Portfolio Page"},
+        {src: require("./fantasy-stocks-imgs/trade.png"), alt: "Trade Page"}
+    ]
+}
+
+//Tweet Feed Carousel Images
+export const tweetFeedImgs = {
+    bg: require("./tweet-feed-imgs/home.png"),
+    slides: [        
+        {src: require("./performance-eval-imgs/performance-evaluation-demo.gif"), alt: "Demo Gif"},
+        {src: require("./tweet-feed-imgs/home.png"), alt: "Home Page"},
+        {src: require("./tweet-feed-imgs/search.png"), alt: "Search Page"},
+        {src: require("./tweet-feed-imgs/random.png"), alt: "Random Page"}
+    ]
+}
+
+//Star Wars API Carousel Images
+export const starwarsAPIImgs = {
+    bg: require("./starwars-api-imgs/home.png"),
+    slides: [        
+        {src: require("./performance-eval-imgs/performance-evaluation-demo.gif"), alt: "Demo Gif"},
+        {src: require("./starwars-api-imgs/home.png"), alt: "Home Page"},
+        {src: require("./starwars-api-imgs/search.png"), alt: "Search Page"}
+    ]
+}
+
+//Snake Game Carousel Images
+export const snakeGameImgs = {
+    bg: require("./snake-game-imgs/home.png"),
+    slides: [        
+        {src: require("./performance-eval-imgs/performance-evaluation-demo.gif"), alt: "Demo Gif"},
+        {src: require("./snake-game-imgs/home.png"), alt: "Home Page"},
+        {src: require("./snake-game-imgs/leaderboard.png"), alt: "Leaderboard Page"}
+    ]
+}
+
+//Calculator Carousel Images
+export const calculatorImgs = {
+    bg: require("./calculator-imgs/home.png"),
+    slides: [        
+        {src: require("./performance-eval-imgs/performance-evaluation-demo.gif"), alt: "Demo Gif"},
+        {src: require("./calculator-imgs/home.png"), alt: "Home Page"}
+    ]
+}
+
 //Performance Evaluation Carousel Images
 export const performanceEvalImgs = {
     bg: require("./performance-eval-imgs/login-page.png"),

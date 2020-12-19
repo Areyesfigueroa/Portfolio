@@ -1,7 +1,19 @@
 import React, { useState } from 'react';
 import ProjectSection from '../../../components/Sections/ProjectSection/ProjectSection';
-import {performanceEvalImgs, skateBuilderImgs, viParkingImgs, vgsImgs} from '../../../assets/_images';
 import Modal from '../../../components/Modal/Modal';
+
+//TODO: Implement project cards.
+import {
+    performanceEvalImgs, 
+    skateBuilderImgs, 
+    viParkingImgs, 
+    vgsImgs,
+    fantasyStockImgs,
+    tweetFeedImgs,
+    starwarsAPIImgs,
+    snakeGameImgs,
+    calculatorImgs
+} from '../../../assets/_images';
 
 const ProjectSectionContainer = (props) => {
 
@@ -65,6 +77,21 @@ const ProjectSectionContainer = (props) => {
                 links: {
                     websiteURL: null,
                     githubURL: null
+                }
+            },
+            {
+                id: 4,
+                icon: require('../../../assets/icons/car.png'),
+                title: 'Fantasy Stocks App',
+                shortDesc: 'Use fake money to trade stock shares from your favorite companies',
+                longDesc: 'This project utilizes the IEX Cloud API to fetch stock information, which communicates with my internal API using Nodejs and Expressjs. In this application, users can register or log in to their account, which uses fake money stored on my database to buy or sell shares from various companies. It also uses visuals from the Google graphs library to help the user make the most out of trading shares.',
+                techDesc: 'Built using React.js for the frontend, Node.js and Express.js for the backend, IEX Cloud, Heroku',
+                background: fantasyStockImgs.bg,
+                showText: false,
+                images: fantasyStockImgs,
+                links: {
+                    websiteURL: "https://ar-fantasy-stock.herokuapp.com/",
+                    githubURL: "https://github.com/Areyesfigueroa/Fantasy-Stock-Trading"
                 }
             }
         ]

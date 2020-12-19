@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import classes from '../../containers/App.module.css';
 import {Carousel} from 'react-bootstrap';
-import MagnifyImg from '../MagnifyImg/MagnifyImg';
 
 const carouselImgStyles=['d-block', classes.carouselImg]; //w-100
 
