@@ -1,10 +1,10 @@
 import React from 'react';
-import classes from '../../containers/App.module.css';
+import classes from './ContactForm.module.css';
 
 const ContactForm = () => {
     return (
         <div>
-            <form className={classes.contactForm} method="POST">
+            <form className={classes.ContactForm} method="POST">
                 <input type="hidden" name="form-name" value="contact"/>
                 <input type='text' name="name" id='name' placeholder='Name'/>
                 <input type='email' name="email" id='email' placeholder='Enter Email'/>

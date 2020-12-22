@@ -317,7 +317,7 @@ a.closeBtn:not([href]):not([tabindex]):hover {
 --------------------------------
 */
 
-.contactForm {
+/* .contactForm {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -332,7 +332,7 @@ a.closeBtn:not([href]):not([tabindex]):hover {
 
 .contactForm input[type=submit] {
   margin-left: auto;
-}
+} */
 
 /*
 --------------------------------

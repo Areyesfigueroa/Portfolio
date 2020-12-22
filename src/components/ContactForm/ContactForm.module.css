@@ -1,0 +1,16 @@
+.ContactForm {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+  
+.ContactForm input, 
+.ContactForm textarea {
+    outline: none;
+    margin-bottom: 3px;
+    resize: vertical;
+}
+
+.ContactForm input[type=submit] {
+    margin-left: auto;
+}

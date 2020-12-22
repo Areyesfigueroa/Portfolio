@@ -7,17 +7,16 @@ import Header from '../components/Header/Header';
 import AboutSection from '../components/Sections/AboutSection/AboutSection';
 import ResumeSection from '../components/Sections/ResumeSection/ResumeSection';
 import TechnologiesSection from '../components/Sections/TechnologySection/TechnologySection';
+import ProjectSectionContainer from './Sections/ProjectSectionContainer/ProjectSectionContainer';
+import ContactSection from '../components/Sections/ContactSection/ContactSection';
 
-import ContactForm from '../components/ContactForm/ContactForm';
 import ScrollToTopBtn from '../components/ScrollToTopBtn/ScrollToTopBtn';
 
 //Layout
-import SectionWrapper from '../components/SectionWrapper/SectionWrapper';
 import Footer from '../components/Footer/Footer';
 
 //Carousel Assets
 import MagnifyImg from '../components/MagnifyImg/MagnifyImg';
-import ProjectSectionContainer from './Sections/ProjectSectionContainer/ProjectSectionContainer';
 
 //Hooks
 import useModal from '../hooks/useModal';
@@ -47,18 +46,12 @@ const App = () => {
       <AboutSection />
       <ResumeSection />
       <TechnologiesSection />
-
-      {/** Projects Section */}
       <ProjectSectionContainer 
       modal={modal} 
       showModalHandler={showModalHandler}
       closeModalHandler={closeModalHandler}
       enableZoomHandler={enableZoomHandler} />
-
-      {/** Contact Form Section */}
-      <SectionWrapper title='Contact' scrollID={'contactSection'}>
-        <ContactForm />
-      </SectionWrapper>
+      <ContactSection />
 
       {/* Fixed Layout Section */}
       <ScrollToTopBtn show={showScrollToTopBtn}/>
