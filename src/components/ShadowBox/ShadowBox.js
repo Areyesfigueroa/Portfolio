@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from '../../containers/App.module.css';
+import classes from './ShadowBox.module.css';
 import {Spring} from 'react-spring/renderprops'
 
 
@@ -13,7 +13,7 @@ const ShadowBox = (props) => {
         config={{ duration: 300 }}
         >
         {props => (
-            <div style={props} className={classes.shadowBox}></div>
+            <div style={props} className={classes.ShadowBox}></div>
         )}
         </Spring>
 

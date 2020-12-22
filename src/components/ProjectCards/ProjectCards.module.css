@@ -1,13 +1,14 @@
-.projectCards {
+.ProjectCards {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1em;
     grid-template-rows: auto;
     justify-items: center;
     align-items: center;
     width: 100%;
   }
   
-  .projectCard {
+  /* .projectCard {
     background-color: #f3f3f3;
     padding: 0;
     width: 300px;
@@ -18,5 +19,5 @@
     grid-template-rows: 140px 1fr;
     align-items: center;
     justify-content: start;
-    /* margin: 30px; */
-  }
+    margin: 30px; 
+  } */

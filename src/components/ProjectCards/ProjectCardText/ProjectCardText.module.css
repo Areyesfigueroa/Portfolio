@@ -1,0 +1,21 @@
+.ProjectCardText {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 50px;
+
+    position: absolute;
+    font-size: 150%;
+    color: white;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+}
+  
+
+.ProjectCardText a {
+    color: var(--btn-hover-color) !important;
+    width: auto;
+    margin: 0 auto;
+    cursor: pointer;
+}
