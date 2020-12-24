@@ -1,0 +1,33 @@
+.scrollToTopBtn {
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+    background-color: var(--accent-color);
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 800;
+  }
+  
+  .scrollToTopBtn:hover {
+    border: 0;
+    background-color: var(--btn-hover-color);
+  }
+  
+  .scrollToTopBtn ion-icon {
+    height: 40px;
+    width: 40px;
+  }
+  
+  .fadeIn {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+  }
+  
+  .fadeOut {
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+  }

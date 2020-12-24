@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from '../../containers/App.module.css';
+import classes from './ScrollToTopBtn.module.css';
 import Link from '../Link/Link';
 
 const ScrollToTopBtn = (props) => {
@@ -9,7 +9,7 @@ const ScrollToTopBtn = (props) => {
     const scrollToTopBtnClasses = [classes.scrollToTopBtn, fadeClass];
 
     return (
-        <Link class={scrollToTopBtnClasses.join(" ")} link={"#header"}>
+        <Link classes={scrollToTopBtnClasses.join(" ")} link={"#header"}>
             <ion-icon name="ios-arrow-up"></ion-icon>
         </Link>
     );
