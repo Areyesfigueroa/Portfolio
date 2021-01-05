@@ -1,5 +1,4 @@
 import React from 'react';
-// import classes from '../../containers/App.module.css';
 import classes from './PageTitle.module.css';
 import Link from '../Link/Link';
 

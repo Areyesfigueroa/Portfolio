@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './SplashScreen.module.css';
 import PageTitle from '../PageTitle/PageTitle';
+import ProfileImg from '../ProfileImg/ProfileImg';
 
 const SplashScreen = (props) => {
     return (
@@ -10,6 +11,8 @@ const SplashScreen = (props) => {
             subtitle={props.subtitle}
             btnText={props.btnText}
             />
+            {/* Profile Img */}
+            <ProfileImg />
         </div>
     );
 };

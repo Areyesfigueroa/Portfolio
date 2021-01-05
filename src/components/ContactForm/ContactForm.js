@@ -3,7 +3,7 @@ import classes from './ContactForm.module.css';
 
 const ContactForm = () => {
     return (
-        <div>
+        <div className={classes.Container}>
             <form className={classes.ContactForm} method="POST">
                 <input type="hidden" name="form-name" value="contact"/>
                 <input type='text' name="name" id='name' placeholder='Name'/>

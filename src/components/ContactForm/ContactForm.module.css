@@ -3,16 +3,25 @@
     width: 100%;
     flex-direction: column;
 }
-  
+.Container {
+    max-width: 600px;
+    width: 100%;
+    padding: 10px;
+}
 .ContactForm input, 
 .ContactForm textarea {
     outline: none;
     margin-bottom: 3px;
     resize: vertical;
+    width: 100%;
 }
 
 .ContactForm input[type=submit] {
     margin-left: auto;
+}
+
+.Container .ContactForm .button {
+    width: auto;
 }
 
 .button {

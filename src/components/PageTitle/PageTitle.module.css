@@ -1,13 +1,26 @@
-.PageTitle {
+/* .PageTitle {
     position: absolute;
     text-align: left;
     left: 15%;
     top: 41%;
-}
+} */
   
+.PageTitle {
+    position: relative;
+}
 .PageTitle div {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: start;
     row-gap: 30%;
+}
+
+@media screen and (max-width: 644px) {
+    .PageTitle {
+        position: relative;
+        margin-bottom: 110px;
+    }
+    .PageTitle div {
+        justify-items: center;
+    }
 }
