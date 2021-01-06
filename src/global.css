@@ -152,6 +152,10 @@ footer {
   height: 100% !important;
 }
 
+.react-pdf__Page__annotations {
+  display: none !important;
+}
+
 /*
 --------------------------------
 -------- BOOTSTRAP SECTION --------

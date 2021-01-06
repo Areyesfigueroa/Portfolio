@@ -3,12 +3,12 @@ import SectionWrapper from '../../SectionWrapper/SectionWrapper';
 import PDFViewer from '../../PDFViewer/PDFViewer';
 import Button from '../../Button/Button';
 
-import resumeFile from "../../../assets/documents/20_06_15_AlielReyes_Resume.pdf";
+import resumeFile from "../../../assets/documents/AlielReyesResume.pdf";
 
 const ResumeSection = () => {
 
     const downloadResume = () => {
-        window.location.replace("https://drive.google.com/uc?export=download&id=1IbFn6ZGfzEb533h1BQ6B-2upLlh5NQiy");
+        window.location.replace("https://drive.google.com/uc?export=download&id=1BNyOYh8eFhxuD0V7JeH4_edGI7eX6ZJT");
     }
 
     return (

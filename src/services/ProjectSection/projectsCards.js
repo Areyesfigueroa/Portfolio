@@ -3,10 +3,7 @@ import { tweetFeedProject } from './Projects/tweetFeedProject';
 import { vgScoutProject } from './Projects/vgScoutProject';
 import { starwarsAPIProject } from './Projects/starwarsAPIProject';
 import { snakeGameProject } from './Projects/snakeGameProject';
-import { calculatorProject } from './Projects/calculatorProject';
 import { skateBuilderProject } from './Projects/skateBuilderProject';
-import { performanceEvalProject } from './Projects/performanceEvalProject';
-import { viParkingAppProject } from './Projects/viParkingAppProject';
 
 const projectCards = [
     fantasyStocksProject,
@@ -14,10 +11,7 @@ const projectCards = [
     vgScoutProject,
     starwarsAPIProject,
     snakeGameProject,
-    calculatorProject,
-    skateBuilderProject,
-    performanceEvalProject,
-    viParkingAppProject
+    skateBuilderProject
 ]
 
 const getProjectCards = () => {

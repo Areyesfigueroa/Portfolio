@@ -8,7 +8,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 class PDFViewer extends Component {
 
     state={
-        numPages: 2,
+        numPages: 1,
         pageNumber: 1,
     }
 
@@ -35,7 +35,6 @@ class PDFViewer extends Component {
     render() {        
         
         const { pageNumber, numPages } = this.state;
-    
         return (
             <div className={classes.PDFViewer}>
                 <div className={classes.pagination}>
