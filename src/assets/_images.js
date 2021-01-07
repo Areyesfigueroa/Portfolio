@@ -1,10 +1,8 @@
-
-
 //Fantasy Stocks Carousel Images
 export const fantasyStockImgs = {
     bg: require("./fantasy-stocks-imgs/home.png"),
     slides: [        
-        {src: require("./performance-eval-imgs/performance-evaluation-demo.gif"), alt: "Demo Gif"},
+        {src: require("./fantasy-stocks-imgs/stocks-demo.gif"), alt: "Demo Gif"},
         {src: require("./fantasy-stocks-imgs/home.png"), alt: "Home Page"},
         {src: require("./fantasy-stocks-imgs/login.png"), alt: "Login Page"},
         {src: require("./fantasy-stocks-imgs/portfolio.png"), alt: "Portfolio Page"},
@@ -16,7 +14,7 @@ export const fantasyStockImgs = {
 export const tweetFeedImgs = {
     bg: require("./tweet-feed-imgs/home.png"),
     slides: [        
-        {src: require("./performance-eval-imgs/performance-evaluation-demo.gif"), alt: "Demo Gif"},
+        {src: require("./tweet-feed-imgs/tweetfeed.gif"), alt: "Demo Gif"},
         {src: require("./tweet-feed-imgs/home.png"), alt: "Home Page"},
         {src: require("./tweet-feed-imgs/search.png"), alt: "Search Page"},
         {src: require("./tweet-feed-imgs/random.png"), alt: "Random Page"}
@@ -27,7 +25,7 @@ export const tweetFeedImgs = {
 export const starwarsAPIImgs = {
     bg: require("./starwars-api-imgs/home.png"),
     slides: [        
-        {src: require("./performance-eval-imgs/performance-evaluation-demo.gif"), alt: "Demo Gif"},
+        {src: require("./starwars-api-imgs/starwars-demo.gif"), alt: "Demo Gif"},
         {src: require("./starwars-api-imgs/home.png"), alt: "Home Page"},
         {src: require("./starwars-api-imgs/search.png"), alt: "Search Page"}
     ]
@@ -37,34 +35,12 @@ export const starwarsAPIImgs = {
 export const snakeGameImgs = {
     bg: require("./snake-game-imgs/home.png"),
     slides: [        
-        {src: require("./performance-eval-imgs/performance-evaluation-demo.gif"), alt: "Demo Gif"},
+        {src: require("./snake-game-imgs/snake-demo.gif"), alt: "Demo Gif"},
         {src: require("./snake-game-imgs/home.png"), alt: "Home Page"},
         {src: require("./snake-game-imgs/leaderboard.png"), alt: "Leaderboard Page"}
     ]
 }
 
-//Calculator Carousel Images
-export const calculatorImgs = {
-    bg: require("./calculator-imgs/home.png"),
-    slides: [        
-        {src: require("./performance-eval-imgs/performance-evaluation-demo.gif"), alt: "Demo Gif"},
-        {src: require("./calculator-imgs/home.png"), alt: "Home Page"}
-    ]
-}
-
-//Performance Evaluation Carousel Images
-export const performanceEvalImgs = {
-    bg: require("./performance-eval-imgs/login-page.png"),
-    slides: [        
-        {src: require("./performance-eval-imgs/performance-evaluation-demo.gif"), alt: "Demo Gif"},
-        {src: require("./performance-eval-imgs/login-page.png"), alt: "Login Page"},
-        {src: require("./performance-eval-imgs/home-page.png"), alt: "Home Page"},
-        {src: require("./performance-eval-imgs/home-modal.png"), alt: "Home Modal"},
-        {src: require("./performance-eval-imgs/manage-users.png"), alt: "Manage users"},
-        {src: require("./performance-eval-imgs/manage-users-actions.png"), alt: "Manager Users Actions"},
-        {src: require("./performance-eval-imgs/reset-pwd.png"), alt: "Reset Password"}
-    ]
-}
 //VGScout Carousel Images
 export const vgsImgs = {
     bg: require("./vgs-imgs/VGS_Desktop_01.png"),
@@ -89,16 +65,40 @@ export const skateBuilderImgs = {
         {src: require("./skate-builder-imgs/interactive-page-2.png"), alt: "Interactive Page 2"},
     ]
 }
-//Vi Parking Carousel Images
-export const viParkingImgs = {
-    bg: require("./vi-parking-imgs/vehicles.png"),
-    slides: [        
-        {src: require("./vi-parking-imgs/vi-app-demo.gif"), alt: "Demo Gif"},
-        {src: require("./vi-parking-imgs/about.png"), alt: "About Page"},
-        {src: require("./vi-parking-imgs/apartments.png"), alt: "Apartments Page"},
-        {src: require("./vi-parking-imgs/details.png"), alt: "Details Page"},
-        {src: require("./vi-parking-imgs/history.png"), alt: "History Page"},
-        {src: require("./vi-parking-imgs/relational-logic.png"), alt: "Relational Logic"},
-        {src: require("./vi-parking-imgs/vehicles.png"), alt: "Vehicles Page"},
-    ]
-}
+
+// //Calculator Carousel Images
+// export const calculatorImgs = {
+//     bg: require("./calculator-imgs/home.png"),
+//     slides: [        
+//         {src: require("./performance-eval-imgs/performance-evaluation-demo.gif"), alt: "Demo Gif"},
+//         {src: require("./calculator-imgs/home.png"), alt: "Home Page"}
+//     ]
+// }
+
+// //Performance Evaluation Carousel Images
+// export const performanceEvalImgs = {
+//     bg: require("./performance-eval-imgs/login-page.png"),
+//     slides: [        
+//         {src: require("./performance-eval-imgs/performance-evaluation-demo.gif"), alt: "Demo Gif"},
+//         {src: require("./performance-eval-imgs/login-page.png"), alt: "Login Page"},
+//         {src: require("./performance-eval-imgs/home-page.png"), alt: "Home Page"},
+//         {src: require("./performance-eval-imgs/home-modal.png"), alt: "Home Modal"},
+//         {src: require("./performance-eval-imgs/manage-users.png"), alt: "Manage users"},
+//         {src: require("./performance-eval-imgs/manage-users-actions.png"), alt: "Manager Users Actions"},
+//         {src: require("./performance-eval-imgs/reset-pwd.png"), alt: "Reset Password"}
+//     ]
+// }
+
+// //Vi Parking Carousel Images
+// export const viParkingImgs = {
+//     bg: require("./vi-parking-imgs/vehicles.png"),
+//     slides: [        
+//         {src: require("./vi-parking-imgs/vi-app-demo.gif"), alt: "Demo Gif"},
+//         {src: require("./vi-parking-imgs/about.png"), alt: "About Page"},
+//         {src: require("./vi-parking-imgs/apartments.png"), alt: "Apartments Page"},
+//         {src: require("./vi-parking-imgs/details.png"), alt: "Details Page"},
+//         {src: require("./vi-parking-imgs/history.png"), alt: "History Page"},
+//         {src: require("./vi-parking-imgs/relational-logic.png"), alt: "Relational Logic"},
+//         {src: require("./vi-parking-imgs/vehicles.png"), alt: "Vehicles Page"},
+//     ]
+// }
