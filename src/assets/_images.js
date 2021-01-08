@@ -14,7 +14,7 @@ export const fantasyStockImgs = {
 export const tweetFeedImgs = {
     bg: require("./tweet-feed-imgs/home.png"),
     slides: [        
-        {src: require("./tweet-feed-imgs/tweetfeed.gif"), alt: "Demo Gif"},
+        {src: "https://drive.google.com/uc?export=download&id=1aEyzcnyshtx7t_guKC6fOQGQL5CVYS0a", alt: "Demo Gif"},
         {src: require("./tweet-feed-imgs/home.png"), alt: "Home Page"},
         {src: require("./tweet-feed-imgs/search.png"), alt: "Search Page"},
         {src: require("./tweet-feed-imgs/random.png"), alt: "Random Page"}
@@ -35,7 +35,7 @@ export const starwarsAPIImgs = {
 export const snakeGameImgs = {
     bg: require("./snake-game-imgs/home.png"),
     slides: [        
-        {src: require("./snake-game-imgs/snake-demo.gif"), alt: "Demo Gif"},
+        {src: "https://drive.google.com/uc?export=download&id=18FUZ06-tvOG3bJ_fGfQmYuOSJ7P68uvu", alt: "Demo Gif"},
         {src: require("./snake-game-imgs/home.png"), alt: "Home Page"},
         {src: require("./snake-game-imgs/leaderboard.png"), alt: "Leaderboard Page"}
     ]
@@ -65,40 +65,3 @@ export const skateBuilderImgs = {
         {src: require("./skate-builder-imgs/interactive-page-2.png"), alt: "Interactive Page 2"},
     ]
 }
-
-// //Calculator Carousel Images
-// export const calculatorImgs = {
-//     bg: require("./calculator-imgs/home.png"),
-//     slides: [        
-//         {src: require("./performance-eval-imgs/performance-evaluation-demo.gif"), alt: "Demo Gif"},
-//         {src: require("./calculator-imgs/home.png"), alt: "Home Page"}
-//     ]
-// }
-
-// //Performance Evaluation Carousel Images
-// export const performanceEvalImgs = {
-//     bg: require("./performance-eval-imgs/login-page.png"),
-//     slides: [        
-//         {src: require("./performance-eval-imgs/performance-evaluation-demo.gif"), alt: "Demo Gif"},
-//         {src: require("./performance-eval-imgs/login-page.png"), alt: "Login Page"},
-//         {src: require("./performance-eval-imgs/home-page.png"), alt: "Home Page"},
-//         {src: require("./performance-eval-imgs/home-modal.png"), alt: "Home Modal"},
-//         {src: require("./performance-eval-imgs/manage-users.png"), alt: "Manage users"},
-//         {src: require("./performance-eval-imgs/manage-users-actions.png"), alt: "Manager Users Actions"},
-//         {src: require("./performance-eval-imgs/reset-pwd.png"), alt: "Reset Password"}
-//     ]
-// }
-
-// //Vi Parking Carousel Images
-// export const viParkingImgs = {
-//     bg: require("./vi-parking-imgs/vehicles.png"),
-//     slides: [        
-//         {src: require("./vi-parking-imgs/vi-app-demo.gif"), alt: "Demo Gif"},
-//         {src: require("./vi-parking-imgs/about.png"), alt: "About Page"},
-//         {src: require("./vi-parking-imgs/apartments.png"), alt: "Apartments Page"},
-//         {src: require("./vi-parking-imgs/details.png"), alt: "Details Page"},
-//         {src: require("./vi-parking-imgs/history.png"), alt: "History Page"},
-//         {src: require("./vi-parking-imgs/relational-logic.png"), alt: "Relational Logic"},
-//         {src: require("./vi-parking-imgs/vehicles.png"), alt: "Vehicles Page"},
-//     ]
-// }
