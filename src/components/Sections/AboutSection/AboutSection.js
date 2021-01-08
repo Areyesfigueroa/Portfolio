@@ -10,15 +10,13 @@ const AboutSection = () => {
         <SectionWrapper title="About" scrollID={'aboutSection'}>
           <Textbox>
             <p><Image src={aboutIcon} fluid/></p>
-            <p>Hello my name is Aliel Reyes, I am a Software Developer based out of
-            the bay area.</p>
+            <p>Hello, my name is Aliel Reyes. I am a Software Developer based out of the bay area.</p>
             <p>I consider myself a flexible engineer that loves to explore new technologies. 
             I am currently working for a company creating Javascript tools that 
             facilitate data management.</p>
-            <p>Currently, my passion is in creating web applications as a Front End Developer 
-            but my goal is to become a Full-Stack Developer.</p>
-            <p>Please take a look around my site at some of my different web application projects. 
-            Feel free to reach out to me and let me know what you think.</p>
+            <p>Currently, my passion is in creating web applications as a Full Stack Developer.</p>
+            <p>Please take a look around my site and explore some of my projects.
+              Feel free to reach out to me. I look forward to talking with you.</p>
           </Textbox>
         </SectionWrapper>
     );

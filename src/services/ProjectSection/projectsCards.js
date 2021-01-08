@@ -9,8 +9,8 @@ const projectCards = [
     fantasyStocksProject,
     tweetFeedProject,
     vgScoutProject,
-    starwarsAPIProject,
     snakeGameProject,
+    starwarsAPIProject,
     skateBuilderProject
 ]
 
