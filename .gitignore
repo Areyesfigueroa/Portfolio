@@ -13,3 +13,6 @@ yarn-error.log*
 /.changelog
 .npm/
 .netlify/
+.netlify/build
+# Local Netlify folder
+.netlify
