@@ -8,7 +8,7 @@ import resumeFile from "../../../assets/documents/AlielReyesResume.pdf";
 const ResumeSection = () => {
 
     const downloadResume = () => {
-        window.location.replace("https://drive.google.com/uc?export=download&id=1fJugKBe6lTDQKcZQ3TpyQ0hmzkqohMy1");
+        window.location.replace("https://docs.google.com/uc?export=download&id=1yikP5s6kbIilKvF7rMLTSJJwSyjTyDAY");
     }
 
     return (
