@@ -3,9 +3,10 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 1em;
     grid-template-rows: auto;
-    justify-items: center;
+    justify-items: space-evenly;
     align-items: center;
     width: 100%;
+    max-width: 1240px;
   }
   
   /* .projectCard {
