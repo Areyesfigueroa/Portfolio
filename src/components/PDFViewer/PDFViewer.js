@@ -39,8 +39,8 @@ class PDFViewer extends Component {
             <div className={classes.PDFViewer}>
                 <div className={classes.pagination}>
                     <p>Page {pageNumber} of {numPages}</p>
-                    <Button click={this.onPrevPage}>Prev</Button>
-                    <Button click={this.onNextPage}>Next</Button>
+                    {/* <Button click={this.onPrevPage}>Prev</Button>
+                    <Button click={this.onNextPage}>Next</Button> */}
                 </div>
                 <Document file={this.props.file} onLoadSuccess={this.onDocumentLoadSuccess}>
                     <Page 
