@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-// import classes from "../../containers/App.module.css";
 import classes from './PDFViewer.module.css';
-import Button from '../Button/Button';
 import {Document, Page, pdfjs} from 'react-pdf';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 

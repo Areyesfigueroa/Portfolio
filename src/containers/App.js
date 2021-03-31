@@ -44,13 +44,13 @@ const App = () => {
 
       <Header showScrollBtn={scrollToTopBtnFadeHandler}/>
       <AboutSection />
-      <ResumeSection />
       <TechnologiesSection />
       <ProjectSectionContainer 
       modal={modal} 
       showModalHandler={showModalHandler}
       closeModalHandler={closeModalHandler}
       enableZoomHandler={enableZoomHandler} />
+      <ResumeSection />
       <ContactSection />
 
       {/* Fixed Layout Section */}
