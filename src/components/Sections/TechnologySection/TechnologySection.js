@@ -15,11 +15,14 @@ const TechnologySection = () => {
             icon: frontEndIcon,
             title: 'Frontend',
             items: [
-                { id: '0', value: 'HTML' },
-                { id: '1', value: 'CSS' },
-                { id: '2', value: 'Javascript' },
-                { id: '3', value: 'Bootstrap' },
-                { id: '4', value: 'React' }
+                { id: '1', value: 'React' },
+                { id: '2', value: 'JavaScript' },
+                { id: '3', value: 'TypeScript' },
+                { id: '4', value: 'Next.js' },
+                { id: '5', value: 'HTML' },
+                { id: '6', value: 'CSS' },
+                { id: '7', value: 'Bootstrap' },
+                { id: '8', value: 'Antd' },
             ]
         },
         {
@@ -27,10 +30,13 @@ const TechnologySection = () => {
             icon: gearsIcon,
             title: 'Server',
             items: [
-                { id: "0", value: 'Node.js' },
-                { id: "1", value: 'Express.js' },
-                { id: "2", value: 'PostgreSQL' },
-                { id: "3", value: 'MySQL' },
+                { id: '0', value: 'Node.js' },
+                { id: '1', value: 'Express.js' },
+                { id: '2', value: 'Jest' },
+                { id: '3', value: 'PostgreSQL' },
+                { id: '4', value: 'Prisma ORM' },
+                { id: '5', value: 'MongoDB' },
+                { id: '6', value: 'MySQL' },
             ]
         },
         {
@@ -38,11 +44,13 @@ const TechnologySection = () => {
             icon: wrenchIcon,
             title: 'Tools',
             items: [
-                { id: "0", value: 'NPM' },
-                { id: "1", value: 'Git/Github' },
-                { id: "2", value: 'Terminal' },
-                { id: "3", value: 'Heroku' },
-                { id: "4", value: 'Netlify' }
+                { id: '0', value: 'Git/Github' },
+                { id: '1', value: 'NPM' },
+                { id: '2', value: 'Docker' },
+                { id: '3', value: 'Terminal' },
+                { id: '4', value: 'Heroku' },
+                { id: '5', value: 'Netlify' },
+                { id: '6', value: 'Vercel' }
             ]
         }
     ];

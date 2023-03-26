@@ -18,7 +18,7 @@ const Header = (props) => {
 
                     <SplashScreen
                     title="Aliel Reyes" 
-                    subtitle="Software Developer" 
+                    subtitle="Full Stack Developer" 
                     btnText="See Portfolio" />
                 </div>
             </Waypoint>

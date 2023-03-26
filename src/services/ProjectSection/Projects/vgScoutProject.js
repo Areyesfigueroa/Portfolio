@@ -15,7 +15,7 @@ const vgScoutProject = {
     showText: false,
     images: vgsImgs,
     links: {
-        websiteURL: 'https://vgscout.netlify.app/',
+        // websiteURL: 'https://vgscout.netlify.app/',
         githubURL: 'https://github.com/Areyesfigueroa/VideoGameSearch'
     }
 }

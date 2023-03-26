@@ -16,7 +16,7 @@ const ModalButtons = (props) => {
             {props.websiteURL ? 
             <Button click={()=>openURL(props.websiteURL)} >Visit Website</Button>
             :
-            <p style={{padding: '4px'}}>Confidential website</p>}
+            <p style={{padding: '4px'}}>Website Not Available</p>}
 
             {props.githubURL ?
             <Button click={()=>openURL(props.githubURL)} >Visit Github</Button>
