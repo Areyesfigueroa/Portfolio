@@ -39,7 +39,6 @@ const useModal = () => {
 
     const enableZoomHandler = (slideData) => {
         if(modal.zoomedIn) return;
-        console.log("Enable Zoom");
     
         const newModal = {...modal};
         newModal.zoomedIn = true;
@@ -48,11 +47,8 @@ const useModal = () => {
         setModal(newModal);
     }
 
-    //REQUIRES Manigify IMG
     const disableZoomHandler = () => {
-        console.log("disable", modal.zoomedIn);
         if(modal.zoomedIn === false) return;
-        console.log("Disable Zoom", modal.zoomedIn);
         
         const newModal = { ...modal };
         newModal.zoomedIn = false;

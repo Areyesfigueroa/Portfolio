@@ -1,7 +1,6 @@
 import { fantasyStockImgs } from '../../../assets/_images';
 
 const fantasyStocksProject = {
-    icon: require('../../../assets/icons/stocks.png'),
     title: 'Fantasy Stocks App',
     shortDesc: 'Use fake money to trade stock shares from your favorite companies',
     longDesc: 'This project utilizes the IEX Cloud API to fetch stock information, which communicates with my internal API using Nodejs and Expressjs. In this application, users can register or log in to their account, which uses fake money stored on my database to buy or sell shares from various companies. It also uses visuals from the Google graphs library to help the user make the most out of trading shares.',
