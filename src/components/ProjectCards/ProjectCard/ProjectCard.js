@@ -18,7 +18,6 @@ const projectCard = (props) => {
             <ShadowBox isActive={props.showText}/>
             
             <div className={classes.cardHeader}>
-                <img className={classes.projectCardIcon} src={props.icon} alt="Project Card Img"/>
                 <h4>{props.title}</h4>
             </div>
             

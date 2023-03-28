@@ -1,5 +1,10 @@
 .DescriptionBox {
-    background-color: white;
-    padding: 10px;
-    border: 2px solid #858484;
+  background-color: white;
+  padding: 10px;
+  border: 2px solid #858484;
+}
+
+.CompanyDescription {
+  display: flex;
+  justify-content: space-between;
 }

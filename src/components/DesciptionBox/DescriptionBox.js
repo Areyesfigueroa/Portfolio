@@ -1,18 +1,47 @@
 import classes from "./DescriptionBox.module.css";
 import React from "react";
 
-const DescriptionBox = (props) => {
+const DescriptionBox = ({ company, position, longDesc, techDesc }) => {
+  const hasCompanyOrPosition = !!company || !!position;
   return (
     <div className={classes.DescriptionBox}>
+      {hasCompanyOrPosition && (
+        <>
+        <div className={classes.CompanyDescription}>
+          {company && (
+            <div>
+              <span>
+                <strong>Company:</strong>
+                &nbsp;
+                {company}
+              </span>
+              <br />
+            </div>
+          )}
+          {position && (
+            <div>
+              <span>
+                <strong>Position:</strong>
+                &nbsp;
+                {position}
+              </span>
+              <br />
+            </div>
+          )}
+        </div>
+        <br />
+        </>
+      )}
+
       <strong>Description:</strong>
       <br />
-      {props.longDesc}
+      {longDesc}
       <br />
       <br />
       <strong>Tech Stack</strong>
       <br />
       <ul>
-        {props.techDesc.map((el, idx) => (
+        {techDesc.map((el, idx) => (
           <li key={`${idx}-${el}`}>{`- ${el}`}</li>
         ))}
       </ul>

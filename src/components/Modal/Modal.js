@@ -44,13 +44,15 @@ const Modal = (props) => {
               />
               <InfoBox title={props.card.title} subtitle={props.card.shortDesc}>
                 <DescriptionBox
+                  company={props.card.company}
+                  position={props.card.position}
                   longDesc={props.card.longDesc}
                   techDesc={props.card.techDesc}
                 />
               </InfoBox>
               <ModalButtons
-                websiteURL={props.card.links.websiteURL}
-                githubURL={props.card.links.githubURL}
+                websiteURL={props.card?.links?.websiteURL}
+                githubURL={props.card?.links?.githubURL}
               />
             </div>
           </div>

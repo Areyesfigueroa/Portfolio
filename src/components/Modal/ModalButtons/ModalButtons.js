@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './ModalButtons.module.css';
 import Button from '../../Button/Button';
 
-const ModalButtons = (props) => {
+const ModalButtons = ({ websiteURL, githubURL }) => {
     //Open URL Page on new tab
     const openURL = (url) => {
         //If url is blank exit.
@@ -13,13 +13,13 @@ const ModalButtons = (props) => {
     }
     return (
         <div className={classes.ModalButtons}>
-            {props.websiteURL ? 
-            <Button click={()=>openURL(props.websiteURL)} >Visit Website</Button>
+            {websiteURL ? 
+            <Button click={()=>openURL(websiteURL)} >Visit Website</Button>
             :
             <p style={{padding: '4px'}}>Website Not Available</p>}
 
-            {props.githubURL ?
-            <Button click={()=>openURL(props.githubURL)} >Visit Github</Button>
+            {githubURL ?
+            <Button click={()=>openURL(githubURL)} >Visit Github</Button>
             :
             <p style={{padding: '4px'}}>Confidential Github</p>}
         </div>  
