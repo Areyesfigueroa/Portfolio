@@ -19,10 +19,11 @@ const TechnologySection = () => {
                 { id: '2', value: 'JavaScript' },
                 { id: '3', value: 'TypeScript' },
                 { id: '4', value: 'Next.js' },
-                { id: '5', value: 'HTML' },
-                { id: '6', value: 'CSS' },
-                { id: '7', value: 'Bootstrap' },
-                { id: '8', value: 'Antd' },
+                { id: '5', value: 'Redux.js' },
+                { id: '6', value: 'HTML' },
+                { id: '7', value: 'CSS' },
+                { id: '8', value: 'Bootstrap' },
+                { id: '9', value: 'Antd' },
             ]
         },
         {
