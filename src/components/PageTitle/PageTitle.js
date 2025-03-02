@@ -1,17 +1,19 @@
-import React from 'react';
-import classes from './PageTitle.module.css';
-import Link from '../Link/Link';
+import React from "react";
+import classes from "./PageTitle.module.css";
+import ScrollLink from "../ScrollLink/ScrollLink";
 
-const pageTitle = (props) => {
-    return (
-        <div className={classes.PageTitle}>
-            <div>
-                <h1>{props.title}</h1>
-                <h3>{props.subtitle}</h3>
-                <Link link='#projectsSection' variants="button">{props.btnText}</Link>
-            </div>
-        </div>
-    );
-}
+const pageTitle = ({ title, subtitle, scrollToSectionName, btnText }) => {
+  return (
+    <div className={classes.PageTitle}>
+      <div>
+        <h1>{title}</h1>
+        <h3>{subtitle}</h3>
+        <ScrollLink to={scrollToSectionName} variants="button">
+          {btnText}
+        </ScrollLink>
+      </div>
+    </div>
+  );
+};
 
 export default pageTitle;
